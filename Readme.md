@@ -1,4 +1,5 @@
-## project by Fdevll, luka0204, yarsolavdudin, elektrosila , jop221
+## project by Fdevll, luka0204, YaroslavDudin, elektrosila , and jop221
+
 **Посмотреть все ветки**
 ```
 git branch -r 
