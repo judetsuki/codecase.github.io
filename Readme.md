@@ -19,3 +19,8 @@ git stash pop
 ```
 git stash clear 
 ```
+## Для объеденения веток
+```
+git config pull.rebase false
+git pull
+```
