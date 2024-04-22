@@ -6,5 +6,5 @@ setup :
 test:
 	npx stryker run
 	npm test
-lint-fix:
+lint:
 	npx eslint . --fix
