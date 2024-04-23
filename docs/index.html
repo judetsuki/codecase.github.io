@@ -9,10 +9,10 @@
 </head>
 <body>
     <script>
-        function generateNumber() {
-            var randomNumber = Math.floor(Math.random() * 100) + 1; 
-            document.getElementById("numberDiv").innerHTML = randomNumber; 
-        }
+        const generateNumber = () => {
+    let randomNumber = Math.floor(Math.random() * 50) + 1; 
+    document.getElementById("numberDiv").innerHTML = randomNumber; 
+}
     </script>
 <header>
 <img src="./images/logo.webp" alt="Main-Logo" class = "main-logo">
@@ -26,13 +26,13 @@
     
     <div class ="cases_parent">
     <div class = "case_of_the_day_menu">
-        <h2 class = "case_of_the_day_text">Case of the Day</hg2>
+        <h2 class = "case_of_the_day_text">Case of the Day</h2>
         </div>
     
         <div class = "unique_cases_menu">
             <h2 class = "unique_cases_text">Unique Cases</h2>
-            <button onclick="generateNumber()">Generate Number</button>
-                <div id="RandomNumberDiv"></div>
+            <button onclick="generateNumber()">Generate Number</button> 
+    <div id="numberDiv"></div>
             </div>
         </div>
 </body>
