@@ -1,7 +1,7 @@
 html{
     width: 100vw;
     height: 100vh;
-    background-image:url("/docs/images/wallpaper.webp");
+    background-image:url("./docs/images/wallpaper.webp");
     box-sizing: border-box;
     font-family: 'Courier', Courier, monospace;
 }
