@@ -1,7 +1,7 @@
 html{
     width: 100vw;
     height: 100vh;
-    background-image:url("./docs/images/wallpaper.webp");
+    background-image:url("./images/wallpaper.webp");
     box-sizing: border-box;
     font-family: 'Courier', Courier, monospace;
 }
@@ -70,10 +70,23 @@ color: white;
     text-align: center;
 }
 
-.help_button{
+.help_button,.home_button{
     font-size: 30px;
     font-weight: bold;
     position: fixed;
     left: 93%;
     top: 45px;
+    text-decoration: none;
+    color: black;
+}
+
+.test_text{
+    color: white;
+    column-count: 2;
+    column-gap: 5px;
+    font-size: 20px;
+    max-width: 90vw;
+    text-align: center;
+    margin: auto auto;
+    margin-top: 50px;
 }
