@@ -5,7 +5,7 @@ export const capitalize = (text) => {
     }
     const firstChar = text[0].toUpperCase();
     const restSubstring = text.slice(1);
-    return `${firstChar}${restSubstring + 1}`;
+    return `${firstChar}${restSubstring}`;
   };
 export const getChildren = (arr) => arr.filter((child) => child.age < 17 ).map((child) => child.name);
 
