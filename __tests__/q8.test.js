@@ -1,4 +1,4 @@
-import * as funcs from '../tasks/q8/firstTask.js';
+import * as funcs from '../q8/firstTask.js';
 import { describe, expect, it, jest } from '@jest/globals';
 
 describe("Tests", () => {
