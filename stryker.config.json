@@ -10,8 +10,7 @@
   ],
   "testRunner": "jest",
   "mutate": [
-    "index.js",
-    "./q8/firstTask.js" 
+    "./q8/tasks.js" 
   ],
   "dashboard": {
     "project": "e553473d-6140-4057-bd49-04af1721fd50"
