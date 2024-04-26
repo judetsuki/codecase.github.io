@@ -1,9 +1,9 @@
 html{
-    width: 100%;
-    height: 1600px;
-    background-image:url("./images/wallpaper.webp");
-    box-sizing: border-box;
-    font-family: 'Courier', Courier, monospace;
+  width: 100%;
+  height: 1600px;
+  background-image:url("./images/wallpaper.webp");
+  box-sizing: border-box;
+  font-family: 'Courier', Courier, monospace;
 
 }
 
@@ -15,7 +15,7 @@ border-bottom: solid black 3px;
 }
 
 body{
-    margin: 0;
+  margin: 0;
 width: 100%;
 min-height: 100vh;
 }
@@ -30,46 +30,46 @@ border-top: solid black 3px;
 }
 
 .main-logo{
- width: 250px; 
- margin-top: 15px;
+width: 250px; 
+margin-top: 15px;
 }
 
 .all_cases_menu{
-    position: relative;
-    margin-top: 200px;
-    border-radius: 10px;
-    height: 300px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(219, 219, 219);
-    box-shadow: 0px 0px 25px black inset;
-    border: solid 2px black;
+  position: relative;
+  margin-top: 200px;
+  border-radius: 10px;
+  height: 300px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 25px black inset;
+  border: solid 2px black;
 }
 
 .case_of_the_day_menu{
-    position: relative;
-    margin-top: 200px;
-    border-radius: 10px;
-    height: 300px;
-    width: 42%;
-    display: inline-block;
-    background-color: rgb(219, 219, 219);
-    box-shadow: 0px 0px 25px black inset;
-    border: solid 2px black;
+  position: relative;
+  margin-top: 200px;
+  border-radius: 10px;
+  height: 300px;
+  width: 42%;
+  display: inline-block;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 25px black inset;
+  border: solid 2px black;
 }
 
 .unique_cases_menu{
-    position: relative;
-    margin-top: 200px;
-    border-radius: 10px;
-    height: 300px;
-    width: 42%;
-    display: inline-block;
-    margin-left: 6%;
-    background-color: rgb(219, 219, 219);
-    box-shadow: 0px 0px 25px black inset;
-    border: solid 2px black;
+  position: relative;
+  margin-top: 200px;
+  border-radius: 10px;
+  height: 300px;
+  width: 42%;
+  display: inline-block;
+  margin-left: 6%;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 25px black inset;
+  border: solid 2px black;
 }
 
 .all_cases_text,.case_of_the_day_text,.unique_cases_text{
@@ -82,27 +82,27 @@ text-shadow: white 0px 0 8px;
 }
 
 .cases_parent{
-    text-align: center;
+  text-align: center;
 }
 
 .help_button,.home_button{
-    font-size: 30px;
-    font-weight: bold;
-    position: relative;
-    left: 78%;
-    text-decoration: none;
-    color: black;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  left: 78%;
+  text-decoration: none;
+  color: black;
 }
 
 .test_text{
-    color: white;
-    column-count: 2;
-    column-gap: 5px;
-    font-size: 20px;
-    max-width: 90%;
-    text-align: center;
-    margin: auto auto;
-    margin-top: 50px;
+  color: white;
+  column-count: 2;
+  column-gap: 5px;
+  font-size: 20px;
+  max-width: 90%;
+  text-align: center;
+  margin: auto auto;
+  margin-top: 50px;
 }
 
 .case_test{
@@ -113,47 +113,47 @@ top: -20px ;
 /* ///////////////////// */ test scripts below /* ///////////////////// */
 
 .unbox-area{
-    position: absolute;
-    top: 100px
+  position: absolute;
+  top: 100px
 }
 
 #cardList {
-    height: 100px;
-    width: 800px;
-    position: relative;
-    border: 2px solid black;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+  height: 100px;
+  width: 800px;
+  position: relative;
+  border: 2px solid black;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+  background-color: red;
+  text-align: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.card > img {
+  width: 100px;
+  height: 100px;
+}
+
+.arrow-down {
+  margin-left: 380px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   
-  .card {
-    display: inline-block;
-    background-color: red;
-    text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    width: 100px;
-    height: 100px;
-  }
-  
-  .card > img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .arrow-down {
-    margin-left: 380px;
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    
-    border-top: 20px solid #f00;
-  }
-  #dialog-msg > img {
-    width: 150px;
-    height: 150px;
-  }
-  #dialog-msg {
-    text-align: center;
-  }
+  border-top: 20px solid #f00;
+}
+#dialog-msg > img {
+  width: 150px;
+  height: 150px;
+}
+#dialog-msg {
+  text-align: center;
+}
