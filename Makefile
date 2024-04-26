@@ -8,3 +8,13 @@ test:
 	npm test
 lint:
 	npx eslint . --fix
+index:
+	  npm test -- index
+qeight:
+	  npm test -- q8
+qseven:
+	  npm test -- q7
+qsix:
+	  npm test -- q6
+qfive:	
+	  npm test -- q5
