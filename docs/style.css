@@ -109,3 +109,51 @@ text-shadow: white 0px 0 8px;
 position: absolute;
 top: -20px ;
 }
+
+/* ///////////////////// */ test scripts below /* ///////////////////// */
+
+.unbox-area{
+    position: absolute;
+    top: 100px
+}
+
+#cardList {
+    height: 100px;
+    width: 800px;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .card {
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .card > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .arrow-down {
+    margin-left: 380px;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #f00;
+  }
+  #dialog-msg > img {
+    width: 150px;
+    height: 150px;
+  }
+  #dialog-msg {
+    text-align: center;
+  }
