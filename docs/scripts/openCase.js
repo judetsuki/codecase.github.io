@@ -1,68 +1,122 @@
-var img = {
-  purple: '<img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH7du6kb-FlvD1DLfYkWNF18lwmO7Eu46h2QS1r0tvZjvyLI-RIwI6aV7X_ADrwevmhZO0up_AwSM1uHNw5nzD30vgQ0tV-jw/360fx360f"/>',
-  pink: '<img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH_9mkgIWKkPvxDLDEm2JS4Mp1mOjG-oLKhF2zowcDPzixc9OLcw82ZlyF8wC8wb251MW4tcifmydi7CEn4HiPlhyy1BxJbeNshqPIHELeWfJvK5CfiA/360fx360f"/>',
-  red: '<img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5gZKKkPLLMrfFqWZU7Mxkh9bN9J7yjRrhrUFuazjzJteVJlQ6NVHTrFe3wObs15G06picwHFnvid25C3bnhSzn1gSOQz0szG-/360fx360f"/>',
-  yellow: '<img src="http://vignette4.wikia.nocookie.net/cswikia/images/a/ad/Csgo-default_rare_item.png/revision/latest?cb=20150227163025"/>'
-}
-function reset(){
-  $('.card').remove();
-  for (var i = 0; i < 210; i++){
-    var element = '<div class="card" style="background-color: lightblue;" data-rarity="blue" id=itemNumber'+i+'>'+img.blue+'</div>';
-    var rand = random(1,1000)/100;
-    if (rand < 20){
-      element = '<div class="card" style="background-color: purple;" data-rarity="purple" id=itemNumber'+i+'>'+img.purple+'</div>';
-    }
-    if (rand < 5){
-      element = '<div class="card" style="background-color: hotpink;" data-rarity="pink" id=itemNumber'+i+'>'+img.pink+'</div>';
-    }
-    if (rand < 2){
-      element = '<div class="card" style="background-color: red;" data-rarity="red" id=itemNumber'+i+'>'+img.red+'</div>';
-    }
-    if (rand < 1){
-      element = '<div class="card" style="background-color: yellow;" data-rarity="yellow" id=itemNumber'+i+'>'+img.yellow+'</div>';
-    }
+const cells = 31
 
-    $('#cardList').append(element);
-  }
-  $('.card').first().css('margin-left',-1000);
-}
+// From 0.001 to 100
+const items = [
+  {name: 'iPhone', img: './images/iPhone.png', chance: 25},
+  {name: 'Keyboard', img: './images/keyboard.png', chance: 25},
+  {name: 'Headphones', img: './images/headphones.png', chance: 25},
+  {name: 'Pivo', img: './images/pivo.png', chance: 25}
+]
 
-function openCase(){
-  reset();
-  var rand = random(1000,20000);
-  var childNumber = Math.floor(rand/100)+4;
-  var timings = ["easeInOutBack","easeOutExpo","easeInOutBounce","easeOutQuad","swing","easeOutElastic","easeInOutElastic"];
-  var timing = timings[random(0,timings.length)];
-  var reward = $('#itemNumber'+childNumber).attr('data-rarity');
-  
-  
-  $('.card').first().animate({
-    marginLeft: -rand
-  }, 3000, timing * 2 , function(){
+function getItem() {
+  let item;
+  const totalChances = items.reduce((acc, curr) => acc + curr.chance, 0);
+
+  while (!item) {
+    const chance = Math.floor(Math.random() * totalChances);
+    let cumulativeChance = 0;
     
-    var src = $('#itemNumber'+childNumber+' img').attr('src');
-    $('#itemNumber'+childNumber).css({background: "linear-gradient(#00bf09, #246b27)"});
-    
-    $('#dialog-msg').html("You have received "+reward+" item!"+"<br><img src="+src+">");
-    
-    $('#dialog').dialog({
-      modal: true,
-      title: "New item!",
-      resizeable: false,
-      draggable: false,
-      width: 400,
-      buttons: {
-        "Receive item":function(){
-          $(this).dialog("close");
-        }
+    for (const elm of items) {
+      cumulativeChance += elm.chance;
+      if (chance < cumulativeChance) {
+        item = elm;
+        break;
       }
-    });
-  });
-  
-  ('.card').css({backgroundColor: 'red'})
-  ('.card:nth-child('+(childNumber+1)+')').css({backgroundColor: 'green'})
+    }
+  }
+
+  return item;
 }
 
-function random(min, max){
-  return Math.floor((Math.random()*(max - min))+min);
+function generateItems() {
+  document.querySelector('.list').remove()
+  document.querySelector('.scope').innerHTML = `
+    <ul class="list"></ul>
+  `
+  
+  const list = document.querySelector('.list')
+
+  for (let i = 0; i < cells; i++) {
+    const item = getItem()
+    
+    const li = document.createElement('li')
+    li.setAttribute('data-item', JSON.stringify(item))
+    li.classList.add('list__item')
+    li.innerHTML = `
+      <img src="${item.img}" alt="" />
+    `
+
+    list.append(li)
+  }
+}
+
+generateItems()
+
+let isStarted = false
+let isFirstStart = true
+
+function start() {
+  if (isStarted) return
+  else isStarted = true
+
+  if (!isFirstStart) generateItems()
+  else isFirstStart = false
+  const list = document.querySelector('.list')
+
+  setTimeout(() => {
+    list.style.left = '50%'
+    list.style.transform = 'translate3d(-50%, 0, 0)'
+  }, 0)
+
+  const item = list.querySelectorAll('li')[15]
+
+  list.addEventListener('transitionend', () => {
+    isStarted = false
+    item.classList.add('active')
+    const data = JSON.parse(item.getAttribute('data-item'))
+    
+    console.log(data);
+  }, {once: true})
+}
+
+let FPSCounter = 0
+function FPSIncrementer() {
+  FPSCounter++
+
+  requestAnimationFrame(arguments.callee)
+}; FPSIncrementer()
+
+function FPSViewer() {
+  document.querySelector('.FPS').innerHTML = FPSCounter * 2
+  FPSCounter = 0
+
+  setTimeout(arguments.callee, 500)
+}; FPSViewer()
+function start() {
+  const startButton = document.getElementById('startButton');
+  startButton.disabled = true; // Disable the button
+
+  if (isStarted) return;
+  else isStarted = true;
+
+  if (!isFirstStart) generateItems();
+  else isFirstStart = false;
+  const list = document.querySelector('.list');
+
+  setTimeout(() => {
+    list.style.left = '50%';
+    list.style.transform = 'translate3d(-50%, 0, 0)';
+  }, 0);
+
+  const item = list.querySelectorAll('li')[15];
+
+  list.addEventListener('transitionend', () => {
+    isStarted = false;
+    item.classList.add('active');
+    const data = JSON.parse(item.getAttribute('data-item'));
+
+    console.log(data);
+
+    startButton.disabled = false; // Enable the button
+  }, {once: true});
 }
