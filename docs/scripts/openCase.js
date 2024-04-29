@@ -159,6 +159,7 @@ function start() {
     isStarted = false;
     item.classList.add('active');
     const data = JSON.parse(item.getAttribute('data-item'));
+  document.getElementById('startButton').style.display = 'none'
 
     console.log(data);
 
@@ -187,6 +188,8 @@ function showGoToTaskButton() {
 function resetStartButtonText() {
   startButton.textContent = 'Испытать удачу снова';
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+  document.getElementById('startButton').style.display = 'none'
+
 }
 let isGoToTaskButtonShown = false;
 
@@ -194,7 +197,7 @@ function showGoToTaskButton() {
   const messageContainer = document.getElementById('messageContainer');
   const goToTaskButton = document.getElementById('goToTaskButton');
   const message = document.getElementById('message');
-
+  document.getElementById('startButton').style.display = 'none'
   message.textContent = 'Предмет выпал!';
   goToTaskButton.style.display = 'inline-block';
 }
@@ -233,3 +236,4 @@ goToTaskButton.addEventListener('click', () => {
   startButton.textContent = 'Крутить';
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
 });
+//162 строка
