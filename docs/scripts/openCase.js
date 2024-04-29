@@ -168,10 +168,10 @@ function start() {
       startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
       showGoToTaskButton(); // Show the "Go to task" button
     } else {
-      startButton.textContent = 'Испытать удачу снова'; // Change the button text to "Испытать удачу снова"
-      resetStartButtonText(); // Hide the "Go to task" button
+    
+      resetStartButtonText(); 
     }
-    isGoToTaskButtonShown = false; // Reset the flag
+    isGoToTaskButtonShown = false; 
   }, {once: true});
 }
 

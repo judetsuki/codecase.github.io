@@ -270,3 +270,19 @@ top: -20px ;
   border: 1px solid black;
   border-radius: 50%;
 }
+.task {
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #eb5146;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
+  cursor: pointer;
+}
+.task:hover {
+  opacity: 0.8;
+}
