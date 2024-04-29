@@ -119,4 +119,117 @@ function start() {
 
     startButton.disabled = false; // Enable the button
   }, {once: true});
+  list.addEventListener('transitionend', () => {
+    isStarted = false;
+    item.classList.add('active');
+    const data = JSON.parse(item.getAttribute('data-item'));
+
+    console.log(data);
+
+    startButton.disabled = false; // Enable the button
+    function showGoToTaskButton() {
+      const messageContainer = document.getElementById('messageContainer');
+      const goToTaskButton = document.getElementById('goToTaskButton');
+      const message = document.getElementById('message');
+    
+      message.textContent = 'Предмет выпал!';
+      goToTaskButton.style.display = 'inline-block';
+      goToTaskButton.textContent = 'Перейти к заданию';
+    }
+    showGoToTaskButton(); // Show the "Go to task" button
+  }, {once: true});
+  list.addEventListener('transitionend', () => {
+    isStarted = false;
+    item.classList.add('active');
+    const data = JSON.parse(item.getAttribute('data-item'));
+
+    console.log(data);
+
+    startButton.disabled = false; // Enable the button
+    if (isGoToTaskButtonShown) {
+      startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
+      showGoToTaskButton(); // Show the "Go to task" button
+    } else {
+      startButton.textContent = 'Испытать удачу снова'; // Change the button text to "Испытать удачу снова"
+      resetStartButtonText(); // Hide the "Go to task" button
+    }
+    isGoToTaskButtonShown = false; // Reset the flag
+  }, {once: true});
+  list.addEventListener('transitionend', () => {
+    isStarted = false;
+    item.classList.add('active');
+    const data = JSON.parse(item.getAttribute('data-item'));
+
+    console.log(data);
+
+    startButton.disabled = false; // Enable the button
+    if (isGoToTaskButtonShown) {
+      startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
+      showGoToTaskButton(); // Show the "Go to task" button
+    } else {
+      startButton.textContent = 'Испытать удачу снова'; // Change the button text to "Испытать удачу снова"
+      resetStartButtonText(); // Hide the "Go to task" button
+    }
+    isGoToTaskButtonShown = false; // Reset the flag
+  }, {once: true});
 }
+
+
+
+function showGoToTaskButton() {
+  const messageContainer = document.getElementById('messageContainer');
+  const goToTaskButton = document.getElementById('goToTaskButton');
+  const message = document.getElementById('message');
+
+  message.textContent = 'Предмет выпал!';
+  goToTaskButton.style.display = 'inline-block';
+}
+function resetStartButtonText() {
+  startButton.textContent = 'Испытать удачу снова';
+  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+}
+let isGoToTaskButtonShown = false;
+
+function showGoToTaskButton() {
+  const messageContainer = document.getElementById('messageContainer');
+  const goToTaskButton = document.getElementById('goToTaskButton');
+  const message = document.getElementById('message');
+
+  message.textContent = 'Предмет выпал!';
+  goToTaskButton.style.display = 'inline-block';
+}
+
+function resetStartButtonText() {
+  startButton.textContent = 'Испытать удачу снова';
+}
+startButton.addEventListener('click', () => {
+  resetStartButtonText(); // Change the button text back to "Испытать удачу снова"
+  isGoToTaskButtonShown = false; // Reset the flag
+  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+  startButton.disabled = true; // Disable the button
+});
+goToTaskButton.addEventListener('click', () => {
+  startButton.textContent = 'Крутить';
+  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+});
+const startButton = document.getElementById('startButton');
+const goToTaskButton = document.getElementById('goToTaskButton');
+
+function showGoToTaskButton() {
+  const messageContainer = document.getElementById('messageContainer');
+  const message = document.getElementById('message');
+
+  message.textContent = 'Предмет выпал!';
+  goToTaskButton.style.display = 'inline-block';
+  goToTaskButton.textContent = 'Испытать удачу снова';
+}
+
+startButton.addEventListener('click', () => {
+  startButton.textContent = 'Крутить';
+  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+});
+
+goToTaskButton.addEventListener('click', () => {
+  startButton.textContent = 'Крутить';
+  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+});
