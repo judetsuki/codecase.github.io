@@ -292,9 +292,8 @@ top: -20px ;
   transition: opacity 0.2s ease;
   box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
   cursor: pointer;
-  position:absolute;
-  left: calc(1517.8px / 2);
-  top: 800px;
+  left: calc(50% - (193.2px / 2));
+  top: 85%;
 }
 .task:hover {
   opacity: 0.8;
