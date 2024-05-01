@@ -76,7 +76,7 @@ margin-top: 15px;
 font-size: 50px;
 text-align: center;
 position: relative;
-bottom: 110px;
+bottom: 150px;
 color: black;
 text-shadow: white 0px 0 8px;
 }
@@ -161,7 +161,7 @@ top: -20px ;
 .scope{
   background-color: rgb(22, 22, 22);
   position: absolute;
-  top:500px;
+  top:50%;
   width: 50%;
   border-radius: 24px;
   left: 25%;
@@ -302,16 +302,19 @@ top: -20px ;
 
 .task{
 position: absolute;
+
 }
 
 .case_on_open_page{
   position: absolute;
-  left: calc(1351px / 2);
+  left: calc(50% - (360px / 2));
+  top:17%;
 }
 
 .text_above_case{
   position:absolute;
   color: white;
-  left: calc(1552.6px / 2)
+  left: calc(50% - (158.4px / 2));
+  top: 17%;
 }
 
