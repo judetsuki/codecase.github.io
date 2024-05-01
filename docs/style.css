@@ -157,7 +157,17 @@ top: -20px ;
 #dialog-msg {
   text-align: center;
 }
-.FPS {
+
+.scope{
+  background-color: rgb(22, 22, 22);
+  position: absolute;
+  top:500px;
+  width: 50%;
+  border-radius: 24px;
+  left: 25%;
+  border: solid rgb(0, 0, 0) 2px;
+}
+/* .FPS {
   position: fixed;
   top: 0;
   right: 0;
@@ -169,7 +179,7 @@ top: -20px ;
   content: "FPS: ";
   font-size: 0.8em;
   opacity: 0.5;
-}
+} */ снести нахуй
 
 .app {
   position: relative;
@@ -224,7 +234,7 @@ top: -20px ;
 }
 .app .start {
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 50%;
   transform: translate3d(-50%, 20px, 0);
   padding: 8px 25px;
@@ -282,7 +292,26 @@ top: -20px ;
   transition: opacity 0.2s ease;
   box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
   cursor: pointer;
+  position:absolute;
+  left: calc(1517.8px / 2);
+  top: 800px;
 }
 .task:hover {
   opacity: 0.8;
 }
+
+.task{
+position: absolute;
+}
+
+.case_on_open_page{
+  position: absolute;
+  left: calc(1351px / 2);
+}
+
+.text_above_case{
+  position:absolute;
+  color: white;
+  left: calc(1552.6px / 2)
+}
+
