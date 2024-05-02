@@ -1,16 +1,19 @@
-const cells = 31
+const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
   {name: 'iPhone', img: './images/iPhone.png', chance: 25},
   {name: 'Keyboard', img: './images/keyboard.png', chance: 25},
   {name: 'Headphones', img: './images/headphones.png', chance: 25},
-  {name: 'Pivo', img: './images/pivo.png', chance: 25}
+  {name: 'Pivo', img: './images/pivo.png', chance: 25},
+  {name: 'butterfly', img: './images/butterfly.png', chance: 25},
+  {name: 'jini', img: './images/jini.png', chance: 25},
+  {name: 'vini', img: './images/vinipuh.png', chance: 25},
 ]
 
 function getItem() {
   let item;
-  const totalChances = items.reduce((acc, curr) => acc + curr.chance, 0);
+  const totalChances = items.reduce((acc, curr) => acc + curr.chance, 0) ;
 
   while (!item) {
     const chance = Math.floor(Math.random() * totalChances);
