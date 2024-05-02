@@ -95,7 +95,6 @@ function FPSViewer() {
 function start() {
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
-  startButton.style.display = 'none'; // Скрываем кнопку "Крутить"
 
   if (isStarted) return;
   else isStarted = true;
@@ -238,3 +237,13 @@ goToTaskButton.addEventListener('click', () => {
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
 });
 //162 строка
+window.addEventListener('resize', function() {
+  // Получаем элементы, которые нужно зафиксировать
+  var fixedElements = document.querySelectorAll('.fixed-element');
+
+  // Проходим по каждому элементу и устанавливаем им позицию fixed
+  for (var i = 0; i < fixedElements.length; i++) {
+    var element = fixedElements[i];
+    element.style.position = 'fixed'; // Зафиксируем позицию элемента
+  }
+});

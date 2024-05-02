@@ -294,15 +294,13 @@ top: -20px ;
   cursor: pointer;
   left: calc(50% - (193.2px / 2));
   top: calc(75% - (21.6px / 2));
+  position: absolute
 }
 .task:hover {
   opacity: 0.8;
 }
 
-.task{
-position: absolute;
 
-}
 
 .case_on_open_page{
   position: absolute;
@@ -316,4 +314,7 @@ position: absolute;
   left: calc(50% - (158.4px / 2));
   top: 17%;
 }
-
+/*.task1 {
+  position: relative;
+} родительский элемент task позволяет зафиксировать позицию несмотря на изменения окна
+*/
