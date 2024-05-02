@@ -118,7 +118,6 @@ function start() {
 
     console.log(data);
 
-    startButton.disabled = false; // Enable the button
   }, {once: true});
   list.addEventListener('transitionend', () => {
     isStarted = false;
