@@ -95,6 +95,7 @@ function FPSViewer() {
 function start() {
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
+  startButton.style.display = 'none'; // Скрываем кнопку "Крутить"
 
   if (isStarted) return;
   else isStarted = true;
