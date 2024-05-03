@@ -2,13 +2,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: './images/iPhone.png', chance: 25},
-  {name: 'Keyboard', img: './images/keyboard.png', chance: 25},
-  {name: 'Headphones', img: './images/headphones.png', chance: 25},
-  {name: 'Pivo', img: './images/pivo.png', chance: 25},
-  {name: 'butterfly', img: './images/butterfly.png', chance: 25},
-  {name: 'jini', img: './images/jini.png', chance: 25},
-  {name: 'vini', img: './images/vinipuh.png', chance: 25},
+  {name: 'iPhone', img: './images/iPhone.png', chance: 14.29},
+  {name: 'Keyboard', img: './images/keyboard.png', chance: 14.29},
+  {name: 'Headphones', img: './images/headphones.png', chance: 14.29},
+  {name: 'Pivo', img: './images/pivo.png', chance: 14.29},
+  {name: 'butterfly', img: './images/butterfly.png', chance: 14.29},
+  {name: 'jini', img: './images/jini.png', chance: 14.29},
+  {name: 'vini', img: './images/vinipuh.png', chance: 14.29},
 ]
 
 function getItem() {
@@ -100,11 +100,12 @@ function start() {
   const item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
   const resultContainer = document.getElementById('resultContainer');
   const resultTitle = document.getElementById('resultTitle');
-
   const resultImage = document.getElementById('resultImage');
-  
-  resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name // подсвечиваемый элемент который выпал
+  setTimeout(() => {
+    resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name // подсвечиваемый элемент который выпал
   resultImage.src = JSON.parse(item.getAttribute('data-item')).img // подсвечиваемый элемент который выпал
+  }, 5000);
+  
   console.log(JSON.parse(item.getAttribute('data-item')))
   resultContainer.style.display = 'block';
   list.addEventListener('transitionend', () => {
