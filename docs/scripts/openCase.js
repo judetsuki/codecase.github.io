@@ -235,14 +235,3 @@ window.addEventListener('resize', function() {
     element.style.position = 'fixed'; // Зафиксируем позицию элемента
   }
 });
-const list = document.querySelector('.list');
-
-list.addEventListener('mousemove', function(event) {
-  const target = event.target;
-  if (target.tagName === 'LI') {
-    const index = Array.from(list.children).indexOf(target);
-    const selectedItem = items[index];
-    const selectedElement = document.querySelector(`li:nth-child(${index + 1})`);
-    selectedElement.classList.add('selected');
-  }
-});
