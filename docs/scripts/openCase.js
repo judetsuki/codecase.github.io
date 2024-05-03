@@ -1,4 +1,4 @@
-const cells = 61 //количество предметов (скорость рулетки) 31
+const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
@@ -71,7 +71,7 @@ function start() {
     list.style.transform = 'translate3d(-50%, 0, 0)'
   }, 0)
 
-  const item = list.querySelectorAll('li')[15]
+  const item = list.querySelectorAll('li')
 
   list.addEventListener('transitionend', () => {
     isStarted = false
@@ -81,20 +81,6 @@ function start() {
     console.log(data);
   }, {once: true})
 }
-
-let FPSCounter = 0
-function FPSIncrementer() {
-  FPSCounter++
-
-  requestAnimationFrame(arguments.callee)
-}; FPSIncrementer()
-
-function FPSViewer() {
-  document.querySelector('.FPS').innerHTML = FPSCounter * 2
-  FPSCounter = 0
-
-  setTimeout(arguments.callee, 500)
-}; FPSViewer()
 function start() {
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
@@ -112,7 +98,7 @@ function start() {
     list.style.transform = 'translate3d(-50%, 0, 0)';
   }, 0);
 
-  const item = list.querySelectorAll('li')[15];
+  const item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
 
   list.addEventListener('transitionend', () => {
     isStarted = false;
@@ -165,7 +151,6 @@ function start() {
   document.getElementById('startButton').style.display = 'none'
 
     console.log(data);
-
     startButton.disabled = false; // Enable the button
     if (isGoToTaskButtonShown) {
       startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
@@ -248,5 +233,16 @@ window.addEventListener('resize', function() {
   for (var i = 0; i < fixedElements.length; i++) {
     var element = fixedElements[i];
     element.style.position = 'fixed'; // Зафиксируем позицию элемента
+  }
+});
+const list = document.querySelector('.list');
+
+list.addEventListener('mousemove', function(event) {
+  const target = event.target;
+  if (target.tagName === 'LI') {
+    const index = Array.from(list.children).indexOf(target);
+    const selectedItem = items[index];
+    const selectedElement = document.querySelector(`li:nth-child(${index + 1})`);
+    selectedElement.classList.add('selected');
   }
 });

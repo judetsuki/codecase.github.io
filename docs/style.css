@@ -192,7 +192,8 @@ top: -20px ;
   z-index: 1;
   left: 50%;
   transform: translate3d(-50%, -25px, 0);
-  height: 50px;
+  height: 35px;
+  top: 49%;
   filter: drop-shadow(0 0 20px rgba(230, 174, 174, 0.3));
 }
 .app .scope {
@@ -320,3 +321,9 @@ top: -20px ;
 } родительский элемент task позволяет зафиксировать позицию несмотря на изменения окна
 */
  /* 207 строка важная */
+ .selected {
+   background-color: yellow;
+ }
+ .selected {
+   background-color: yellow;
+ }
