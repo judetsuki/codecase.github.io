@@ -294,7 +294,7 @@ top: -20px ;
   box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
   cursor: pointer;
   left: calc(50% - (193.2px / 2));
-  top: calc(75% - (21.6px / 2));
+  top: calc(73% - (21.6px / 2));
   position: absolute
 }
 .task:hover {
