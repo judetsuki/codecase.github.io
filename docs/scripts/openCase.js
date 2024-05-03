@@ -78,7 +78,6 @@ function start() {
     item.classList.add('active')
     const data = JSON.parse(item.getAttribute('data-item'))
     
-    console.log(data);
   }, {once: true})
 }
 function start() {
@@ -99,13 +98,20 @@ function start() {
   }, 0);
 
   const item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
+  const resultContainer = document.getElementById('resultContainer');
+  const resultTitle = document.getElementById('resultTitle');
 
+  const resultImage = document.getElementById('resultImage');
+  
+  resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name // подсвечиваемый элемент который выпал
+  resultImage.src = JSON.parse(item.getAttribute('data-item')).img // подсвечиваемый элемент который выпал
+  console.log(JSON.parse(item.getAttribute('data-item')))
+  resultContainer.style.display = 'block';
   list.addEventListener('transitionend', () => {
     isStarted = false;
     item.classList.add('active');
-    const data = JSON.parse(item.getAttribute('data-item'));
+    //const data = JSON.parse(item.getAttribute('data-item').name);
 
-    console.log(data);
 
   }, {once: true});
   list.addEventListener('transitionend', () => {
@@ -113,7 +119,6 @@ function start() {
     item.classList.add('active');
     const data = JSON.parse(item.getAttribute('data-item'));
 
-    console.log(data);
 
     startButton.disabled = false; // Enable the button
     function showGoToTaskButton(prizeName) {
@@ -121,7 +126,6 @@ function start() {
       const goToTaskButton = document.getElementById('goToTaskButton');
       const message = document.getElementById('message');
     
-      message.textContent = 'Предмет выпал!';
       goToTaskButton.style.display = 'inline-block';
       goToTaskButton.textContent = 'Перейти к заданию';
     }
@@ -132,7 +136,6 @@ function start() {
     item.classList.add('active');
     const data = JSON.parse(item.getAttribute('data-item'));
 
-    console.log(data);
 
     startButton.disabled = false; // Enable the button
     if (isGoToTaskButtonShown) {
@@ -150,7 +153,6 @@ function start() {
     const data = JSON.parse(item.getAttribute('data-item'));
   document.getElementById('startButton').style.display = 'none'
 
-    console.log(data);
     startButton.disabled = false; // Enable the button
     if (isGoToTaskButtonShown) {
       startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
