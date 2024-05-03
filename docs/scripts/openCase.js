@@ -116,7 +116,7 @@ function start() {
     console.log(data);
 
     startButton.disabled = false; // Enable the button
-    function showGoToTaskButton() {
+    function showGoToTaskButton(prizeName) {
       const messageContainer = document.getElementById('messageContainer');
       const goToTaskButton = document.getElementById('goToTaskButton');
       const message = document.getElementById('message');
