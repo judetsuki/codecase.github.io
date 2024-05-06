@@ -18,7 +18,15 @@ body{
   margin: 0;
 width: 100%;
 min-height: 100vh;
+
 }
+.body_open_page{
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Убрать горизонтальную прокрутку */
+  overflow-y: scroll; /* оставить вертикальную прокрутку */
+  }
 
 footer{
 background-color: rgb(219, 219, 219);
@@ -88,12 +96,22 @@ text-shadow: white 0px 0 8px;
 .help_button,.home_button{
   font-size: 30px;
   font-weight: bold;
-  position: relative;
-  left: 78%;
+  position: sticky;
+  left: 90%;
+  top: 12%;
   text-decoration: none;
   color: black;
+  z-index: 1000; /* Устанавливаем z-index, чтобы кнопка была поверх других элементов */
+
 }
 
+
+.home_button.sticky {
+  position: sticky;
+  left: 90%;
+  top: 10%; /* Позиционирование кнопки чуть выше на 2% от исходной позиции */
+  z-index: 1000;
+}
 .test_text{
   color: white;
   column-count: 2;
@@ -296,6 +314,7 @@ top: -20px ;
   left: calc(50% - (193.2px / 2));
   top: calc(73% - (21.6px / 2));
   position: absolute
+  
 }
 .task:hover {
   opacity: 0.8;
