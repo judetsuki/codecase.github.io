@@ -12,6 +12,7 @@ background-color: rgb(219, 219, 219);
 width: 100%;
 height: 96px;
 border-bottom: solid black 3px;
+
 }
 
 body{
@@ -37,10 +38,7 @@ top: 1600px;
 border-top: solid black 3px;
 }
 
-.main-logo{
-width: 250px; 
-margin-top: 15px;
-}
+
 
 .all_cases_menu{
   position: relative;
@@ -93,25 +91,28 @@ text-shadow: white 0px 0 8px;
   text-align: center;
 }
 
-.help_button,.home_button{
+.main-logo {
+  width: 250px;
+  margin-top: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* this will push the logo to the left and buttons to the right */
+  padding-right: 10%;
+  padding-top: 1%;
+  z-index: 1000;
+  align-items: center;
+}
+
+.help_button, .home_button {
   font-size: 30px;
   font-weight: bold;
-  position: sticky;
-  left: 90%;
-  top: 12%;
   text-decoration: none;
   color: black;
-  z-index: 1000; /* Устанавливаем z-index, чтобы кнопка была поверх других элементов */
-
 }
 
 
-.home_button.sticky {
-  position: sticky;
-  left: 90%;
-  top: 10%; /* Позиционирование кнопки чуть выше на 2% от исходной позиции */
-  z-index: 1000;
-}
 .test_text{
   color: white;
   column-count: 2;
