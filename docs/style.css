@@ -96,7 +96,7 @@ text-shadow: white 0px 0 8px;
   margin-top: 15px;
 }
 
-.help_button, .home_button , .task_button {
+.help_button, .home_button {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
@@ -104,7 +104,14 @@ text-shadow: white 0px 0 8px;
   position: sticky;
   left:90%;
   bottom: 93.5%;
-  margin-top: 30px;
+  margin-top: 35px;
+}
+
+.task_button{
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
 .test_text{
@@ -181,6 +188,7 @@ top: -20px ;
   border: solid rgb(0, 0, 0) 2px;
 }
 
+d
 .app {
   position: relative;
   width: 650px;
