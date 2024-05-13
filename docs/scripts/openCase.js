@@ -128,7 +128,7 @@ function start() {
     
   }, {once: true});
 }
-function compareNames(object, reqItem) {
+/*function compareNames(object, reqItem) {
   let result;
   object.forEach((item) => {
     if (item.name === reqItem) {  
@@ -136,7 +136,13 @@ function compareNames(object, reqItem) {
     }
   });
   return result;
+}*/
+function compareNames(object, reqItem) {
+  let result = object.find(item => item.name === reqItem);
+  return result;
 }
+const itemName = JSON.parse(item.getAttribute('data-item')).name;
+console.log(itemName);
 // доделать эту функцию /\
 const goToTaskButton = document.getElementById('goToTaskButton');
 
