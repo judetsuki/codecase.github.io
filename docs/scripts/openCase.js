@@ -131,27 +131,20 @@ function start() {
 function compareNames(object, reqItem) {
   let result;
   object.forEach((item) => {
-    if (item.name === reqItem) {
+    if (item.name === reqItem) {  
       result = item;
     }
   });
   return result;
 }
-const selectedItem = compareNames(items, requiredItem);
-
-// Получаем элемент с идентификатором "output"
-const outputElement = document.getElementById("output");
-
-// Выводим сохраненный элемент в элемент "output"
-outputElement.textContent = JSON.stringify(selectedItem);
 // доделать эту функцию /\
+const goToTaskButton = document.getElementById('goToTaskButton');
 
 goToTaskButton.addEventListener('click', () => {
   startButton.textContent = 'Крутить';
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
 });
 const startButton = document.getElementById('startButton');
-const goToTaskButton = document.getElementById('goToTaskButton');
 
 
 
@@ -172,5 +165,5 @@ window.addEventListener('resize', function() {
 });
 
 
-let dataTransfer = resultTitle;
-localStorage.setItem(dataTransfer);
+/*let dataTransfer = resultTitle;
+localStorage.setItem(dataTransfer);*/
