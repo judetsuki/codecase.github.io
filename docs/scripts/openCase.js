@@ -59,28 +59,6 @@ let isStarted = false
 let isFirstStart = true
 
 function start() {
-  if (isStarted) return
-  else isStarted = true
-
-  if (!isFirstStart) generateItems()
-  else isFirstStart = false
-  const list = document.querySelector('.list')
-
-  setTimeout(() => {
-    list.style.left = '50%'
-    list.style.transform = 'translate3d(-50%, 0, 0)'
-  }, 0)
-
-  const item = list.querySelectorAll('li')
-
-  list.addEventListener('transitionend', () => {
-    isStarted = false
-    item.classList.add('active')
-    const data = JSON.parse(item.getAttribute('data-item'))
-    
-  }, {once: true})
-}
-function start() {
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
   startButton.style.display = 'none'; // Скрываем кнопку "Крутить"
@@ -108,6 +86,15 @@ function start() {
   
   console.log(JSON.parse(item.getAttribute('data-item')))
   resultContainer.style.display = 'block';
+
+function CompareNames(object,reqItem) {
+  const result = object.filter((item) => item === reqItem);
+  return result[0];
+}
+
+// доделать эту функцию /\
+
+
   list.addEventListener('transitionend', () => {
     isStarted = false;
     item.classList.add('active');
@@ -238,3 +225,7 @@ window.addEventListener('resize', function() {
     element.style.position = 'fixed'; // Зафиксируем позицию элемента
   }
 });
+
+
+let dataTransfer = resultTitle;
+localStorage.setItem(dataTransfer);
