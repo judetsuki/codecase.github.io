@@ -84,22 +84,9 @@ function start() {
   resultImage.src = JSON.parse(item.getAttribute('data-item')).img // подсвечиваемый элемент который выпал
   }, 5000);
   
-  console.log(JSON.parse(item.getAttribute('data-item')))
   resultContainer.style.display = 'block';
 
-  function CompareNames(object, reqItem) {
-    let result;
-    object.forEach((item) => {
-      if (item.name === reqItem) {
-        result = item;
-      }
-    });
-    return result;
-  }
-  
 
-
-  // доделать эту функцию /\
 
 
   list.addEventListener('transitionend', () => {
@@ -119,7 +106,6 @@ function start() {
     function showGoToTaskButton(prizeName) {
       const goToTaskButton = document.getElementById('goToTaskButton');
       goToTaskButton.style.display = 'inline-block';
-      goToTaskButton.textContent = 'Перейти к заданию';
     }
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
@@ -130,11 +116,8 @@ function start() {
 
 
     startButton.disabled = false; // Enable the button
-    if (isGoToTaskButtonShown) {
-      startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
-      showGoToTaskButton(); // Show the "Go to task" button
-    } 
-    isGoToTaskButtonShown = false; // Reset the flag
+       // Show the "Go to task" button
+ // Reset the flag
   }, {once: true});
   list.addEventListener('transitionend', () => {
     isStarted = false;
@@ -142,16 +125,26 @@ function start() {
   document.getElementById('startButton').style.display = 'none'
 
     startButton.disabled = false; // Enable the button
-    if (isGoToTaskButtonShown) {
-      startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
-      showGoToTaskButton(); // Show the "Go to task" button
-    } else {
     
-      resetStartButtonText(); 
-    }
-    isGoToTaskButtonShown = false; 
   }, {once: true});
 }
+function compareNames(object, reqItem) {
+  let result;
+  object.forEach((item) => {
+    if (item.name === reqItem) {
+      result = item;
+    }
+  });
+  return result;
+}
+const selectedItem = compareNames(items, requiredItem);
+
+// Получаем элемент с идентификатором "output"
+const outputElement = document.getElementById("output");
+
+// Выводим сохраненный элемент в элемент "output"
+outputElement.textContent = JSON.stringify(selectedItem);
+// доделать эту функцию /\
 
 goToTaskButton.addEventListener('click', () => {
   startButton.textContent = 'Крутить';
