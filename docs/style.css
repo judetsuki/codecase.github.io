@@ -335,6 +335,55 @@ top: -20px ;
   left: calc(50% - (158.4px / 2));
   top: 17%;
 }
+.section-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 869px;
+}
+
+
+.descritionContainer{
+  border-radius: 30px;
+  background-color:gray;
+  height: 1348px;
+  margin: 10px;
+  width:737px;
+  padding: 10px;
+  
+}
+.codeContainer{
+  border-radius: 30px  ;
+  background-color:gray;
+  height: 722px;
+  margin: 10px;
+  width:1040px;
+  padding: 10px
+}
+.resultContainer-task{
+
+  background-color:gray;
+  height: 585px;
+  border-radius: 30px;
+  margin: 10px;
+  width:1040px;
+  padding: 10px
+}
+.ye{
+  display: flex;
+  flex-direction:column ;
+}
+p{
+  color: white
+}
+#cadeArea{
+  height: 719px;
+  width: 1036px;
+  border-radius: 30px;
+  border: none;
+  background-color: #1b1f24;
+  color:white;
+}
+
 
 /*.task1 {
   position: relative;
