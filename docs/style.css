@@ -96,22 +96,23 @@ text-shadow: white 0px 0 8px;
   margin-top: 15px;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between; /* this will push the logo to the left and buttons to the right */
-  padding-right: 10%;
-  padding-top: 1%;
-  z-index: 1000;
-  align-items: center;
+.help_button, .home_button {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  position: sticky;
+  left:90%;
+  bottom: 93.5%;
+  margin-top: 35px;
 }
 
-.help_button, .home_button , .task_button {
+.task_button{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
-
 
 .test_text{
   color: white;
@@ -186,20 +187,8 @@ top: -20px ;
   left: 25%;
   border: solid rgb(0, 0, 0) 2px;
 }
-/* .FPS {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  font-weight: bold;
-  color: white;
-}
-.FPS::before {
-  content: "FPS: ";
-  font-size: 0.8em;
-  opacity: 0.5;
-} */ снести нахуй
 
+d
 .app {
   position: relative;
   width: 650px;
