@@ -87,12 +87,19 @@ function start() {
   console.log(JSON.parse(item.getAttribute('data-item')))
   resultContainer.style.display = 'block';
 
-function CompareNames(object,reqItem) {
-  const result = object.filter((item) => item === reqItem);
-  return result[0];
-}
+  function CompareNames(object, reqItem) {
+    let result;
+    object.forEach((item) => {
+      if (item.name === reqItem) {
+        result = item;
+      }
+    });
+    return result;
+  }
+  
 
-// доделать эту функцию /\
+
+  // доделать эту функцию /\
 
 
   list.addEventListener('transitionend', () => {
@@ -110,10 +117,7 @@ function CompareNames(object,reqItem) {
 
     startButton.disabled = false; // Enable the button
     function showGoToTaskButton(prizeName) {
-      const messageContainer = document.getElementById('messageContainer');
       const goToTaskButton = document.getElementById('goToTaskButton');
-      const message = document.getElementById('message');
-    
       goToTaskButton.style.display = 'inline-block';
       goToTaskButton.textContent = 'Перейти к заданию';
     }
@@ -129,16 +133,12 @@ function CompareNames(object,reqItem) {
     if (isGoToTaskButtonShown) {
       startButton.textContent = 'Перейти к заданию'; // Change the button text to "Перейти к заданию"
       showGoToTaskButton(); // Show the "Go to task" button
-    } else {
-      startButton.textContent = 'Испытать удачу снова'; // Change the button text to "Испытать удачу снова"
-      resetStartButtonText(); // Hide the "Go to task" button
-    }
+    } 
     isGoToTaskButtonShown = false; // Reset the flag
   }, {once: true});
   list.addEventListener('transitionend', () => {
     isStarted = false;
     item.classList.add('active');
-    const data = JSON.parse(item.getAttribute('data-item'));
   document.getElementById('startButton').style.display = 'none'
 
     startButton.disabled = false; // Enable the button
@@ -153,42 +153,6 @@ function CompareNames(object,reqItem) {
   }, {once: true});
 }
 
-
-
-function showGoToTaskButton() {
-  const messageContainer = document.getElementById('messageContainer');
-  const goToTaskButton = document.getElementById('goToTaskButton');
-  const message = document.getElementById('message');
-
-  message.textContent = 'Предмет выпал!';
-  goToTaskButton.style.display = 'inline-block';
-}
-function resetStartButtonText() {
-  startButton.textContent = 'Испытать удачу снова';
-  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
-  document.getElementById('startButton').style.display = 'none'
-
-}
-let isGoToTaskButtonShown = false;
-
-function showGoToTaskButton() {
-  const messageContainer = document.getElementById('messageContainer');
-  const goToTaskButton = document.getElementById('goToTaskButton');
-  const message = document.getElementById('message');
-  document.getElementById('startButton').style.display = 'none'
-  message.textContent = 'Предмет выпал!';
-  goToTaskButton.style.display = 'inline-block';
-}
-
-function resetStartButtonText() {
-  startButton.textContent = 'Испытать удачу снова';
-}
-startButton.addEventListener('click', () => {
-  resetStartButtonText(); // Change the button text back to "Испытать удачу снова"
-  isGoToTaskButtonShown = false; // Reset the flag
-  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
-  startButton.disabled = true; // Disable the button
-});
 goToTaskButton.addEventListener('click', () => {
   startButton.textContent = 'Крутить';
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
@@ -196,25 +160,13 @@ goToTaskButton.addEventListener('click', () => {
 const startButton = document.getElementById('startButton');
 const goToTaskButton = document.getElementById('goToTaskButton');
 
-function showGoToTaskButton() {
-  const messageContainer = document.getElementById('messageContainer');
-  const message = document.getElementById('message');
 
-  message.textContent = 'Предмет выпал!';
-  goToTaskButton.style.display = 'inline-block';
-  goToTaskButton.textContent = 'Испытать удачу снова';
-}
 
 startButton.addEventListener('click', () => {
   startButton.textContent = 'Крутить';
   document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
 });
 
-goToTaskButton.addEventListener('click', () => {
-  startButton.textContent = 'Крутить';
-  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
-});
-//162 строка
 window.addEventListener('resize', function() {
   // Получаем элементы, которые нужно зафиксировать
   var fixedElements = document.querySelectorAll('.fixed-element');
