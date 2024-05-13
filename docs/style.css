@@ -345,7 +345,7 @@ d
   background-color:gray;
   height: 722px;
   margin: 10px;
-  width:1040px;
+  width:784px;
   padding: 10px
 }
 .resultContainer-task{
@@ -354,7 +354,7 @@ d
   height: 585px;
   border-radius: 30px;
   margin: 10px;
-  width:1040px;
+  width:784px;
   padding: 10px
 }
 .ye{
@@ -366,7 +366,7 @@ p{
 }
 #cadeArea{
   height: 719px;
-  width: 1036px;
+  width: 777px;
   border-radius: 30px;
   border: none;
   background-color: #1b1f24;
