@@ -61,7 +61,9 @@ let item
 let resultContainer
 let resultTitle
 let resultImage
+let data1;
 function start() {
+  
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
   startButton.style.display = 'none'; // Скрываем кнопку "Крутить"
@@ -84,12 +86,30 @@ function start() {
   resultImage = document.getElementById('resultImage');
 
   setTimeout(() => {
-    var data1 = JSON.parse(item.getAttribute('data-item'));
-
-    resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name; // выводим имя выпавшего элемента
+    data1 = JSON.parse(item.getAttribute('data-item'));
+    resultTitle.textContent = data1.name; // выводим имя выпавшего элемента
     console.log(data1.name); // Выводим имя выпавшего элемента в консоль
+    resultImage.src = data1.img; // выводим изображение выпавшего элемента
 
-    resultImage.src = JSON.parse(item.getAttribute('data-item')).img; // выводим изображение выпавшего элемента
+    function compareNames(object, reqItem) {
+      let result;
+      object.forEach((item) => {
+        if (item.name === reqItem) {  
+          result = item;
+        }
+      });
+      return result;
+    }
+    const result = compareNames(items, data1.name);
+    localStorage.setItem('dataToPass', JSON.stringify(result));
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    const taskNameElement = document.querySelector('.taskName');
+const taskDescriptionElement = document.querySelector('.taskDescription');
+
+    console.log(dataToPass);
+
+    // доделать эту функцию /\
+
   }, 5000);
 
   resultContainer.style.display = 'block';
@@ -126,21 +146,25 @@ function start() {
     startButton.disabled = false; // Enable the button
     
   }, {once: true});
+
+  
 }
 /*function compareNames(object, reqItem) {
   let result;
+  reqItem = data1.name
   object.forEach((item) => {
     if (item.name === reqItem) {  
       result = item;
     }
   });
-  return result;
-}*/
+   console.log(result);
+   return result;
+}
 function compareNames(object, reqItem) {
   let result = object.find(item => item.name === reqItem);
   return result;
 }
-// доделать эту функцию /\
+console.log(data1.name); */
 const goToTaskButton = document.getElementById('goToTaskButton');
 
 goToTaskButton.addEventListener('click', () => {
