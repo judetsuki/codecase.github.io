@@ -78,15 +78,20 @@ function start() {
     list.style.transform = 'translate3d(-50%, 0, 0)';
   }, 0);
 
-   item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
-   resultContainer = document.getElementById('resultContainer');
-   resultTitle = document.getElementById('resultTitle');
-   resultImage = document.getElementById('resultImage');
+  item = list.querySelectorAll('li')[30]; // получаем 30-й подсвеченный элемент
+  resultContainer = document.getElementById('resultContainer');
+  resultTitle = document.getElementById('resultTitle');
+  resultImage = document.getElementById('resultImage');
+
   setTimeout(() => {
-    resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name // подсвечиваемый элемент который выпал
-  resultImage.src = JSON.parse(item.getAttribute('data-item')).img // подсвечиваемый элемент который выпал
+    var data1 = JSON.parse(item.getAttribute('data-item'));
+
+    resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name; // выводим имя выпавшего элемента
+    console.log(data1.name); // Выводим имя выпавшего элемента в консоль
+
+    resultImage.src = JSON.parse(item.getAttribute('data-item')).img; // выводим изображение выпавшего элемента
   }, 5000);
-  
+
   resultContainer.style.display = 'block';
 
 
@@ -135,7 +140,6 @@ function compareNames(object, reqItem) {
   let result = object.find(item => item.name === reqItem);
   return result;
 }
-const itemName = JSON.parse(item.getAttribute('data-item')).name; // не воркает 
 // доделать эту функцию /\
 const goToTaskButton = document.getElementById('goToTaskButton');
 
