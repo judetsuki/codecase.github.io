@@ -57,7 +57,10 @@ generateItems()
 
 let isStarted = false
 let isFirstStart = true
-
+let item
+let resultContainer
+let resultTitle
+let resultImage
 function start() {
   const startButton = document.getElementById('startButton');
   startButton.disabled = true; // Disable the button
@@ -75,10 +78,10 @@ function start() {
     list.style.transform = 'translate3d(-50%, 0, 0)';
   }, 0);
 
-  const item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
-  const resultContainer = document.getElementById('resultContainer');
-  const resultTitle = document.getElementById('resultTitle');
-  const resultImage = document.getElementById('resultImage');
+   item = list.querySelectorAll('li')[30]; // подсвечиваемый элемент
+   resultContainer = document.getElementById('resultContainer');
+   resultTitle = document.getElementById('resultTitle');
+   resultImage = document.getElementById('resultImage');
   setTimeout(() => {
     resultTitle.textContent = JSON.parse(item.getAttribute('data-item')).name // подсвечиваемый элемент который выпал
   resultImage.src = JSON.parse(item.getAttribute('data-item')).img // подсвечиваемый элемент который выпал
@@ -109,16 +112,7 @@ function start() {
     }
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
-  list.addEventListener('transitionend', () => {
-    isStarted = false;
-    item.classList.add('active');
-    const data = JSON.parse(item.getAttribute('data-item'));
-
-
-    startButton.disabled = false; // Enable the button
-       // Show the "Go to task" button
- // Reset the flag
-  }, {once: true});
+  
   list.addEventListener('transitionend', () => {
     isStarted = false;
     item.classList.add('active');
@@ -141,8 +135,7 @@ function compareNames(object, reqItem) {
   let result = object.find(item => item.name === reqItem);
   return result;
 }
-const itemName = JSON.parse(item.getAttribute('data-item')).name;
-console.log(itemName);
+const itemName = JSON.parse(item.getAttribute('data-item')).name; // не воркает 
 // доделать эту функцию /\
 const goToTaskButton = document.getElementById('goToTaskButton');
 
