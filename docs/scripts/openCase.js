@@ -10,7 +10,7 @@ const items = [
   {name: 'jini', img: './images/jini.png', chance: 14.29},
   {name: 'vini', img: './images/vinipuh.png', chance: 14.29},
 ]
-
+// создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
   let item;
   const totalChances = items.reduce((acc, curr) => acc + curr.chance, 0) ;
@@ -81,14 +81,13 @@ function start() {
   }, 0);
 
   item = list.querySelectorAll('li')[30]; // получаем 30-й подсвеченный элемент
-  resultContainer = document.getElementById('resultContainer');
-  resultTitle = document.getElementById('resultTitle');
-  resultImage = document.getElementById('resultImage');
+  resultContainer = document.getElementById('resultContainer'); // получаем контейнер для результата
+  resultTitle = document.getElementById('resultTitle'); // получаем заголовок результата
+  resultImage = document.getElementById('resultImage');   // получаем изображение результата
 
   setTimeout(() => {
     data1 = JSON.parse(item.getAttribute('data-item'));
     resultTitle.textContent = data1.name; // выводим имя выпавшего элемента
-    console.log(data1.name); // Выводим имя выпавшего элемента в консоль
     resultImage.src = data1.img; // выводим изображение выпавшего элемента
 
     function compareNames(object, reqItem) {
@@ -100,15 +99,15 @@ function start() {
       });
       return result;
     }
-    const result = compareNames(items, data1.name);
-    localStorage.setItem('dataToPass', JSON.stringify(result));
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
-    const taskName = document.getElementById('TaskName');
+    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
+    localStorage.setItem('dataToPass', JSON.stringify(result.name)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass')); // получаем данные из localStorage
+    const taskName = document.getElementById('TaskName'); // получаем элемент с названием задания
     if(taskName) {
-        taskName.textContent = dataToPass.name;
+        taskName.textContent = dataToPass.name; // устанавливаем название задания
     }
-
-    console.log(dataToPass);
+    document.querySelector('.myDiv').innerHTML = dataToPass.name
+    console.log(dataToPass.name); 
 
     // доделать эту функцию /\
 
@@ -151,22 +150,7 @@ function start() {
 
   
 }
-/*function compareNames(object, reqItem) {
-  let result;
-  reqItem = data1.name
-  object.forEach((item) => {
-    if (item.name === reqItem) {  
-      result = item;
-    }
-  });
-   console.log(result);
-   return result;
-}
-function compareNames(object, reqItem) {
-  let result = object.find(item => item.name === reqItem);
-  return result;
-}
-console.log(data1.name); */
+
 const goToTaskButton = document.getElementById('goToTaskButton');
 
 goToTaskButton.addEventListener('click', () => {

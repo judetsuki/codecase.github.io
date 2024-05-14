@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"> 
+      var number = localStorage.getItem('dataToPass');
+      </script>
 </head>
 <body>
 
@@ -30,20 +33,12 @@
             Output: [0,1]
             Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
           </p>
-
-
-          <div class="tasks" id="TaskName">
-            <!-- Здесь будет отображаться текст -->
-        </div>
-          <p>
-            Example 2:
-
-            Input: nums = [3,2,4], target = 6
-            Output: [1,2]
-
-          </p>
-
-          <p>
+          <h1 style="color: white;">
+            <script type="text/javascript">
+              document.write(number)
+            </script>
+          </h1>
+          <p> 
             Example 3:
 
             Input: nums = [3,3], target = 6
