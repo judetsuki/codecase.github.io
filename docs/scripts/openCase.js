@@ -103,8 +103,10 @@ function start() {
     const result = compareNames(items, data1.name);
     localStorage.setItem('dataToPass', JSON.stringify(result));
     const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
-    const taskNameElement = document.querySelector('.taskName');
-const taskDescriptionElement = document.querySelector('.taskDescription');
+    const taskName = document.getElementById('TaskName');
+    if(taskName) {
+        taskName.textContent = dataToPass.name;
+    }
 
     console.log(dataToPass);
 
