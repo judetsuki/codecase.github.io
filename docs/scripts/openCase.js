@@ -129,48 +129,20 @@ function start() {
     }
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
-  history.pushState({ page: 1 }, "Title 1", "?page=1");
-
-// Обрабатываем событие popstate для восстановления состояния предыдущей страницы
-// Сохраняем состояние текущей страницы в истории браузера
-const currentState = { page: 'current' };
-history.pushState(currentState, null, window.location.href);
-
-// Обрабатываем событие popstate для восстановления состояния предыдущей страницы
-window.addEventListener('popstate', function(event) {
-    if (event.state && event.state.page === 'current') {
-        // Восстанавливаем состояние предыдущей страницы
-        console.log("Возвращение на предыдущую страницу");
-    }
-});
 }
 
-// Сохраняем состояние текущей страницы в истории браузера
-const currentState = { page: 'current' };
-history.pushState(currentState, null, window.location.href);
+history.pushState({ page: 1 }, "Title 1", "?page=1");
 
 // Обрабатываем событие popstate для восстановления состояния предыдущей страницы
 window.addEventListener('popstate', function(event) {
-    if (event.state && event.state.page === 'current') {
-        // Восстанавливаем состояние предыдущей страницы
+    if (event.state) {
+        // Восстановление состояния предыдущей страницы
         console.log("Возвращение на предыдущую страницу");
     }
 });
 
-window.addEventListener('load', function() {
-  const savedState = localStorage.getItem('pageState');
-  if (savedState) {
-      // Восстанавливаем сохраненное состояние
-      console.log("Восстановление сохраненного состояния страницы");
-  }
-});
 
-// При уходе со страницы сохраняем текущее состояние
-window.addEventListener('beforeunload', function() {
-  const currentState = { page: 'current' };
-  localStorage.setItem('pageState', JSON.stringify(currentState));
-});
-
+// добавить сохранение кнопки 
 
 window.addEventListener('resize', function() {
   // Получаем элементы, которые нужно зафиксировать
