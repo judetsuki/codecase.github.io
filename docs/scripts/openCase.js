@@ -108,22 +108,13 @@ function start() {
     }
     document.querySelector('.myDiv').innerHTML = dataToPass.name
     console.log(dataToPass.name); 
-
-    // доделать эту функцию /\
-
   }, 5000);
-
   resultContainer.style.display = 'block';
-
-
-
 
   list.addEventListener('transitionend', () => {
     isStarted = false;
     item.classList.add('active');
     //const data = JSON.parse(item.getAttribute('data-item').name);
-
-
   }, {once: true});
   list.addEventListener('transitionend', () => {
     isStarted = false;
@@ -132,39 +123,54 @@ function start() {
 
 
     startButton.disabled = false; // Enable the button
-    function showGoToTaskButton(prizeName) {
+    function showGoToTaskButton() {
       const goToTaskButton = document.getElementById('goToTaskButton');
       goToTaskButton.style.display = 'inline-block';
     }
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
-  
-  list.addEventListener('transitionend', () => {
-    isStarted = false;
-    item.classList.add('active');
-  document.getElementById('startButton').style.display = 'none'
+  history.pushState({ page: 1 }, "Title 1", "?page=1");
 
-    startButton.disabled = false; // Enable the button
-    
-  }, {once: true});
+// Обрабатываем событие popstate для восстановления состояния предыдущей страницы
+// Сохраняем состояние текущей страницы в истории браузера
+const currentState = { page: 'current' };
+history.pushState(currentState, null, window.location.href);
 
-  
+// Обрабатываем событие popstate для восстановления состояния предыдущей страницы
+window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.page === 'current') {
+        // Восстанавливаем состояние предыдущей страницы
+        console.log("Возвращение на предыдущую страницу");
+    }
+});
 }
 
-const goToTaskButton = document.getElementById('goToTaskButton');
+// Сохраняем состояние текущей страницы в истории браузера
+const currentState = { page: 'current' };
+history.pushState(currentState, null, window.location.href);
 
-goToTaskButton.addEventListener('click', () => {
-  startButton.textContent = 'Крутить';
-  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+// Обрабатываем событие popstate для восстановления состояния предыдущей страницы
+window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.page === 'current') {
+        // Восстанавливаем состояние предыдущей страницы
+        console.log("Возвращение на предыдущую страницу");
+    }
 });
-const startButton = document.getElementById('startButton');
 
-
-
-startButton.addEventListener('click', () => {
-  startButton.textContent = 'Крутить';
-  document.getElementById('goToTaskButton').style.display = 'none'; // Hide the "Go to task" button
+window.addEventListener('load', function() {
+  const savedState = localStorage.getItem('pageState');
+  if (savedState) {
+      // Восстанавливаем сохраненное состояние
+      console.log("Восстановление сохраненного состояния страницы");
+  }
 });
+
+// При уходе со страницы сохраняем текущее состояние
+window.addEventListener('beforeunload', function() {
+  const currentState = { page: 'current' };
+  localStorage.setItem('pageState', JSON.stringify(currentState));
+});
+
 
 window.addEventListener('resize', function() {
   // Получаем элементы, которые нужно зафиксировать
@@ -176,7 +182,3 @@ window.addEventListener('resize', function() {
     element.style.position = 'fixed'; // Зафиксируем позицию элемента
   }
 });
-
-
-/*let dataTransfer = resultTitle;
-localStorage.setItem(dataTransfer);*/
