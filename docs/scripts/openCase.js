@@ -87,8 +87,8 @@ function start() {
 
   setTimeout(() => {
     data1 = JSON.parse(item.getAttribute('data-item'));
-    resultTitle.textContent = data1.name; // выводим имя выпавшего элемента
-    resultImage.src = data1.img; // выводим изображение выпавшего элемента
+    //resultTitle.textContent = data1.name; // выводим имя выпавшего элемента
+    //resultImage.src = data1.img; // выводим изображение выпавшего элемента
 
     function compareNames(object, reqItem) {
       let result;
