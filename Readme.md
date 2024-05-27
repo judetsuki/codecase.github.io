@@ -1,10 +1,4 @@
 # A gamified educational website project
 
-## by Fdevll, luka0204, YaroslavDudin, elektrosila , and jop221
+## by luka0204, YaroslavDudin
 
-
-## Основные Задачи -
-
- **elektrosila & Fdevll & jop221** - интеграция заданий на страницу с решением задач
-
- **YaroslavDudin** - интеграция тестов на страницу решения задачи (потом)
