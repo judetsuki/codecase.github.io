@@ -51,6 +51,8 @@ border-top: solid black 3px;
   background-color: rgb(219, 219, 219);
   box-shadow: 0px 0px 25px black inset;
   border: solid 2px black;
+  display: flex;
+  justify-content: space-between;
 }
 
 .case_of_the_day_menu{
@@ -125,10 +127,10 @@ text-shadow: white 0px 0 8px;
   margin-top: 50px;
 }
 
-.q1_case{
-position: absolute;
+
+.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case{
 bottom: 15%;
-width: 320px;
+width: 200px;
 margin-left: 1%;
 }
 
