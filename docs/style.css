@@ -310,12 +310,11 @@ d
   opacity: 0.8;
 }
 
-
-
 .case_on_open_page{
   position: absolute;
-  left: calc(50% - (360px / 2));
-  top:17%;
+  left: calc(50% - (638px / 2));
+  width: 50%;
+  top: 10%;
 }
 
 .text_above_case{
