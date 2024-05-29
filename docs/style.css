@@ -125,9 +125,11 @@ text-shadow: white 0px 0 8px;
   margin-top: 50px;
 }
 
-.case_test{
+.q1_case{
 position: absolute;
-top: -20px ;
+bottom: 15%;
+width: 25%;
+margin-left: 1%;
 }
 
 /* ///////////////////// */ test scripts below /* ///////////////////// */
