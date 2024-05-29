@@ -9,8 +9,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript"> 
-      var number = localStorage.getItem('dataToPass');
+      var number = JSON.parse(localStorage.getItem('dataToPass'));
       </script>
+
 </head>
 <body>
 
@@ -26,10 +27,13 @@
         <div class= 'descritionContainer'>
           <h1 class="taskName">
             <script type="text/javascript">
-              document.write(number)
+              document.write(number.name)
             </script>
           </h1>
-          <p class="taskDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <p id = "task_text" class="taskDescription">
+            <script type="text/javascript">
+              document.write(number.taskText)
+            </script>
           </p>
           <p>
             Example 1:

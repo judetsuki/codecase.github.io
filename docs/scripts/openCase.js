@@ -2,13 +2,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: './images/iPhone.png', chance: 14.29},
-  {name: 'Keyboard', img: './images/keyboard.png', chance: 14.29},
-  {name: 'Headphones', img: './images/headphones.png', chance: 14.29},
-  {name: 'Pivo', img: './images/pivo.png', chance: 14.29},
-  {name: 'butterfly', img: './images/butterfly.png', chance: 14.29},
-  {name: 'jini', img: './images/jini.png', chance: 14.29},
-  {name: 'vini', img: './images/vinipuh.png', chance: 14.29},
+  {name: 'iPhone', img: './images/iPhone.png',taskText : 'task_text', chance: 14.29},
+  {name: 'Keyboard', img: './images/keyboard.png',taskText : 'task_text', chance: 14.29},
+  {name: 'Headphones', img: './images/headphones.png',taskText : 'task_text', chance: 14.29},
+  {name: 'Pivo', img: './images/pivo.png',taskText : 'task_text', chance: 14.29},
+  {name: 'butterfly', img: './images/butterfly.png',taskText : 'task_text', chance: 14.29},
+  {name: 'jini', img: './images/jini.png',taskText : 'task_text', chance: 14.29},
+  {name: 'vini', img: './images/vinipuh.png',taskText : 'task_text', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -33,9 +33,9 @@ function getItem() {
 
 function generateItems() {
   document.querySelector('.list').remove()
-  document.querySelector('.scope').innerHTML = `
-    <ul class="list"></ul>
-  `
+   document.querySelector('.scope').innerHTML = `
+     <ul class="list"></ul>
+   `
   
   const list = document.querySelector('.list')
 
@@ -100,14 +100,11 @@ function start() {
       return result;
     }
     const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPass', JSON.stringify(result.name)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass')); // получаем данные из localStorage
-    const taskName = document.getElementById('TaskName'); // получаем элемент с названием задания
-    if(taskName) {
-        taskName.textContent = dataToPass.name; // устанавливаем название задания
-    }
-    document.querySelector('.myDiv').innerHTML = dataToPass.name
-    console.log(dataToPass.name); 
+    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    console.log(dataToPass) // получаем данные из localStorage
+    
+    
   }, 5000);
   resultContainer.style.display = 'block';
 
