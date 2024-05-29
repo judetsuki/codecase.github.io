@@ -128,7 +128,7 @@ text-shadow: white 0px 0 8px;
 .q1_case{
 position: absolute;
 bottom: 15%;
-width: 25%;
+width: 320px;
 margin-left: 1%;
 }
 
@@ -314,9 +314,9 @@ d
 
 .case_on_open_page{
   position: absolute;
-  left: calc(50% - (638px / 2));
-  width: 50%;
-  top: 10%;
+  left: calc(50% - (320px / 2));
+  width: 320px;
+  top: 30%;
 }
 
 .text_above_case{
