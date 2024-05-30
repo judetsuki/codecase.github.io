@@ -138,7 +138,7 @@ text-shadow: white 0px 0 8px;
 }
 
 
-.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case{
+.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case ,.uniq_case ,.day_case {
 bottom: 15%;
 width: 200px;
 margin-left: 1%;
