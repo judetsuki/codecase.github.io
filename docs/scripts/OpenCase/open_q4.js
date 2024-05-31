@@ -2,13 +2,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: '../images/iPhone.png',taskText : 'здесь должна быть переменная', chance: 14.29},
-  {name: 'Keyboard', img: '../images/keyboard.png',taskText : 'и здесь', chance: 14.29},
-  {name: 'Headphones', img: '../images/headphones.png',taskText : 'здесь тоже переменая', chance: 14.29},
-  {name: 'Pivo', img: '../images/pivo.png',taskText : 'в файле tasks.js переменные', chance: 14.29},
-  {name: 'butterfly', img: '../images/butterfly.png',taskText : 'это туда нужно засунуть сюда', chance: 14.29},
-  {name: 'jini', img: '../images/jini.png',taskText : 'переменные это лет и конст и имя переменной', chance: 14.29},
-  {name: 'vini', img: '../images/vinipuh.png',taskText : 'парни я в вас верю', chance: 14.29},
+  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : 'здесь должна быть переменная', chance: 14.29},
+  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : 'и здесь', chance: 14.29},
+  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : 'здесь тоже переменая', chance: 14.29},
+  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : 'в файле tasks.js переменные', chance: 14.29},
+  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : 'это туда нужно засунуть сюда', chance: 14.29},
+  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : 'переменные это лет и конст и имя переменной', chance: 14.29},
+  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : 'парни я в вас верю', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -93,13 +93,13 @@ function start() {
     function compareNames(object, reqItem) {
       let result;
       object.forEach((item) => {
-        if (item.name === reqItem) {  
+        if (item.nameQ4 === reqItem) {  
           result = item;
         }
       });
       return result;
     }
-    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
+    const result = compareNames(items, data1.nameQ4); // сравниваем имя выпавшего элемента с именами предметов
     localStorage.setItem('dataToPass4', JSON.stringify(result)); // сохраняем данные в localStorage
     const dataToPass = JSON.parse(localStorage.getItem('dataToPass4'));
     console.log(dataToPass) // получаем данные из localStorage
@@ -127,6 +127,9 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
+
+const a = document.querySelector('.start');
+a.addEventListener('click', start);
 
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 
