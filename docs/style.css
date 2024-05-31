@@ -53,38 +53,27 @@ border-top: solid black 3px;
   border: solid 2px black;
   display: flex;
   justify-content: space-between;
+  padding: 10px 10px 10px 10px;
 }
 
-.case_of_the_day_menu{
+.case_of_the_day_menu,.unique_cases_menu{
   position: relative;
   margin-top: 200px;
   border-radius: 10px;
-  height: 300px;
-  width: 42%;
-  display: inline-block;
+  height: 150px;
+  width: 30%;
   background-color: rgb(219, 219, 219);
   box-shadow: 0px 0px 25px black inset;
   border: solid 2px black;
-}
-
-.unique_cases_menu{
-  position: relative;
-  margin-top: 200px;
-  border-radius: 10px;
-  height: 300px;
-  width: 42%;
-  display: inline-block;
-  margin-left: 6%;
-  background-color: rgb(219, 219, 219);
-  box-shadow: 0px 0px 25px black inset;
-  border: solid 2px black;
+  display: inline-flex;
+  padding: 10px 10px 10px 10px;
 }
 
 .case_of_the_day_text,.unique_cases_text{
 font-size: 50px;
 text-align: center;
 position: relative;
-bottom: 150px;
+bottom: 120%;
 color: black;
 text-shadow: white 0px 0 8px;
 }
@@ -138,10 +127,15 @@ text-shadow: white 0px 0 8px;
 }
 
 
-.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case ,.uniq_case ,.day_case {
+.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case {
 bottom: 15%;
 width: 200px;
 margin-left: 1%;
+}
+
+.uniq_case ,.day_case,.day {
+  position: relative;
+  width: 200px;
 }
 
 /* ///////////////////// */ test scripts below /* ///////////////////// */
@@ -194,8 +188,7 @@ margin-left: 1%;
 
 .scope{
   background-color: rgb(22, 22, 22);
-  position: absolute;
-  top:50%;
+  position: relative;
   width: 50%;
   border-radius: 24px;
   left: 25%;
@@ -210,17 +203,19 @@ d
   border-radius: 10px;
 }
 .app .pointer {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 50%;
-  transform: translate3d(-50%, -25px, 0);
+  left: calc(50% - (35px / 2));
+
   height: 35px;
-  top: 49%;
   filter: drop-shadow(0 0 20px rgba(230, 174, 174, 0.3));
+  margin-top: 1%;
+  bottom: 0px;
 }
 .app .scope {
   overflow: hidden;
 }
+
 .app .scope .list {
   position: relative;
   display: inline-flex;
@@ -256,10 +251,9 @@ d
   transition: 0.3s ease;
 }
 .app .start {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate3d(-50%, 20px, 0);
+  position: relative;
+  left: calc(50% - (112.45px / 2));  
+  margin-top: 1%;
   padding: 8px 25px;
   border: none;
   border-radius: 5px;
@@ -316,8 +310,8 @@ d
   box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
   cursor: pointer;
   left: calc(50% - (193.2px / 2));
-  top: calc(73% - (21.6px / 2));
-  position: absolute
+  margin-top: 1%;
+  position: relative;
   
 }
 .task:hover {
@@ -325,17 +319,24 @@ d
 }
 
 .case_on_open_page{
-  position: absolute;
+  position: relative;
   left: calc(50% - (320px / 2));
   width: 320px;
-  top: 30%;
+  margin-top: 5%;
 }
 
 .text_above_case{
-  position:absolute;
+  position:relative;
   color: white;
-  left: calc(50% - (158.4px / 2));
+  left: calc(50% - (115.2px / 2));
   top: 17%;
+}
+
+.text_above_case_uniq{
+  position:relative;
+  color: white;
+  left: calc(50% - (187.2px / 2));
+  top: 17%; 
 }
 .section-1{
   display: grid;

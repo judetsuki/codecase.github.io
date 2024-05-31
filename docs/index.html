@@ -6,6 +6,11 @@
     <title>codecase</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"> 
+        var number = localStorage.getItem('selectedImagePath');
+        </script>
 </head>
 <body>
 
@@ -27,13 +32,17 @@
     <div class ="cases_parent">
     <div class = "case_of_the_day_menu">
         <h2 class = "case_of_the_day_text">Case of the Day</h2>
-        <a href='./CaseOpenPage/case_open_page_of_the_day.html'><img src="./images/cases/uniqCase.png" alt="case_test" class = "uniq_case"></a>
+        <a href='' class="day"><img src="" alt="case_test" class = "day_case"></a>
+        <a href = '' onclick="runme()"> <img src=""></a>
 
+<script>
+    document.write(number)
+</script>
         </div>
             
         <div class = "unique_cases_menu">
             <h2 class = "unique_cases_text">Unique Cases</h2>
-            <a href='./CaseOpenPage/case_open_page_unique.html'><img src="./images/cases/uniqCase.png" alt="case_test" class = "day_case"></a>
+            <a href='./CaseOpenPage/case_open_page_unique.html'><img src="./images/cases/uniqCase.png" alt="case_test" class = "uniq_case"></a>
             </div>
         </div>
         <footer>
@@ -41,3 +50,4 @@
 </body>
 </html>
 
+<script src ="./scripts/case_of_the_day.js"></script>

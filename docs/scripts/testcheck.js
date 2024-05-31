@@ -1,6 +1,4 @@
-/*<div id="results"></div>
 
-<script>
 fetch('https://api.github.com/repos/luka0204/codecase.github.io/actions/runs')
   .then(response => response.json())
   .then(data => {
@@ -19,6 +17,25 @@ fetch('https://api.github.com/repos/luka0204/codecase.github.io/actions/runs')
       <p>Ошибка при получении результатов.</p>
     `;
   });
-</script>
+/*
+  const userCode = document.getElementById('userCode').value; // получите код пользователя из текстового поля
 
-</div> */
+fetch('/api/tests', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    code: userCode,
+    taskId: 'your_task_id' // замените на фактический идентификатор задачи
+  })
+})
+  .then(response => response.json())
+  .then(data => {
+    // обработайте ответ от сервера
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Ошибка:', error);
+  });
+  */
