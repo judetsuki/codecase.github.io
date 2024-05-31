@@ -94,15 +94,15 @@ function start() {
     function compareNames(object, reqItem) {
       let result;
       object.forEach((item) => {
-        if (item.name === reqItem) {  
+        if (item.nameQ6 === reqItem) {  
           result = item;
         }
       });
       return result;
     }
-    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    const result = compareNames(items, data1.nameQ6); // сравниваем имя выпавшего элемента с именами предметов
+    localStorage.setItem('dataToPass6', JSON.stringify(result)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass6'));
     console.log(dataToPass) // получаем данные из localStorage
     
     
