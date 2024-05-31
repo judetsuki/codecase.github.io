@@ -1,14 +1,13 @@
+import { text_6 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
-
-// From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: '../images/iPhone.png',taskText : 'здесь должна быть переменная', chance: 14.29},
-  {name: 'Keyboard', img: '../images/keyboard.png',taskText : 'и здесь', chance: 14.29},
-  {name: 'Headphones', img: '../images/headphones.png',taskText : 'здесь тоже переменая', chance: 14.29},
-  {name: 'Pivo', img: '../images/pivo.png',taskText : 'в файле tasks.js переменные', chance: 14.29},
-  {name: 'butterfly', img: '../images/butterfly.png',taskText : 'это туда нужно засунуть сюда', chance: 14.29},
-  {name: 'jini', img: '../images/jini.png',taskText : 'переменные это лет и конст и имя переменной', chance: 14.29},
-  {name: 'vini', img: '../images/vinipuh.png',taskText : 'парни я в вас верю', chance: 14.29},
+  {nameQ5: 'iPhone', img: '../images/iPhone.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'Keyboard', img: '../images/keyboard.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'Headphones', img: '../images/headphones.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'Pivo', img: '../images/pivo.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'butterfly', img: '../images/butterfly.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'jini', img: '../images/jini.png',taskTextQ5 : text_6, chance: 14.29},
+  {nameQ5: 'vini', img: '../images/vinipuh.png',taskTextQ5 : text_6, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -100,8 +99,9 @@ function start() {
       return result;
     }
     const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    localStorage.setItem('dataToPass1', JSON.stringify(result)); // сохраняем данные в localStorage
+
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass1'));
     console.log(dataToPass) // получаем данные из localStorage
     
     
@@ -127,7 +127,8 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
-
+const a = document.querySelector('.start');
+a.addEventListener('click', start);
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 
 // Обрабатываем событие popstate для восстановления состояния предыдущей страницы
