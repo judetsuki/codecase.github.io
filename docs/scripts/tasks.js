@@ -52,5 +52,17 @@ export const text_q1_3 = 'Task \n You are at start location [0, 0] in mountain a
 export const text_q1_4 = 'In this Kata, you will be given boolean values and boolean operators. Your task will be to return the number of arrangements that evaluate to True. \n t,f will stand for true, false and the operators will be Boolean AND (&), OR (|), and XOR (^). \n For example, solve("tft","^&") = 2, as follows: \n "((t ^ f) & t)" = True \n "(t ^ (f & t))" = True \n Notice that the order of the boolean values and operators does not change. What changes is the position of braces. \n More examples in the test cases. \n Good luck!'; // https://www.codewars.com/kata/59eb1e4a0863c7ff7e000008
 export const text_q1_5 = 'If youd like to take a breather before continuing with this challenge, you may want to complete Generate BF Program from Target Output Brainfuck generator first. \n Original Task \n Write a function that receives a string as input and outputs a valid BF program that evaluates to the given string. There is no restriction as to how long or how short your output program must be for any given string but if youre feeling up for the challenge then do try to make your code generator optimise the BF code so that it contains as few characters as possible. A BF interpreter interpreter() has been preloaded for you. \n Additional Requirements \n In addition to the instructions specified above, a reference solution reference() has also been preloaded for you. In this Kata, your solution must always return a shorter BF program in terms of character count compared to that returned by the reference solution for all input strings of length >= 20.'; // https://www.codewars.com/kata/585e3bec6d36a5cad5000103
 export const text_q1_6 = 'Preface \n This is the crazy hard version of the Prime Ant - Performance Version kata. If you did not complete it yet, you should begin there. \n Description, task and examples \n Everything is exactly the same as in the previous version (see above). You should really complete that first, then take your solution here and get started! \n Tests \n Now this is where we re going crazy! You will have 2000 test cases in the 106 to 2 * 106 range. Sounds too much? No, it isnt: the reference solution can do almost the double before timing out. Sounds too few? Well, you must leave some room for less optimized solutions :-) Also, CW would choke because of too much output...'; // https://www.codewars.com/kata/5a54e01d80eba8014c000344
-export const text_q1_7 = 'There are a series of 10 bombs about to go off! Defuse them all! Simple, right? \n Note: This is not an ordinary Kata, but more of a series of puzzles. The point is to figure out what you are supposed to do, then how to do it. Instructions are intentionally left vague.'; // https://www.codewars.com/kata/54d558c72a5e542c0600060f
+export const text_q1_7 = 'There are a series of 10 bombs about to go off! Defuse them all! Simple, right? \n Note: This is not an ordinary Kata, but more of a series of puzzles. The point is to figure out what you are supposed to do, then how to do it. Instructions are intentionally left vague.'; // https://www.codewars.com/kata/54d558c72a5e542c0600060fц
+
+
+// UniqCase Tasks
+
+export const text_uniq_1 = '';
+export const text_uniq_2 = '';
+export const text_uniq_3 = '';
+export const text_uniq_4 = '';
+export const text_uniq_5 = '';
+export const text_uniq_6 = '';
+export const text_uniq_7 = '';
+
 

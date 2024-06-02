@@ -1,4 +1,4 @@
-import { text_1, text_2 , text_3 , text_4 , text_5 } from "../tasks.js";
+import { text_q6_1 , text_q6_2 , text_q6_3 , text_q6_4 , text_q6_5 , text_q6_6 , text_q6_7 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
