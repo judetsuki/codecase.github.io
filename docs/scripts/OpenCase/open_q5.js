@@ -1,4 +1,4 @@
-import { text_6 } from "../tasks.js";
+import { text_q5_1 , text_q5_2 , text_q5_3 , text_q5_4 , text_q5_5 , text_q5_6 , text_q5_7 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 const items = [
   {nameQ5: 'iPhone', img: '../images/iPhone.png',taskTextQ5 : text_q5_1, chance: 14.29},
