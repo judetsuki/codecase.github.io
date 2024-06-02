@@ -94,15 +94,15 @@ function start() {
     function compareNames(object, reqItem) {
       let result;
       object.forEach((item) => {
-        if (item.name === reqItem) {  
+        if (item.nameQ1 === reqItem) {  
           result = item;
         }
       });
       return result;
     }
-    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    const result = compareNames(items, data1.nameQ1); // сравниваем имя выпавшего элемента с именами предметов
+    localStorage.setItem('dataToPass1', JSON.stringify(result)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass1'));
     console.log(dataToPass) // получаем данные из localStorage
     
     
@@ -128,6 +128,7 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
+ const a = document.querySelector('.start');a.addEventListener('click', start);
 
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 
