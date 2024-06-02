@@ -3,13 +3,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ6: 'iPhone', img: '../images/iPhone.png',taskTextQ6 : text_1, chance: 14.29},
-  {nameQ6: 'Keyboard', img: '../images/keyboard.png',taskTextQ6 : text_2, chance: 14.29},
-  {nameQ6: 'Headphones', img: '../images/headphones.png',taskTextQ6 : text_3, chance: 14.29},
-  {nameQ6: 'Pivo', img: '../images/pivo.png',taskTextQ6 : text_4, chance: 14.29},
-  {nameQ6: 'butterfly', img: '../images/butterfly.png',taskTextQ6 : text_5, chance: 14.29},
-  {nameQ6: 'jini', img: '../images/jini.png',taskTextQ6 : text_1, chance: 14.29},
-  {nameQ6: 'vini', img: '../images/vinipuh.png',taskTextQ6 : text_2, chance: 14.29},
+  {nameQ6: 'iPhone', img: '../images/iPhone.png',taskTextQ6 : text_q6_1, chance: 14.29},
+  {nameQ6: 'Keyboard', img: '../images/keyboard.png',taskTextQ6 : text_q6_2, chance: 14.29},
+  {nameQ6: 'Headphones', img: '../images/headphones.png',taskTextQ6 : text_q6_3, chance: 14.29},
+  {nameQ6: 'Pivo', img: '../images/pivo.png',taskTextQ6 : text_q6_4, chance: 14.29},
+  {nameQ6: 'butterfly', img: '../images/butterfly.png',taskTextQ6 : text_q6_5, chance: 14.29},
+  {nameQ6: 'jini', img: '../images/jini.png',taskTextQ6 : text_q6_6, chance: 14.29},
+  {nameQ6: 'vini', img: '../images/vinipuh.png',taskTextQ6 : text_q6_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

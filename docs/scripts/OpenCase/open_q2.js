@@ -2,13 +2,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: '../images/iPhone.png',taskText : 'здесь должна быть переменная', chance: 14.29},
-  {name: 'Keyboard', img: '../images/keyboard.png',taskText : 'и здесь', chance: 14.29},
-  {name: 'Headphones', img: '../images/headphones.png',taskText : 'здесь тоже переменая', chance: 14.29},
-  {name: 'Pivo', img: '../images/pivo.png',taskText : 'в файле tasks.js переменные', chance: 14.29},
-  {name: 'butterfly', img: '../images/butterfly.png',taskText : 'это туда нужно засунуть сюда', chance: 14.29},
-  {name: 'jini', img: '../images/jini.png',taskText : 'переменные это лет и конст и имя переменной', chance: 14.29},
-  {name: 'vini', img: '../images/vinipuh.png',taskText : 'парни я в вас верю', chance: 14.29},
+  {name: 'iPhone', img: '../images/iPhone.png',taskText : text_q2_1, chance: 14.29},
+  {name: 'Keyboard', img: '../images/keyboard.png',taskText : text_q2_2, chance: 14.29},
+  {name: 'Headphones', img: '../images/headphones.png',taskText : text_q2_3, chance: 14.29},
+  {name: 'Pivo', img: '../images/pivo.png',taskText : text_q2_4, chance: 14.29},
+  {name: 'butterfly', img: '../images/butterfly.png',taskText : text_q2_5, chance: 14.29},
+  {name: 'jini', img: '../images/jini.png',taskText : text_q2_6, chance: 14.29},
+  {name: 'vini', img: '../images/vinipuh.png',taskText : text_q2_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

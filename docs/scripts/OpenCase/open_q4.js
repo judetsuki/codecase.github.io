@@ -2,13 +2,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : 'здесь должна быть переменная', chance: 14.29},
-  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : 'и здесь', chance: 14.29},
-  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : 'здесь тоже переменая', chance: 14.29},
-  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : 'в файле tasks.js переменные', chance: 14.29},
-  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : 'это туда нужно засунуть сюда', chance: 14.29},
-  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : 'переменные это лет и конст и имя переменной', chance: 14.29},
-  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : 'парни я в вас верю', chance: 14.29},
+  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, chance: 14.29},
+  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : text_q4_2, chance: 14.29},
+  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : text_q4_3, chance: 14.29},
+  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, chance: 14.29},
+  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : text_q4_5, chance: 14.29},
+  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : text_q4_6, chance: 14.29},
+  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
