@@ -94,15 +94,15 @@ function start() {
     function compareNames(object, reqItem) {
       let result;
       object.forEach((item) => {
-        if (item.name === reqItem) {  
+        if (item.nameQ2 === reqItem) {  
           result = item;
         }
       });
       return result;
     }
-    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
+    const result = compareNames(items, data1.nameQ2); // сравниваем имя выпавшего элемента с именами предметов
+    localStorage.setItem('dataToPass2', JSON.stringify(result)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass2'));
     console.log(dataToPass) // получаем данные из localStorage
     
     
@@ -138,7 +138,7 @@ window.addEventListener('popstate', function(event) {
         console.log("Возвращение на предыдущую страницу");
     }
 });
-
+const a = document.querySelector('.start');a.addEventListener('click', start);
 
 // добавить сохранение кнопки 
 

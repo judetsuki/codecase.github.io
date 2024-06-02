@@ -57,12 +57,12 @@ export const text_q1_7 = 'There are a series of 10 bombs about to go off! Defuse
 
 // UniqCase Tasks
 
-export const text_uniq_1 = '';
-export const text_uniq_2 = '';
-export const text_uniq_3 = '';
-export const text_uniq_4 = '';
-export const text_uniq_5 = '';
-export const text_uniq_6 = '';
-export const text_uniq_7 = '';
+export const text_uniq_1 = 'Create an endless stream that yields prime numbers. The stream must be able to produce a million primes in a few seconds. \n If this is too easy, try Prime Streaming (NC-17).'; // https://www.codewars.com/kata/5519a584a73e70fa570005f5; q1_2task
+export const text_uniq_2 = 'Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ). \n Examples \n n = 0  ==> [1]        # [2^0] \n n = 1  ==> [1, 2]     # [2^0, 2^1] \n n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]'; // https://www.codewars.com/kata/57a083a57cb1f31db7000028; q6_task2
+export const text_uniq_3 = 'This code does not execute properly. Try to figure out why.'; // https://www.codewars.com/kata/50654ddff44f800200000004; q6_3
+export const text_uniq_4 = 'Given a non-negative integer, return an array / a list of the individual digits in order. \n Examples: \n 123 => [1,2,3] \n 1 => [1] \n 8675309 => [8,6,7,5,3,0,9]'; // https://www.codewars.com/kata/5417423f9e2e6c2f040002ae; q5_6task
+export const text_uniq_5 = 'Task \n You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions. \n Examples \n [7, 1]  =>  [1, 7] \n [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4] \n [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]'; // https://www.codewars.com/kata/578aa45ee9fd15ff4600090d; q4_3task
+export const text_uniq_6 = 'A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). \n Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.'; // https://www.codewars.com/kata/545cedaa9943f7fe7b000048; q4_6task
+export const text_uniq_7 = 'Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers. \n For example: \n ([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8] \n ([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26] \n ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]'; // https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c; q5_5task
 
 
