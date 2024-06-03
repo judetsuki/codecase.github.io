@@ -44,24 +44,25 @@ border-top: solid black 3px;
   position: relative;
   margin-top: 200px;
   border-radius: 10px;
-  height: 150px;
-  width: 90%;
+  height: 150%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(219, 219, 219);
   box-shadow: 0px 0px 25px black inset;
   border: solid 2px black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px 10px 10px 10px;
+
 }
 
 .case_of_the_day_menu,.unique_cases_menu{
   position: relative;
   margin-top: 200px;
   border-radius: 10px;
-  height: 150px;
-  width: 30%;
+  max-height: 150%;
+  max-width: 30%;
   background-color: rgb(219, 219, 219);
   box-shadow: 0px 0px 25px black inset;
   border: solid 2px black;
@@ -70,23 +71,28 @@ border-top: solid black 3px;
 }
 
 .case_of_the_day_text,.unique_cases_text{
-font-size: 50px;
-text-align: center;
-position: relative;
-bottom: 120%;
+position: absolute;
+bottom: 90%;
 color: black;
 text-shadow: white 0px 0 8px;
 }
+
+.case_of_the_day_text,.unique_cases_text,.all_cases_text{
+  font-size: 2.9vw;
+}
+.unique_cases_text{
+  margin-left: 10%;
+}
+
+.case_of_the_day_text{
+  margin-left: 5%;
+}
+
 .all_cases_text {
-  font-size: 50px;
-  text-align: center;
   position: absolute;
-  top: calc(0% - 100px); 
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 90%;
   color: black;
   text-shadow: white 0px 0 8px;
-  z-index: 1; 
 }
 .cases_parent{
   text-align: center;
@@ -129,13 +135,12 @@ text-shadow: white 0px 0 8px;
 
 .q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case {
 bottom: 15%;
-width: 200px;
+max-width: 82%;
 margin-left: 1%;
 }
 
-.uniq_case ,.day_case,.day {
-  position: relative;
-  width: 200px;
+.uniq_case ,.day_case {
+max-width: 42%;
 }
 
 /* ///////////////////// */ test scripts below /* ///////////////////// */
