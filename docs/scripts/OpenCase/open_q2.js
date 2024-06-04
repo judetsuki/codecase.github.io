@@ -1,15 +1,15 @@
-import { text_q2_1 , text_q2_2 , text_q2_3 , text_q2_4 , text_q2_5 , text_q2_6 , text_q2_7 } from "../tasks.js";
+import { text_q2_1, text_q2_2, text_q2_3, text_q2_4, text_q2_5, text_q2_6, text_q2_7  } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: '../images/iPhone.png',taskText : text_q2_1, chance: 14.29},
-  {name: 'Keyboard', img: '../images/keyboard.png',taskText : text_q2_2, chance: 14.29},
-  {name: 'Headphones', img: '../images/headphones.png',taskText : text_q2_3, chance: 14.29},
-  {name: 'Pivo', img: '../images/pivo.png',taskText : text_q2_4, chance: 14.29},
-  {name: 'butterfly', img: '../images/butterfly.png',taskText : text_q2_5, chance: 14.29},
-  {name: 'jini', img: '../images/jini.png',taskText : text_q2_6, chance: 14.29},
-  {name: 'vini', img: '../images/vinipuh.png',taskText : text_q2_7, chance: 14.29},
+  {nameQ2: 'iPhone', img: '../images/iPhone.png',taskTextQ2 : text_q2_1, chance: 14.29},
+  {nameQ2: 'Keyboard', img: '../images/keyboard.png',taskTextQ2 : text_q2_2, chance: 14.29},
+  {nameQ2: 'Headphones', img: '../images/headphones.png',taskTextQ2 : text_q2_3, chance: 14.29},
+  {nameQ2: 'Pivo', img: '../images/pivo.png',taskTextQ2 : text_q2_4, chance: 14.29},
+  {nameQ2: 'butterfly', img: '../images/butterfly.png',taskTextQ2 : text_q2_5, chance: 14.29},
+  {nameQ2: 'jini', img: '../images/jini.png',taskTextQ2 : text_q2_6, chance: 14.29},
+  {nameQ2: 'vini', img: '../images/vinipuh.png',taskTextQ2 : text_q2_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -129,6 +129,9 @@ function start() {
   }, {once: true});
 }
 
+const a = document.querySelector('.start');
+a.addEventListener('click', start);
+
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 
 // Обрабатываем событие popstate для восстановления состояния предыдущей страницы
@@ -138,7 +141,7 @@ window.addEventListener('popstate', function(event) {
         console.log("Возвращение на предыдущую страницу");
     }
 });
-const a = document.querySelector('.start');a.addEventListener('click', start);
+
 
 // добавить сохранение кнопки 
 

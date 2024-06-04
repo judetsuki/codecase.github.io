@@ -1,15 +1,15 @@
-import { text_q1_1 , text_q1_2 , text_q1_3 , text_q1_4 , text_q1_5 , text_q1_6 , text_q1_7 } from "../tasks.js";
+import { text_q1_1, text_q1_2, text_q1_3, text_q1_4, text_q1_5, text_q1_6, text_q1_7 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {name: 'iPhone', img: '../images/iPhone.png',taskText : text_q1_1, chance: 14.29},
-  {name: 'Keyboard', img: '../images/keyboard.png',taskText : text_q1_2, chance: 14.29},
-  {name: 'Headphones', img: '../images/headphones.png',taskText : text_q1_3, chance: 14.29},
-  {name: 'Pivo', img: '../images/pivo.png',taskText : text_q1_4, chance: 14.29},
-  {name: 'butterfly', img: '../images/butterfly.png',taskText : text_q1_5, chance: 14.29},
-  {name: 'jini', img: '../images/jini.png',taskText : text_q1_6, chance: 14.29},
-  {name: 'vini', img: '../images/vinipuh.png',taskText : text_q1_7, chance: 14.29},
+  {nameQ1: 'iPhone', img: '../images/iPhone.png',taskTextQ1 : text_q1_1, chance: 14.29},
+  {nameQ1: 'Keyboard', img: '../images/keyboard.png',taskTextQ1 : text_q1_2, chance: 14.29},
+  {nameQ1: 'Headphones', img: '../images/headphones.png',taskTextQ1 : text_q1_3, chance: 14.29},
+  {nameQ1: 'Pivo', img: '../images/pivo.png',taskTextQ1 : text_q1_4, chance: 14.29},
+  {nameQ1: 'butterfly', img: '../images/butterfly.png',taskTextQ1 : text_q1_5, chance: 14.29},
+  {nameQ1: 'jini', img: '../images/jini.png',taskTextQ1 : text_q1_6, chance: 14.29},
+  {nameQ1: 'vini', img: '../images/vinipuh.png',taskTextQ1: text_q1_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -128,7 +128,9 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
- const a = document.querySelector('.start');a.addEventListener('click', start);
+
+const a = document.querySelector('.start');
+a.addEventListener('click', start);
 
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 

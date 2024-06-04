@@ -103,7 +103,7 @@ function start() {
     const result = compareNames(items, data1.nameQ4); // сравниваем имя выпавшего элемента с именами предметов
     localStorage.setItem('dataToPass4', JSON.stringify(result)); // сохраняем данные в localStorage
     const dataToPass = JSON.parse(localStorage.getItem('dataToPass4'));
-    console.log(dataToPass) // получаем данные из localStorage
+    console.log(dataToPas4) // получаем данные из localStorage
     
     
   }, 5000);
