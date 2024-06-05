@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codecase</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"> 
+      var item = JSON.parse(localStorage.getItem('dataToPass4'));
+      </script>
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+    
+        <img src="../images/logo.webp" alt="Main-Logo" class =
+        "main-logo">
+        <a href='../index.html' class = 'home_button'>Home</a>
+      </div>
+        </header>
+    <div class='section-1'>
+        <div class= 'descritionContainer'>
+          <h1 class="taskName">
+            <script type="text/javascript">
+              document.write(item.nameQ4)
+            </script>
+          </h1>
+          <p id = "task_text" class="taskDescription">
+            <script type="text/javascript">
+              document.write(item.taskTextQ4)
+            </script>
+          </p>
+          <p>
+            Example 1:
+            Input: nums = [2,7,11,15], target = 9
+            Output: [0,1]
+            Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+          </p>
+          
+          <p> 
+            Example 3:
+
+            Input: nums = [3,3], target = 6
+            Output: [0,1]
+ 
+          </p>
+
+        </div>
+      <div class="ye">
+        <div class="codeContainer">
+          <textarea name="code" id="cadeArea"> 
+            class Solution {
+              public:
+                  vector<int> twoSum(vector<int>& nums, int target) {
+                      
+                  }
+              };
+          </textarea>
+        </div>
+        <div class="resultContainer-task"></div>
+      </div>
+      </div>
+<footer>
+</footer>
+<script src="../ace_editor/js/ace-editor/src-min/ace.js"></script>
+<script src="../ace_editor/js/ace-editor/src-min/mode-javascript.js"></script>
+<script src="../ace_editor/js/ace-editor/src-min/ext-language_tools.js"></script>
+
+<!-- Custom Scripts -->
+<script src="../ace_editor/js/editor.js"></script>
+<script src="../ace_editor/js/editor-console.js"></script>
+</body>
+</html>
