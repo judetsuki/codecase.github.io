@@ -23,7 +23,7 @@ let editorLib = {
             const newLogText = document.createElement('pre');
 
             newLogText.className = log.class;
-            newLogText.textContent = `> ${log.message}`;
+            newLogText.textContent = `>${log.message}`;
 
             newLogItem.appendChild(newLogText);
 
