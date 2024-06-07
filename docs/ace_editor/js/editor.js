@@ -115,10 +115,10 @@ editorLib.init();
         testCases.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
             const isCorrect = result === testCase.expected;
-            const message = isCorrect ? 'Правильно' : 'Неправильно';
+            const message = isCorrect ? 'Correct' : 'Incorrect';
             console.log(`${message}: ${result}`);
             const resultElement = document.createElement('p');
-            resultElement.textContent = `${message}: ${result}`;
+            resultElement.textContent = `${testCase.inputA} ${testCase.inputB} expected ${testCase.expected}; result : ${result} ; ${message}`;
             consoleLogList.appendChild(resultElement);
         });
     });
