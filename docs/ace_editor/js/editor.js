@@ -5,7 +5,7 @@ const resetCodeBtn = document.querySelector('.editor__reset');
 
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = 'console.log("Hello World!")';
+let defaultCode = 'console.log("Hello World!")'; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
 
 let editorLib = {
@@ -34,7 +34,7 @@ let editorLib = {
         // Configure Ace
 
         // Theme
-        codeEditor.setTheme("ace/theme/dreamweaver");
+        codeEditor.setTheme("ace/theme/ambiance");
 
         // Set language
         codeEditor.session.setMode("ace/mode/javascript");
@@ -81,19 +81,23 @@ resetCodeBtn.addEventListener('click', () => {
 
 editorLib.init();
     //console.log(codeEditor.getValue()); беру значение из редактора
+    
+        const submitCodeBtn = document.querySelector('.editor__submit');
 
-    const submitCodeBtn = document.querySelector('.editor__submit');
+        submitCodeBtn.addEventListener('click', () => {
+            const userCode = codeEditor.getValue();
+            const functionBody = userCode.split('{')[1];
+            const trimmedFunctionBody = functionBody.split('}')[0];
+            // let func = new Function([arg1, arg2, ...argN], trimmedFunctionBody);
+            const userFunction = new Function(['a', 'b'], trimmedFunctionBody);
+            console.log(userFunction);    
 
-    submitCodeBtn.addEventListener('click', () => {
-        const userCode = codeEditor.getValue();
-        const userFunction = new Function('a', 'b', userCode);
-        console.log(userFunction);    
         // Example test cases
         const testCases = [
             { inputA: 3, inputB: 5, expected: 15 },
             { inputA: 3, inputB: 0, expected: 0 },
             { inputA: -2, inputB: 5, expected: -10 },
-            { inputA: 3.14, inputB: 2.71, expected: 9.4384 }
+            { inputA: 3.14, inputB: 2.71, expected: 8.5094 }
         ];
     
         // Run the user function with the test cases
