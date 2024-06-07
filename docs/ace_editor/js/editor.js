@@ -86,11 +86,22 @@ editorLib.init();
 
         submitCodeBtn.addEventListener('click', () => {
             const userCode = codeEditor.getValue();
-            const functionBody = userCode.split('{')[1];
-            const trimmedFunctionBody = functionBody.split('}')[0];
-            // let func = new Function([arg1, arg2, ...argN], trimmedFunctionBody);
-            const userFunction = new Function(['a', 'b'], trimmedFunctionBody);
+
+            function removeFirstAndLastBrackets(input) {
+                const firstBracketIndex = input.indexOf('{');
+                const lastBracketIndex = input.lastIndexOf('}');
+              
+                if (firstBracketIndex !== -1 && lastBracketIndex !== -1) {
+                  const newInput = input.slice(firstBracketIndex + 1, lastBracketIndex);
+                  return(newInput);
+                } else {
+                  console.log('No brackets found');
+                }
+              }
+
+            const userFunction = new Function(['a', 'b'], removeFirstAndLastBrackets(userCode));
             console.log(userFunction);    
+
 
         // Example test cases
         const testCases = [
