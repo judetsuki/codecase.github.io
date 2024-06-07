@@ -5,7 +5,7 @@ const resetCodeBtn = document.querySelector('.editor__reset');
 
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = 'console.log("Hello World!")'; // добавить имена функций в зависимости от задачи
+let defaultCode = 'function multiply (a,b) { \n\ \n\ }'; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
 
 let editorLib = {
@@ -106,11 +106,12 @@ editorLib.init();
             const isCorrect = result === testCase.expected;
             const message = isCorrect ? 'Правильно' : 'Неправильно';
             console.log(`${message}: ${result}`);
+            const resultElement = document.createElement('p');
+            resultElement.textContent = `${message}: ${result}`;
+            consoleLogList.appendChild(resultElement);
         });
     });
     
-
-
 
 
 
