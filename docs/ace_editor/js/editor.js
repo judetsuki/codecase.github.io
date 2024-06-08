@@ -2,10 +2,10 @@
 const consoleLogList = document.querySelector('.editor__console-logs');
 const executeCodeBtn = document.querySelector('.editor__run');
 const resetCodeBtn = document.querySelector('.editor__reset');
-
+var item = JSON.parse(localStorage.getItem('dataToPass1'));
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = 'function multiply (a,b) { \n\ \n\ }'; // добавить имена функций в зависимости от задачи
+let defaultCode = item.FuncName; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
 
 let editorLib = {
