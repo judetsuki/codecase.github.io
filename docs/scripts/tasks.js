@@ -8,14 +8,33 @@ export const text_q6_6 = 'Create a function that converts US dollars (USD) to Ch
 export const text_q6_7 = 'We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the value key on the new Object or Dict to the passed-in value. \n So, for example, if we execute the following code: \n wrapper_obj = wrap("my_wrapped_string");  \n # wrapper_obj should be  {"value":"my_wrapped_string"} \n We would then expect the following statement to be true: \n wrapper_obj["value"] == "my_wrapped_string" \n Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.'; // https://www.codewars.com/kata/521cd52e790405a74800032c
 
 //Q6 FuncStart
-
-
+export const function_name_q6_1 = '';
+export const function_name_q6_2 = '';
+export const function_name_q6_3 = '';
+export const function_name_q6_4 = '';
+export const function_name_q6_5 = '';
+export const function_name_q6_6 = '';
+export const function_name_q6_7 = '';
 
 //Q6 Examples
+export const text_example_q6_1 = '';
+export const second_example_q6_1 = '';
+export const text_example_q6_2 = '';
+export const second_example_q6_2 = '';
+export const text_example_q6_3 = '';
+export const second_example_q6_3 = '';
+export const text_example_q6_4 = '';
+export const second_example_q6_4 = '';
+export const text_example_q6_5 = '';
+export const second_example_q6_5 = '';
+export const text_example_q6_6 = '';
+export const second_example_q6_6 = '';
+export const text_example_q6_7 = '';
+export const second_example_q6_7 = '';
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Q5 Tasks
-
+//Q5 Task
 export const text_q5_1 = 'Task \n Given any positive integer x ≤ 4000, find the smallest positive integer m such that mx consists of all 9s. Return -1 if no such m exists. \n Examples: \n allNines(11) -> 9, because 11*9 = 99. \n allNines(12) -> -1, because 12 is even, so no multiple of it can be all 9s. \n allNines(13) -> 76923, because 13*76923 = 999999, and no smaller positive integer, when multiplied by 13, generates an integer containing only 9s. \n NOTE: Although x ≤ 4000, m can be very very LARGE. Where necessary, the way of handling big integers appropriate to the language should be used.'; // https://www.codewars.com/kata/664b9dd610985cc3b6784111/javascript
 export const text_q5_2 = 'Given an array of ones and zeroes, convert the equivalent binary value to an integer. \n Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.\n Examples: \n Testing: [0, 0, 0, 1] ==> 1 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 0, 1] ==> 5 \n Testing: [1, 0, 0, 1] ==> 9 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 1, 0] ==> 6 \n Testing: [1, 1, 1, 1] ==> 15 \n Testing: [1, 0, 1, 1] ==> 11 \n However, the arrays can have varying lengths, not just limited to 4.'; // https://www.codewars.com/kata/578553c3a1b8d5c40300037c
 export const text_q5_3 = 'You ll be given a string of characters as an input. Complete the function that returns a list of strings: (a) in the reverse order of the original string, and (b) with each successive string starting one character further in from the end of the original string. \n Assume the original string is at least 3 characters long. Try to do this using slices and avoid converting the string to a list. \n Examples \n 123   ==>  [321, 21, 1] \n abcde ==>  [edcba, dcba, cba, ba, a]'; // https://www.codewars.com/kata/586efc2dcf7be0f217000619
@@ -25,9 +44,31 @@ export const text_q5_6 = 'Given a non-negative integer, return an array / a list
 export const text_q5_7 = 'Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integers divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string (integer) is prime (null in C#, empty table in COBOL) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust). \n Example: \n divisors(12); // should return [2,3,4,6] \n divisors(25); // should return [5] \n divisors(13); // should return "13 is prime"'; // https://www.codewars.com/kata/544aed4c4a30184e960010f4
 
 //Q5 FuncStart
+export const function_name_q5_1 = '';
+export const function_name_q5_2 = '';
+export const function_name_q5_3 = '';
+export const function_name_q5_4 = '';
+export const function_name_q5_5 = '';
+export const function_name_q5_6 = '';
+export const function_name_q5_7 = '';
 
 //Q5 Examples
+export const text_example_q5_1 = '';
+export const second_example_q5_1 = '';
+export const text_example_q5_2 = '';
+export const second_example_q5_2 = '';
+export const text_example_q5_3 = '';
+export const second_example_q5_3 = '';
+export const text_example_q5_4 = '';
+export const second_example_q5_4 = '';
+export const text_example_q5_5 = '';
+export const second_example_q5_5 = '';
+export const text_example_q5_6 = '';
+export const second_example_q5_6 = '';
+export const text_example_q5_7 = '';
+export const second_example_q5_7 = '';
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q4 Tasks
 export const text_q4_1 = 'Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit. \n For example (Input --> Output): \n 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit, there are 3 multiplications) \n 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2, there are 4 multiplications) \n 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)'; // https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
@@ -39,17 +80,33 @@ export const text_q4_6 = 'A pangram is a sentence that contains every single let
 export const text_q4_7 = 'Your job is to create a calculator which evaluates expressions in Reverse Polish notation.' 
 
 //Q4 FuncStart
-
+export const function_name_q4_1 = '';
+export const function_name_q4_2 = '';
+export const function_name_q4_3 = '';
+export const function_name_q4_4 = '';
+export const function_name_q4_5 = '';
+export const function_name_q4_6 = '';
+export const function_name_q4_7 = '';
 
 //Q4 Examples
+export const text_example_q4_1 = '';
+export const second_example_q4_1 = '';
+export const text_example_q4_2 = '';
+export const second_example_q4_2 = '';
+export const text_example_q4_3 = '';
+export const second_example_q4_3 = '';
+export const text_example_q4_4 = '';
+export const second_example_q4_4 = '';
+export const text_example_q4_5 = '';
+export const second_example_q4_5 = '';
+export const text_example_q4_6 = '';
+export const second_example_q4_6 = '';
+export const text_example_q4_7 = '';
+export const second_example_q4_7 = '';
 
-export const text_q4_7_example1 = 'For example expression 5 1 2 + 4 * + 3 - (which is equivalent to 5 + ((1 + 2) * 4) - 3 in normal notation) should evaluate to 14. \n For your convenience, the input is formatted such that a space is provided between every token. \n Empty expression should evaluate to 0. \n Valid operations are +, -, *, /. \n You may assume that there wont be exceptional situations (like stack underflow or division by zero).'; // https://www.codewars.com/kata/52f78966747862fc9a0009ae
-export const text_q4_7_example2 ='я ебаааааал котаааа всегда готов трахнуть сразу несколько бамшмаков'
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q3 Tasks
-
 export const text_q3_1 = 'Write a class that, when given a string, will return an uppercase string with each letter shifted forward in the alphabet by however many spots the cipher was initialized to. \n For example: \n var c = new CaesarCipher(5); // creates a CipherHelper with a shift of five \n c.encode(Codewars); // returns HTIJBFWX \n c.decode(BFKKQJX); // returns WAFFLES \n If something in the string is not in the alphabet (e.g. punctuation, spaces), simply leave it as is. \n The shift will always be in range of [1, 26].'; // https://www.codewars.com/kata/526d42b6526963598d0004db
 export const text_q3_2 = 'You are given the outline of a Rational class to do arithmetic with rational numbers. \n Complete the class filling in the operations for simplifying, comparing, adding, subtracting, multiplying, and dividing Rationals. \n None of the operations (except for the constructor and the simplify) should modify the Rational.'; // https://www.codewars.com/kata/5260074c9a0022f83e0009da
 export const text_q3_3 = 'Implement a function that receives two IPv4 addresses, and returns the number of addresses between them (including the first one, excluding the last one). \n All inputs will be valid IPv4 addresses in the form of strings. The last address will always be greater than the first one. \n Examples \n * With input "10.0.0.0", "10.0.0.50"  => return   50  \n * With input "10.0.0.0", "10.0.1.0"   => return  256  \n * With input "20.0.0.10", "20.0.1.0"  => return  246'; // https://www.codewars.com/kata/526989a41034285187000de4
@@ -59,11 +116,31 @@ export const text_q3_6 = 'In this Kata, you will be given a string of numbers in
 export const text_q3_7 = 'Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes? \n Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0. \n Examples: \n // must return 2 \n cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200});  \n // must return 0 \n cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}); '; //https://www.codewars.com/kata/525c65e51bf619685c000059
 
 //Q3 FuncStart
-
+export const function_name_q3_1 = '';
+export const function_name_q3_2 = '';
+export const function_name_q3_3 = '';
+export const function_name_q3_4 = '';
+export const function_name_q3_5 = '';
+export const function_name_q3_6 = '';
+export const function_name_q3_7 = '';
 
 //Q3 Examples
+export const text_example_q3_1 = '';
+export const second_example_q3_1 = '';
+export const text_example_q3_2 = '';
+export const second_example_q3_2 = '';
+export const text_example_q3_3 = '';
+export const second_example_q3_3 = '';
+export const text_example_q3_4 = '';
+export const second_example_q3_4 = '';
+export const text_example_q3_5 = '';
+export const second_example_q3_5 = '';
+export const text_example_q3_6 = '';
+export const second_example_q3_6 = '';
+export const text_example_q3_7 = '';
+export const second_example_q3_7 = '';
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q2 Tasks
 export const text_q2_1 = 'Prelude \n The painting fence problem involves finding the number of ways to paint a fence with n posts and k colors, assuming that no more than two adjacent posts have the same color. \n Task \n Your task is to implement a function named ways(n, k) that takes two BigInts as input: \n n The number of posts in the fence. \n k The number of colors available for painting the fence. \n And returns the number of ways of painting the fence such that no more than two adjacent posts have the same color. A linear time solution is much too slow for this problem; the numbers will be up to 10 billion! \n Examples \n ways(1n, 4n) -> 4n \n ways(3n, 2n) -> 6n \n ways(4n, 5n) -> 580n \n Constraints \n n and k will not be greater than 10,000,000,000 or less than 1. \n Note, result will get very large, return it mod 1000000007'; // https://www.codewars.com/kata/64bc4a428e1e9570fd90ed0d
@@ -75,12 +152,32 @@ export const text_q2_6 = 'The problem \n How many zeroes are at the end of the f
 export const text_q2_7 = 'Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out. \n Example: \n Given an input string of: \n apples, pears # and bananas \n grapes \n bananas !apples \n The output expected would be: \n apples, pears \n grapes \n bananas \n The code would be called like so: \n var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]) \n // result should == "apples, pears\ngrapes\nbananas"'; // https://www.codewars.com/kata/51c8e37cee245da6b40000bd
 
 //Q2 FuncStart
-
+export const function_name_q2_1 = '';
+export const function_name_q2_2 = '';
+export const function_name_q2_3 = '';
+export const function_name_q2_4 = '';
+export const function_name_q2_5 = '';
+export const function_name_q2_6 = '';
+export const function_name_q2_7 = '';
 
 //Q2 Examples
+export const text_example_q2_1 = '';
+export const second_example_q2_1 = '';
+export const text_example_q2_2 = '';
+export const second_example_q2_2 = '';
+export const text_example_q2_3 = '';
+export const second_example_q2_3 = '';
+export const text_example_q2_4 = '';
+export const second_example_q2_4 = '';
+export const text_example_q2_5 = '';
+export const second_example_q2_5 = '';
+export const text_example_q2_6 = '';
+export const second_example_q2_6 = '';
+export const text_example_q2_7 = '';
+export const second_example_q2_7 = '';
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q1 Tasks
 export const text_q1_1 = 'This is a hard version of How many are smaller than me?. If you have troubles solving this one, have a look at the easier kata first. \n Write \n function smaller(arr) \n that given an array arr, you have to return the amount of numbers that are smaller than arr[i] to the right. \n For example: \n smaller([5, 4, 3, 2, 1]) === [4, 3, 2, 1, 0] \n smaller([1, 2, 0]) === [1, 1, 0] \n Note \n Your solution will be tested against inputs with up to 100_000 elements'; // https://www.codewars.com/kata/56a1c63f3bc6827e13000006
@@ -92,13 +189,32 @@ export const text_q1_6 = 'Preface \n This is the crazy hard version of the Prime
 export const text_q1_7 = 'There are a series of 10 bombs about to go off! Defuse them all! Simple, right? \n Note: This is not an ordinary Kata, but more of a series of puzzles. The point is to figure out what you are supposed to do, then how to do it. Instructions are intentionally left vague.'; // https://www.codewars.com/kata/54d558c72a5e542c0600060fц
 
 //Q1 FuncStart
-export const funtion_name_q1_1 = 'function multiply (a,b) { \n\ \n\ }'
+export const function_name_q1_1 = 'function multiply (a,b) { \n\ \n\ }';
+export const function_name_q1_2 = 'class Primes { \n static * stream() { \n // replace this with your solution \n for(let p of [2,3,5,7,11,13,17,19,23,29]) { \n yield p; \n } \n } \n }';
+export const function_name_q1_3 = 'function pathFinder(area){ \n return 42; \n }';
+export const function_name_q1_4 = 'function solve(s, ops) { \n return 0; \n };';
+export const function_name_q1_5 = 'function generateBFProgramAdvanced(target) { \n // Return a BF program that evaluates to the target output provided \n // Your algorithm must outperform my reference solution in terms of shortening the BF code \n}';
+export const function_name_q1_6 = 'function primeAnt(n) { \n return []; \n }';
+export const function_name_q1_7 = '// Defuse all of the Bombs! \n Bomb.diffuse( /* your guess goes here */ ); \n // console.log( Bomb );';
 
 
 //Q1 Examples
+export const text_example_q1_1 = 'For example: \n smaller([5, 4, 3, 2, 1]) === [4, 3, 2, 1, 0] \n smaller([1, 2, 0]) === [1, 1, 0] \n Note \n Your solution will be tested against inputs with up to 100_000 elements';
+export const second_example_q1_1 = '';
+export const text_example_q1_2 = '';
+export const second_example_q1_2 = '';
+export const text_example_q1_3 = '';
+export const second_example_q1_3 = '';
+export const text_example_q1_4 = 'For example, solve("tft","^&") = 2, as follows: \n "((t ^ f) & t)" = True \n "(t ^ (f & t))" = True \n Notice that the order of the boolean values and operators does not change. What changes is the position of braces. \n More examples in the test cases. \n Good luck!';
+export const second_example_q1_4 = '';
+export const text_example_q1_5 = 'In this Kata, your solution must always return a shorter BF program in terms of character count compared to that returned by the reference solution for all input strings of length >= 20.';
+export const second_example_q1_5 = '';
+export const text_example_q1_6 = '';
+export const second_example_q1_6 = '';
+export const text_example_q1_7 = '';
+export const second_example_q1_7 = '';
 
-export const text_example_q1_1 = 'ya yebu soooobak'
-export const second_example_q1_1 = 'vsegda gotov traxnut' 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // UniqCase Tasks
 
