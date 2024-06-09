@@ -1,16 +1,15 @@
 import { text_q4_1 , text_q4_2 , text_q4_3 , text_q4_4 , text_q4_5 , text_q4_6 , text_q4_7 } from "../tasks.js";
-import { text_q4_7_example1 , text_q4_7_example2 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, exampleQ4: text_q4_7_example1,secondQ4example: text_q4_7_example2, chance: 14.29},
-  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : text_q4_2, exampleQ4: text_q4_7_example1, chance: 14.29},
-  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : text_q4_3,exampleQ4: text_q4_7_example1, chance: 14.29},
-  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, exampleQ4: text_q4_7_example1, chance: 14.29},
-  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : text_q4_5,exampleQ4: text_q4_7_example1, chance: 14.29},
-  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : text_q4_6,exampleQ4: text_q4_7_example1, chance: 14.29},
-  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7,exampleQ4: text_q4_7_example1, chance: 14.29},
+  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : text_q4_2,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : text_q4_3,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : text_q4_5,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : text_q4_6,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

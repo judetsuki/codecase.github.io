@@ -1,13 +1,13 @@
 import { text_q5_1 , text_q5_2 , text_q5_3 , text_q5_4 , text_q5_5 , text_q5_6 , text_q5_7 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 const items = [
-  {nameQ5: 'iPhone', img: '../images/iPhone.png',taskTextQ5 : text_q5_1, chance: 14.29},
-  {nameQ5: 'Keyboard', img: '../images/keyboard.png',taskTextQ5 : text_q5_2, chance: 14.29},
-  {nameQ5: 'Headphones', img: '../images/headphones.png',taskTextQ5 : text_q5_3, chance: 14.29},
-  {nameQ5: 'Pivo', img: '../images/pivo.png',taskTextQ5 : text_q5_4, chance: 14.29},
-  {nameQ5: 'butterfly', img: '../images/butterfly.png',taskTextQ5 : text_q5_5, chance: 14.29},
-  {nameQ5: 'jini', img: '../images/jini.png',taskTextQ5 : text_q5_6, chance: 14.29},
-  {nameQ5: 'vini', img: '../images/vinipuh.png',taskTextQ5 : text_q5_7, chance: 14.29},
+  {nameQ5: 'iPhone', img: '../images/iPhone.png',taskTextQ5 : text_q5_1,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'Keyboard', img: '../images/keyboard.png',taskTextQ5 : text_q5_2,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'Headphones', img: '../images/headphones.png',taskTextQ5 : text_q5_3,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'Pivo', img: '../images/pivo.png',taskTextQ5 : text_q5_4,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'butterfly', img: '../images/butterfly.png',taskTextQ5 : text_q5_5,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ2 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'jini', img: '../images/jini.png',taskTextQ5 : text_q5_6,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'vini', img: '../images/vinipuh.png',taskTextQ5 : text_q5_7,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

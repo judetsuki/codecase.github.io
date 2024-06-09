@@ -4,13 +4,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ1: 'iPhone', img: '../images/iPhone.png',taskTextQ1 : text_q1_1, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'Keyboard', img: '../images/keyboard.png',taskTextQ1 : text_q1_2, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'Headphones', img: '../images/headphones.png',taskTextQ1 : text_q1_3, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'Pivo', img: '../images/pivo.png',taskTextQ1 : text_q1_4, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'butterfly', img: '../images/butterfly.png',taskTextQ1 : text_q1_5, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'jini', img: '../images/jini.png',taskTextQ1 : text_q1_6, FuncName: funtion_name_q1_1, chance: 14.29},
-  {nameQ1: 'vini', img: '../images/vinipuh.png',taskTextQ1: text_q1_7, FuncName: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'iPhone', img: '../images/iPhone.png',taskTextQ1 : text_q1_1,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'Keyboard', img: '../images/keyboard.png',taskTextQ1 : text_q1_2, SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'Headphones', img: '../images/headphones.png',taskTextQ1 : text_q1_3, SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'Pivo', img: '../images/pivo.png',taskTextQ1 : text_q1_4,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1:  funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'butterfly', img: '../images/butterfly.png',taskTextQ1 : text_q1_5,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'jini', img: '../images/jini.png',taskTextQ1 : text_q1_6,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'vini', img: '../images/vinipuh.png',taskTextQ1: text_q1_7,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

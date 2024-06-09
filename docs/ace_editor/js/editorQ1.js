@@ -5,7 +5,7 @@ const resetCodeBtn = document.querySelector('.editor__reset');
 var item = JSON.parse(localStorage.getItem('dataToPass1'));
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = item.FuncName; // добавить имена функций в зависимости от задачи
+let defaultCode = item.FuncNameQ1; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
 
 let editorLib = {

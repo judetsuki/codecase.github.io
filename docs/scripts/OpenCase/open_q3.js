@@ -3,13 +3,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ3: 'iPhone', img: '../images/iPhone.png',taskTextQ3 : text_q3_1, chance: 14.29},
-  {nameQ3: 'Keyboard', img: '../images/keyboard.png',taskTextQ3 : text_q3_2, chance: 14.29},
-  {nameQ3: 'Headphones', img: '../images/headphones.png',taskTextQ3 : text_q3_3, chance: 14.29},
-  {nameQ3: 'Pivo', img: '../images/pivo.png',taskTextQ3 : text_q3_4, chance: 14.29},
-  {nameQ3: 'butterfly', img: '../images/butterfly.png',taskTextQ3 : text_q3_5, chance: 14.29},
-  {nameQ3: 'jini', img: '../images/jini.png',taskTextQ3 : text_q3_6, chance: 14.29},
-  {nameQ3: 'vini', img: '../images/vinipuh.png',taskTextQ3 : text_q3_7, chance: 14.29},
+  {nameQ3: 'iPhone', img: '../images/iPhone.png',taskTextQ3 : text_q3_1,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'Keyboard', img: '../images/keyboard.png',taskTextQ3 : text_q3_2,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'Headphones', img: '../images/headphones.png',taskTextQ3 : text_q3_3,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'Pivo', img: '../images/pivo.png',taskTextQ3 : text_q3_4,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ2 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'butterfly', img: '../images/butterfly.png',taskTextQ3 : text_q3_5,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'jini', img: '../images/jini.png',taskTextQ3 : text_q3_6,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ3: 'vini', img: '../images/vinipuh.png',taskTextQ3 : text_q3_7,SecondExampleQ3 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ3 : /*сюда первый экземпляр текста*/ '' ,testsQ3 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ3: /*сюда имя функции*/ '', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
