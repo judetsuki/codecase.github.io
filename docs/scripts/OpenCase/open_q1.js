@@ -1,10 +1,12 @@
 import { text_q1_1, text_q1_2, text_q1_3, text_q1_4, text_q1_5, text_q1_6, text_q1_7 } from "../tasks.js";
 import { funtion_name_q1_1 } from "../tasks.js";
+import { text_example_q1_1} from "../tasks.js";
+import { second_example_q1_1} from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {nameQ1: 'iPhone', img: '../images/iPhone.png',taskTextQ1 : text_q1_1,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
+  {nameQ1: 'iPhone', img: '../images/iPhone.png',taskTextQ1 : text_q1_1,SecondExampleQ1 : second_example_q1_1 ,exampleQ1 : text_example_q1_1 ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 1111111111114.29},
   {nameQ1: 'Keyboard', img: '../images/keyboard.png',taskTextQ1 : text_q1_2, SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
   {nameQ1: 'Headphones', img: '../images/headphones.png',taskTextQ1 : text_q1_3, SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1: funtion_name_q1_1, chance: 14.29},
   {nameQ1: 'Pivo', img: '../images/pivo.png',taskTextQ1 : text_q1_4,SecondExampleQ1 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ1 : /*сюда первый экземпляр текста*/ '' ,testsQ1 : /*сюда первый экземпляр текста*/ '' , FuncNameQ1:  funtion_name_q1_1, chance: 14.29},

@@ -97,8 +97,8 @@ export const funtion_name_q1_1 = 'function multiply (a,b) { \n\ \n\ }'
 
 //Q1 Examples
 
-
-
+export const text_example_q1_1 = 'ya yebu soooobak'
+export const second_example_q1_1 = 'vsegda gotov traxnut' 
 
 // UniqCase Tasks
 
