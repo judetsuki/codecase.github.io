@@ -90,14 +90,17 @@ editorLib.init();
             function removeFirstAndLastBrackets(input) {
                 const firstBracketIndex = input.indexOf('{');
                 const lastBracketIndex = input.lastIndexOf('}');
-              
+                //const forOdnostrochnik = input.indexOf('>');
                 if (firstBracketIndex !== -1 && lastBracketIndex !== -1) {
                   const newInput = input.slice(firstBracketIndex + 1, lastBracketIndex);
                   return(newInput);
-                } else {
-                  console.log('No brackets found');
+                //} else if (forOdnostrochnik !== -1) {
+                   // const newInput = input.slice(forOdnostrochnik + 1);
+                    //return newInput;
+                  } else {
+                    console.log('No brackets or > found');
+                  }
                 }
-              }
 
             const userFunction = new Function(['a', 'b'], removeFirstAndLastBrackets(userCode));
             console.log(userFunction);    
