@@ -6,7 +6,7 @@ const items = [
   {nameQ2: 'iPhone', img: '../images/iPhone.png',taskTextQ2 : text_q2_1, chance: 14.29},
   {nameQ2: 'Keyboard', img: '../images/keyboard.png',taskTextQ2 : text_q2_2, chance: 14.29},
   {nameQ2: 'Headphones', img: '../images/headphones.png',taskTextQ2 : text_q2_3, chance: 14.29},
-  {nameQ2: 'Pivo', img: '../images/pivo.png',taskTextQ2 : text_q2_4, chance: 14.29},
+  {nameQ2: 'Pivo', img: '../images/pivo.png',taskTextQ2 : text_q2_4, chance: 14111111.29},
   {nameQ2: 'butterfly', img: '../images/butterfly.png',taskTextQ2 : text_q2_5, chance: 14.29},
   {nameQ2: 'jini', img: '../images/jini.png',taskTextQ2 : text_q2_6, chance: 14.29},
   {nameQ2: 'vini', img: '../images/vinipuh.png',taskTextQ2 : text_q2_7, chance: 14.29},

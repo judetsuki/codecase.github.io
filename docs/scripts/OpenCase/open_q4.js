@@ -4,7 +4,7 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, exampleQ4: text_q4_7_example1,secondQ4example: text_q4_7_example2, chance: 10004.29},
+  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, exampleQ4: text_q4_7_example1,secondQ4example: text_q4_7_example2, chance: 14.29},
   {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : text_q4_2, exampleQ4: text_q4_7_example1, chance: 14.29},
   {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : text_q4_3,exampleQ4: text_q4_7_example1, chance: 14.29},
   {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, exampleQ4: text_q4_7_example1, chance: 14.29},
