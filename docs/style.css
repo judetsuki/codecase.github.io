@@ -442,18 +442,33 @@ p{
   z-index: 999;
 }
 
-.modal-content {
+.modal_content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   z-index: 999;
+  
 }
 
-#close-modal {
+#close_modal  {
   background-color: #f44336;
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   z-index: 999;
+}
+#go_to_home_modal {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+#go_to_home_modal:hover {
+  background-color: #d32f2f;
+}
+#close_modal:hover {
+  background-color: #d32f2f;
 }
