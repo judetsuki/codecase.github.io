@@ -109,7 +109,7 @@ editorLib.init();
         // Run the user function with the test cases
         item.testsQ6.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
-            const isCorrect = result === testCase.expected;
+            const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
             const message = isCorrect ? 'Correct' : 'Incorrect';
             console.log(`${message}: ${result}`);
             const resultElement = document.createElement('p');

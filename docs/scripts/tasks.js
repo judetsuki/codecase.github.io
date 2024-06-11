@@ -1,7 +1,7 @@
 // Q6 Tasks
 export const text_q6_1 = 'Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. \n Return your answer as a number.;' // https://www.codewars.com/kata/57eaeb9578748ff92a000009/javascript
 export const text_q6_2 = 'Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ). \n Examples \n n = 0  ==> [1]        # [2^0] \n n = 1  ==> [1, 2]     # [2^0, 2^1] \n n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]'; // https://www.codewars.com/kata/57a083a57cb1f31db7000028
-export const text_q6_3 = 'This code does not execute properly. Try to figure out why.'; // https://www.codewars.com/kata/50654ddff44f800200000004
+export const text_q6_3 = 'Multiply two numbers together.' // https://www.codewars.com/kata/50654ddff44f800200000004
 export const text_q6_4 = 'Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives. \n [1, 2, 3, 4, 5] --> [-1, -2, -3, -4, -5] \n [1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5] \n [] --> [] \n You can assume that all values are integers. Do not mutate the input array.'; // https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad
 export const text_q6_5 = 'Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n. \n For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10. \n If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n. \n Good luck :)'; // https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
 export const text_q6_6 = 'Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by Chinese Yuan \n Examples (Input -> Output) \n 15  -> 101.25 Chinese Yuan \n 465 -> 3138.75 Chinese Yuan \n The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")'; // https://www.codewars.com/kata/5977618080ef220766000022
@@ -9,20 +9,20 @@ export const text_q6_7 = 'We have implemented a function wrap(value) that takes 
 
 //Q6 FuncStart
 export const function_name_q6_1 = 'function sumMix(x){ \n\ \n\}';
-export const function_name_q6_2 = '';
-export const function_name_q6_3 = '';
+export const function_name_q6_2 = 'function powersOfTwo(n){ \n\  \n\ }';
+export const function_name_q6_3 = 'function multiply(a,b){ \n\ \n\ }';
 export const function_name_q6_4 = '';
 export const function_name_q6_5 = '';
 export const function_name_q6_6 = '';
 export const function_name_q6_7 = '';
 
 //Q6 Examples
-export const text_example_q6_1 = '';
-export const second_example_q6_1 = '';
-export const text_example_q6_2 = '';
-export const second_example_q6_2 = '';
-export const text_example_q6_3 = '';
-export const second_example_q6_3 = '';
+export const text_example_q6_1 = `First example: \n\ x =  [6,'3',-3,0] --> 6 `;
+export const second_example_q6_1 = `Second example: \n\ x =  [-2,'-3',-3,12, -21] --> -17`;
+export const text_example_q6_2 = 'First example: \n\ n = 0  ==> [1]        # [2^0]';
+export const second_example_q6_2 = 'Second example: \n\ n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]';
+export const text_example_q6_3 = 'First example : \n\ a = 6, b = 3  ==> 18'; 
+export const second_example_q6_3 = 'Second example : \n\ a = -2, b = -3  ==> -6'; 
 export const text_example_q6_4 = '';
 export const second_example_q6_4 = '';
 export const text_example_q6_5 = '';
@@ -39,10 +39,37 @@ export const testCases_q6_1 = [
     { inputA: [6,'-3',-3,12], expected: 12 },
     { inputA: [-2,'-3',-3,12, -21], expected: -17 },
 ];
-
+export const testCases_q6_2 = [
+    { inputA: [0], expected: [1] },
+    { inputA: [1], expected: [1,2] },
+    { inputA: [4], expected: [1,2,4,8,16] },
+]
+export const testCases_q6_3 = [
+    { inputA: 6,inputB: 3 , expected: 18 },
+    { inputA: -2, inputB: -3, expected: -6 },
+    { inputA: -6, inputB: 0, expected: 0 },
+]
+export const testCases_q6_4 = [
+  
+]
+export const testCases_q6_5 = [
+  
+]
+export const testCases_q6_6 = [
+  
+]
+export const testCases_q6_7 = [
+  
+]
 //Q6 Func param 
 
 export const userFunction_q6_1 = 'x'
+export const userFunction_q6_2 = 'n'
+export const userFunction_q6_3 = ['a', 'b']
+export const userFunction_q6_4 = ''
+export const userFunction_q6_5 = ''
+export const userFunction_q6_6 = ''
+export const userFunction_q6_7 = ''
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
