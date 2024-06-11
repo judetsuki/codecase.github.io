@@ -106,6 +106,7 @@ editorLib.init();
         // Example test cases
         item.testsQ6
         let hasIncorrectResult = false;
+        let correctCount = 0;
 
         // Run the user function with the test cases
         item.testsQ6.forEach(testCase => {
@@ -119,15 +120,17 @@ editorLib.init();
 
 
             const resultDiv = document.querySelector('.descritionContainer_1');
-            if (!isCorrect) {
-                hasIncorrectResult = true;
+            if (isCorrect) {
+                correctCount++;
             }
-            if (hasIncorrectResult) {
-                resultDiv.classList.remove('correct');
-                resultDiv.classList.add('incorrect');
-            } else {
+            if (correctCount === 3) {
                 resultDiv.classList.remove('incorrect');
                 resultDiv.classList.add('correct');
+                const modal = document.getElementById('modal');
+                modal.style.display = 'block';
+            } else {
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
             }
 
             const resultElement = document.createElement('p');
