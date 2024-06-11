@@ -27,7 +27,7 @@ export const second_example_q6_4 = 'Second example : [] --> [] \n ';
 export const text_example_q6_5 = 'For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10.';
 export const second_example_q6_5 = 'If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n.';
 export const text_example_q6_6 = `First example 15 : -> '101.25 Chinese Yuan'`
-export const second_example_q6_6 = ` Second example : 465 -> '3138.75 Chinese Yuan''`
+export const second_example_q6_6 = ` Second example : 465 -> '3138.75 Chinese Yuan'`;
 export const text_example_q6_7 = 'First example : [10, 20, 15, 30, 25, 5] ==> [5, 30, 25]';
 export const second_example_q6_7 = 'Second example : [30, 25, 40, 15, 20, 5] ==> [5, 40, 35]';
 
