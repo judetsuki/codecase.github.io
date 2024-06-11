@@ -13,7 +13,7 @@ const items = [
   {nameQ6: 'Multiply', img: '../images/headphones.png',taskTextQ6 : text_q6_3,SecondExampleQ6 : second_example_q6_3 ,exampleQ6 : text_example_q6_3 ,testsQ6 : testCases_q6_3 ,FuncNameQ6: function_name_q6_3, FuncArgsQ6 : userFunction_q6_3 , chance: 14.29},
   {nameQ6: 'Invert values', img: '../images/pivo.png',taskTextQ6 : text_q6_4,SecondExampleQ6 : second_example_q6_4 ,exampleQ6 : text_example_q6_4 ,testsQ6 : testCases_q6_4 ,FuncNameQ6: function_name_q6_4, FuncArgsQ6 : userFunction_q6_4, chance: 14.29},
   {nameQ6: 'Find Nearest square number', img: '../images/butterfly.png',taskTextQ6 : text_q6_5,SecondExampleQ6 : second_example_q6_5 ,exampleQ6 : text_example_q6_5 ,testsQ6 : testCases_q6_5 ,FuncNameQ6: function_name_q6_5, FuncArgsQ6 : userFunction_q6_5, chance: 14.29},
-  {nameQ6: 'USD => CNY', img: '../images/jini.png',taskTextQ6 : text_q6_6,SecondExampleQ6 : second_example_q6_6 ,exampleQ6 : text_example_q6_6 ,testsQ6 : testCases_q6_6 ,FuncNameQ6: function_name_q6_6, FuncArgsQ6 : userFunction_q6_6, chance: 11111111111111111114.29},
+  {nameQ6: 'USD => CNY', img: '../images/jini.png',taskTextQ6 : text_q6_6,SecondExampleQ6 : second_example_q6_6 ,exampleQ6 : text_example_q6_6 ,testsQ6 : testCases_q6_6 ,FuncNameQ6: function_name_q6_6, FuncArgsQ6 : userFunction_q6_6, chance: 14.29},
   {nameQ6: 'Find the Difference in Age between Oldest and Youngest Family Members', img: '../images/vinipuh.png',taskTextQ6 : text_q6_7,SecondExampleQ6 : second_example_q6_7 ,exampleQ6 : text_example_q6_7 ,testsQ6 : testCases_q6_7 ,FuncNameQ6: function_name_q6_7, FuncArgsQ6 : userFunction_q6_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
