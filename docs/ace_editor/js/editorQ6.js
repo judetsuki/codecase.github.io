@@ -123,16 +123,13 @@ editorLib.init();
                 existingButton.remove();
             }
             
-            // Create the reset button
             const resetButton = document.createElement('button');
             resetButton.classList.add('resetButton');
             resetButton.textContent = 'Reset Tests';
             
-            // Append the button to the desired element
             const resetButtonContainer = document.querySelector('.descritionContainer_1');
             resetButtonContainer.appendChild(resetButton);
             
-            // Add the event listener to the reset button
             resetButton.addEventListener('click', function() {
                 resultDiv.innerHTML = '';
             });
