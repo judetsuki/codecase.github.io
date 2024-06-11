@@ -357,14 +357,24 @@ d
   max-width: 90%;
 }
 
-.descritionContainer{
+.descritionContainer {
   border-radius: 30px;
   background-color:gray;
-  height: 97vh;
+  height: 85vh;
   width: 50vw;
   margin: 10px;
   padding: 10px;
   
+}
+.descritionContainer_1{
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px  ;
+  background-color:gray;
+  height: 400px;
+  margin: 10px;
+  width: 47vw;
+  padding: 10px
 }
 .codeContainer{
   border-radius: 30px  ;
@@ -398,4 +408,17 @@ p{
   border: none;
   background-color: #1b1f24;
   color:white;
+}
+.resetButton {
+  border: 0;
+  padding: .5em;
+  background-color:darkslategray;
+  border: 2px solid #333;
+  margin-top: 1em;
+  width: 100px;
+  cursor: pointer;
+}
+
+.Outptut_text{
+
 }

@@ -112,9 +112,40 @@ editorLib.init();
             const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
             const message = isCorrect ? 'Correct' : 'Incorrect';
             console.log(`${message}: ${result}`);
+            const resultDiv = document.querySelector('.descritionContainer_1');
             const resultElement = document.createElement('p');
+            resultElement.classList.add('Outptut_text')
             resultElement.textContent = ` expected ${testCase.expected}; result : ${result} ; ${message}`;
-            consoleLogList.appendChild(resultElement);
+            resultDiv.appendChild(resultElement);
+            
+            const existingButton = document.querySelector('.descritionContainer_1 button');
+            if (existingButton) {
+                existingButton.remove();
+            }
+            
+            // Create the reset button
+            const resetButton = document.createElement('button');
+            resetButton.classList.add('resetButton');
+            resetButton.textContent = 'Reset Tests';
+            
+            // Append the button to the desired element
+            const resetButtonContainer = document.querySelector('.descritionContainer_1');
+            resetButtonContainer.appendChild(resetButton);
+            
+            // Add the event listener to the reset button
+            resetButton.addEventListener('click', function() {
+                resultDiv.innerHTML = '';
+            });
         });
+        
     });
     
+    
+    /*const clearButton = document.createElement('button');
+clearButton.textContent = 'Сбросить';
+
+clearButton.addEventListener('click', function() {
+  resultDiv.innerHTML = '';
+});
+
+resultDiv.appendChild(clearButton);*/
