@@ -80,6 +80,15 @@ export const second_example_q5_6 = '';
 export const text_example_q5_7 = '';
 export const second_example_q5_7 = '';
 
+//Q6 Tests
+export const test_q5_1 = '';
+export const test_q5_2 = '';
+export const test_q5_3 = '';
+export const test_q5_4 = '';
+export const test_q5_5 = '';
+export const test_q5_6 = '';
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q4 Tasks
@@ -115,6 +124,15 @@ export const text_example_q4_6 = '';
 export const second_example_q4_6 = '';
 export const text_example_q4_7 = '';
 export const second_example_q4_7 = '';
+
+//Q6 Tests
+export const test_q4_1 = '';
+export const test_q4_2 = '';
+export const test_q4_3 = '';
+export const test_q4_4 = '';
+export const test_q4_5 = '';
+export const test_q4_6 = '';
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -152,6 +170,15 @@ export const second_example_q3_6 = '';
 export const text_example_q3_7 = '';
 export const second_example_q3_7 = '';
 
+//Q6 Tests
+export const test_q3_1 = '';
+export const test_q3_2 = '';
+export const test_q3_3 = '';
+export const test_q3_4 = '';
+export const test_q3_5 = '';
+export const test_q3_6 = '';
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q2 Tasks
@@ -187,6 +214,15 @@ export const text_example_q2_6 = '';
 export const second_example_q2_6 = '';
 export const text_example_q2_7 = '';
 export const second_example_q2_7 = '';
+
+//Q6 Tests
+export const test_q2_1 = '';
+export const test_q2_2 = '';
+export const test_q2_3 = '';
+export const test_q2_4 = '';
+export const test_q2_5 = '';
+export const test_q2_6 = '';
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -226,6 +262,112 @@ export const second_example_q1_6 = '';
 export const text_example_q1_7 = '';
 export const second_example_q1_7 = '';
 
+//Q6 Tests
+export const test_q1_1 = `const chai = require('chai');
+const assert = chai.assert;
+chai.config.truncateThreshold = 0;
+
+
+describe('Initial Tests', () => {
+  it('Sample tests', function(){
+    assert.deepEqual(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0]);
+    assert.deepEqual(smaller([1, 2, 3]), [0, 0, 0]);
+    assert.deepEqual(smaller([1, 2, 0]), [1, 1, 0]);
+    assert.deepEqual(smaller([1, 2, 1]), [0, 1, 0]);
+    assert.deepEqual(smaller([1, 1, -1, 0, 0]), [3, 3, 0, 0, 0]);
+    assert.deepEqual(smaller([5, 4, 7, 9, 2, 4, 4, 5, 6]), [4, 1, 5, 5, 0, 0, 0, 0, 0]);
+    assert.deepEqual(smaller([5, 4, 7, 9, 2, 4, 1, 4, 5, 6]), [5, 2, 6, 6, 1, 1, 0, 0, 0, 0]);
+  });
+});`;
+
+export const test_q1_2 = `function verify (from_n, ...vals) {
+    const stream = Primes.stream()
+    for(let i=0; i<from_n; ++i) stream.next()
+    for(let v of vals) Test.assertEquals(stream.next().value, v)
+  }
+  
+  describe('Small numbers', ()=>{
+    it('0_10', ()=> verify(0,2,3,5,7,11,13,17,19,23,29))
+    it('10_10', ()=> verify(10,31,37,41,43,47,53,59,61,67,71))
+    it('100_10', ()=> verify(100,547,557,563,569,571,577,587,593,599,601))
+    it('1000_10', ()=> verify(1000,7927,7933,7937,7949,7951,7963,7993,8009,8011,8017))
+  })`;
+
+export const test_q1_3 = `const { assert } = require("chai");
+
+function testArea(expected, area){
+  let actual = pathFinder(area);
+  assert.strictEqual(actual, expected, area);
+}
+
+describe("Basic tests", () => {
+  it("Flat lands", () => 
+     testArea(0,
+'000
+000
+000));
+
+  it("Wall", () => 
+    testArea(2,
+'010
+010
+010'));
+
+  it("Checkerboard", () =>
+    testArea(4,
+'010
+101
+010'));
+  
+  it("Checkerboard 2", () =>
+    testArea(42,
+'0707
+7070
+0707
+7070'));
+
+  it("Massif Central", () => 
+    testArea(14,
+'700000
+077770
+077770
+077770
+077770
+000007'));
+
+  it("Crest path", () =>
+    testArea(0,
+'777000
+007000
+007000
+007000
+007000
+007777'));
+
+  it("Minor obstacles", () =>
+    testArea(4,
+'000000
+000000
+000000
+000010
+000109
+001010'));
+});
+`;
+
+export const test_q1_4 = `describe("Basic tests", function(){
+    Test.assertEquals(solve("tft","^&"),2);
+    Test.assertEquals(solve("ttftff","|&^&&"),16);
+    Test.assertEquals(solve("ttftfftf","|&^&&||"),339);
+    Test.assertEquals(solve("ttftfftft","|&^&&||^"),851);
+    Test.assertEquals(solve("ttftfftftf","|&^&&||^&"),2434);
+    });`;
+
+
+export const test_q1_5 = '';
+export const test_q1_6 = '';
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // UniqCase Tasks
@@ -238,4 +380,10 @@ export const text_uniq_5 = 'Task \n You will be given an array of numbers. You h
 export const text_uniq_6 = 'A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). \n Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.'; // https://www.codewars.com/kata/545cedaa9943f7fe7b000048; q4_6task
 export const text_uniq_7 = 'Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers. \n For example: \n ([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8] \n ([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26] \n ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]'; // https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c; q5_5task
 
-
+//UniqCase Tests
+export const test_uniq_1 = '';
+export const test_uniq_2 = '';
+export const test_uniq_3 = '';
+export const test_uniq_4 = '';
+export const test_uniq_5 = '';
+export const test_uniq_6 = '';
