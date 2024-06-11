@@ -2,19 +2,18 @@
 export const text_q6_1 = 'Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. \n Return your answer as a number.;' // https://www.codewars.com/kata/57eaeb9578748ff92a000009/javascript
 export const text_q6_2 = 'Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ). \n Examples \n n = 0  ==> [1]        # [2^0] \n n = 1  ==> [1, 2]     # [2^0, 2^1] \n n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]'; // https://www.codewars.com/kata/57a083a57cb1f31db7000028
 export const text_q6_3 = 'Multiply two numbers together.' // https://www.codewars.com/kata/50654ddff44f800200000004
-export const text_q6_4 = 'Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives. \n [1, 2, 3, 4, 5] --> [-1, -2, -3, -4, -5] \n [1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5] \n [] --> [] \n You can assume that all values are integers. Do not mutate the input array.'; // https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad
-export const text_q6_5 = 'Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n. \n For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10. \n If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n. \n Good luck :)'; // https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
-export const text_q6_6 = 'Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by Chinese Yuan \n Examples (Input -> Output) \n 15  -> 101.25 Chinese Yuan \n 465 -> 3138.75 Chinese Yuan \n The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")'; // https://www.codewars.com/kata/5977618080ef220766000022
-export const text_q6_7 = 'We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the value key on the new Object or Dict to the passed-in value. \n So, for example, if we execute the following code: \n wrapper_obj = wrap("my_wrapped_string");  \n # wrapper_obj should be  {"value":"my_wrapped_string"} \n We would then expect the following statement to be true: \n wrapper_obj["value"] == "my_wrapped_string" \n Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.'; // https://www.codewars.com/kata/521cd52e790405a74800032c
-
+export const text_q6_4 = 'Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.You can assume that all values are integers. Do not mutate the input array.'; // https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad
+export const text_q6_5 = 'Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n. '; // https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
+export const text_q6_6 = 'Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by Chinese Yuan (CNY). The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")'; // https://www.codewars.com/kata/5977618080ef220766000022
+export const text_q6_7 = `At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].`;
 //Q6 FuncStart
 export const function_name_q6_1 = 'function sumMix(x){ \n\ \n\}';
 export const function_name_q6_2 = 'function powersOfTwo(n){ \n\  \n\ }';
 export const function_name_q6_3 = 'function multiply(a,b){ \n\ \n\ }';
-export const function_name_q6_4 = '';
-export const function_name_q6_5 = '';
-export const function_name_q6_6 = '';
-export const function_name_q6_7 = '';
+export const function_name_q6_4 = 'function getAdditiveInverse(array) { \n\ \n\ }';
+export const function_name_q6_5 = 'function nearestSq(n){ \n\ \n\ }';
+export const function_name_q6_6 = 'function usdToCny(usd){ \n\ \n\ }';
+export const function_name_q6_7 = 'function differenceInAges(ages){ \n\ \n\ }';
 
 //Q6 Examples
 export const text_example_q6_1 = `First example: \n\ x =  [6,'3',-3,0] --> 6 `;
@@ -23,14 +22,14 @@ export const text_example_q6_2 = 'First example: \n\ n = 0  ==> [1]        # [2^
 export const second_example_q6_2 = 'Second example: \n\ n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]';
 export const text_example_q6_3 = 'First example : \n\ a = 6, b = 3  ==> 18'; 
 export const second_example_q6_3 = 'Second example : \n\ a = -2, b = -3  ==> -6'; 
-export const text_example_q6_4 = '';
-export const second_example_q6_4 = '';
-export const text_example_q6_5 = '';
-export const second_example_q6_5 = '';
-export const text_example_q6_6 = '';
-export const second_example_q6_6 = '';
-export const text_example_q6_7 = '';
-export const second_example_q6_7 = '';
+export const text_example_q6_4 = 'First example : [1, -2, 3, 4, -5] ==> [-1, 2, -3, -4, 5]';
+export const second_example_q6_4 = 'Second example : [] --> [] \n ';
+export const text_example_q6_5 = 'For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10.';
+export const second_example_q6_5 = 'If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n.';
+export const text_example_q6_6 = `First example 15 : -> '101.25 Chinese Yuan'`
+export const second_example_q6_6 = ` Second example : 465 -> '3138.75 Chinese Yuan''`
+export const text_example_q6_7 = 'First example : [10, 20, 15, 30, 25, 5] ==> [5, 30, 25]';
+export const second_example_q6_7 = 'Second example : [30, 25, 40, 15, 20, 5] ==> [5, 40, 35]';
 
 //Q6 tests
 
@@ -46,30 +45,39 @@ export const testCases_q6_2 = [
 ]
 export const testCases_q6_3 = [
     { inputA: 6,inputB: 3 , expected: 18 },
-    { inputA: -2, inputB: -3, expected: -6 },
+    { inputA: -2, inputB: -3, expected: 6 },
     { inputA: -6, inputB: 0, expected: 0 },
 ]
 export const testCases_q6_4 = [
-  
+  { inputA: [1, -2, 3, 4, -5], expected: [-1, 2, -3, -4, 5] },
+  { inputA: [], expected: [] },
+  { inputA: [1, 2, 3, 4, 5], expected: [-1, -2, -3, -4, -5] },
 ]
 export const testCases_q6_5 = [
-  
+  {inputA: 111, expected: 121 },
+  {inputA: 9999, expected: 10000 },
+  {inputA: 0, expected: 0 },
 ]
 export const testCases_q6_6 = [
-  
+  {inputA: 15, expected: '101.25 Chinese Yuan' },
+  {inputA: 465, expected: '3138.75 Chinese Yuan' },
+  {inputA: 123, expected: '830.25 Chinese Yuan' },
+
 ]
 export const testCases_q6_7 = [
-  
+  {inputA: [10, 20, 15, 30, 25, 5], expected: [5, 30, 25] },
+  {inputA: [30, 25, 40, 15, 20, 5], expected: [5, 40, 35] },
+  {inputA: [82, 15, 6, 38, 35] , expected : [6, 82, 76] },
 ]
 //Q6 Func param 
 
 export const userFunction_q6_1 = 'x'
 export const userFunction_q6_2 = 'n'
 export const userFunction_q6_3 = ['a', 'b']
-export const userFunction_q6_4 = ''
-export const userFunction_q6_5 = ''
-export const userFunction_q6_6 = ''
-export const userFunction_q6_7 = ''
+export const userFunction_q6_4 = 'array'
+export const userFunction_q6_5 = 'n'
+export const userFunction_q6_6 = 'usd'
+export const userFunction_q6_7 = 'ages'
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
