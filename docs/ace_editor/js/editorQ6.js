@@ -105,37 +105,62 @@ editorLib.init();
 
         // Example test cases
         item.testsQ6
-    
+        let allTestsCorrect = true;
+
         // Run the user function with the test cases
         item.testsQ6.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
+
             const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
+
             const message = isCorrect ? 'Correct' : 'Incorrect';
+
             console.log(`${message}: ${result}`);
+
             const isIncorrect = !isCorrect;
+
             const resultDiv = document.querySelector('.descritionContainer_1');
+
+            const lastTestCorrect = item.testsQ6[item.testsQ6.length - 1].expected;
+            const allButLastIncorrect = item.testsQ6.slice(0, -1).every(testCase => JSON.stringify(testCase.expected) !== JSON.stringify(lastTestCorrect));
+
+
+            
+
             if (isIncorrect) {
                 resultDiv.classList.remove('correct');
                 resultDiv.classList.add('incorrect');
-              } else {
+              } else  {
                 resultDiv.classList.remove('incorrect');
                 resultDiv.classList.add('correct');
+                
               }
+              if (allButLastIncorrect && JSON.stringify(result) === JSON.stringify(lastTestCorrect)) {
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
+            }
             const resultElement = document.createElement('p');
+
             resultElement.classList.add('Outptut_text')
+
             resultElement.textContent = ` expected ${testCase.expected}; result : ${result} ; ${message}`;
+
             resultDiv.appendChild(resultElement);
             
             const existingButton = document.querySelector('.descritionContainer_1 button');
+
             if (existingButton) {
                 existingButton.remove();
             }
             
             const resetButton = document.createElement('button');
+
             resetButton.classList.add('resetButton');
+
             resetButton.textContent = 'Reset Tests';
             
             const resetButtonContainer = document.querySelector('.descritionContainer_1');
+
             resetButtonContainer.appendChild(resetButton);
             
             resetButton.addEventListener('click', function() {
@@ -147,12 +172,17 @@ editorLib.init();
         
     });
     
-    
-    /*const clearButton = document.createElement('button');
-clearButton.textContent = 'Сбросить';
-
-clearButton.addEventListener('click', function() {
-  resultDiv.innerHTML = '';
-});
-
-resultDiv.appendChild(clearButton);*/
+    /*if (!resultDiv.querySelector('.modal')) {
+                    resultDiv.classList.remove('incorrect');
+                    resultDiv.classList.add('correct');
+                    const modal = document.createElement('div');
+                    modal.classList.add('modal');
+            
+                    const modalContent = document.createElement('div');
+                    modalContent.classList.add('modal-content');
+                    modalContent.innerHTML = `
+                        <p>Kata :'${item.nameQ6}' Correct</p>
+                    `;
+                    modal.appendChild(modalContent);
+                    resultDiv.appendChild(modal);
+                }*/
