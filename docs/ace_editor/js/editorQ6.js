@@ -105,7 +105,6 @@ editorLib.init();
 
         // Example test cases
         item.testsQ6
-        let hasIncorrectResult = false;
         let correctCount = 0;
 
         // Run the user function with the test cases
@@ -128,6 +127,11 @@ editorLib.init();
                 resultDiv.classList.add('correct');
                 const modal = document.getElementById('modal');
                 modal.style.display = 'block';
+                const closeButton = document.getElementById('close-modal');
+closeButton.addEventListener('click', () => {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+});
             } else {
                 resultDiv.classList.remove('correct');
                 resultDiv.classList.add('incorrect');
