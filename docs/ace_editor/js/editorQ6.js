@@ -105,7 +105,7 @@ editorLib.init();
 
         // Example test cases
         item.testsQ6
-        let allTestsCorrect = true;
+        let hasIncorrectResult = false;
 
         // Run the user function with the test cases
         item.testsQ6.forEach(testCase => {
@@ -117,28 +117,19 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
-            const isIncorrect = !isCorrect;
 
             const resultDiv = document.querySelector('.descritionContainer_1');
-
-            const lastTestCorrect = item.testsQ6[item.testsQ6.length - 1].expected;
-            const allButLastIncorrect = item.testsQ6.slice(0, -1).every(testCase => JSON.stringify(testCase.expected) !== JSON.stringify(lastTestCorrect));
-
-
-            
-
-            if (isIncorrect) {
+            if (!isCorrect) {
+                hasIncorrectResult = true;
+            }
+            if (hasIncorrectResult) {
                 resultDiv.classList.remove('correct');
                 resultDiv.classList.add('incorrect');
-              } else  {
+            } else {
                 resultDiv.classList.remove('incorrect');
                 resultDiv.classList.add('correct');
-                
-              }
-              if (allButLastIncorrect && JSON.stringify(result) === JSON.stringify(lastTestCorrect)) {
-                resultDiv.classList.remove('correct');
-                resultDiv.classList.add('incorrect');
             }
+
             const resultElement = document.createElement('p');
 
             resultElement.classList.add('Outptut_text')
@@ -172,17 +163,4 @@ editorLib.init();
         
     });
     
-    /*if (!resultDiv.querySelector('.modal')) {
-                    resultDiv.classList.remove('incorrect');
-                    resultDiv.classList.add('correct');
-                    const modal = document.createElement('div');
-                    modal.classList.add('modal');
-            
-                    const modalContent = document.createElement('div');
-                    modalContent.classList.add('modal-content');
-                    modalContent.innerHTML = `
-                        <p>Kata :'${item.nameQ6}' Correct</p>
-                    `;
-                    modal.appendChild(modalContent);
-                    resultDiv.appendChild(modal);
-                }*/
+    
