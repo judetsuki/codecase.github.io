@@ -112,7 +112,15 @@ editorLib.init();
             const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
             const message = isCorrect ? 'Correct' : 'Incorrect';
             console.log(`${message}: ${result}`);
+            const isIncorrect = !isCorrect;
             const resultDiv = document.querySelector('.descritionContainer_1');
+            if (isIncorrect) {
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
+              } else {
+                resultDiv.classList.remove('incorrect');
+                resultDiv.classList.add('correct');
+              }
             const resultElement = document.createElement('p');
             resultElement.classList.add('Outptut_text')
             resultElement.textContent = ` expected ${testCase.expected}; result : ${result} ; ${message}`;
@@ -132,6 +140,8 @@ editorLib.init();
             
             resetButton.addEventListener('click', function() {
                 resultDiv.innerHTML = '';
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.remove('incorrect');
             });
         });
         
