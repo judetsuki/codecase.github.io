@@ -8,7 +8,7 @@ export const text_q6_6 = 'Create a function that converts US dollars (USD) to Ch
 export const text_q6_7 = 'We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the value key on the new Object or Dict to the passed-in value. \n So, for example, if we execute the following code: \n wrapper_obj = wrap("my_wrapped_string");  \n # wrapper_obj should be  {"value":"my_wrapped_string"} \n We would then expect the following statement to be true: \n wrapper_obj["value"] == "my_wrapped_string" \n Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.'; // https://www.codewars.com/kata/521cd52e790405a74800032c
 
 //Q6 FuncStart
-export const function_name_q6_1 = '';
+export const function_name_q6_1 = 'function sumMix(x){ \n\ \n\}';
 export const function_name_q6_2 = '';
 export const function_name_q6_3 = '';
 export const function_name_q6_4 = '';
@@ -31,6 +31,18 @@ export const text_example_q6_6 = '';
 export const second_example_q6_6 = '';
 export const text_example_q6_7 = '';
 export const second_example_q6_7 = '';
+
+//Q6 tests
+
+export const testCases_q6_1 = [
+    { inputA: [6,'3',-3,0], expected: 6 },
+    { inputA: [6,'-3',-3,12], expected: 12 },
+    { inputA: [-2,'-3',-3,12, -21], expected: -17 },
+];
+
+//Q6 Func param 
+
+export const userFunction_q6_1 = 'x'
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -99,26 +99,21 @@ editorLib.init();
                 }
               }
 
-            const userFunction = new Function(['a', 'b'], removeFirstAndLastBrackets(userCode));
+            const userFunction = new Function([item.FuncArgsQ6], removeFirstAndLastBrackets(userCode));
             console.log(userFunction);    
 
 
         // Example test cases
-        const testCases = [
-            { inputA: 3, inputB: 5, expected: 15 },
-            { inputA: 3, inputB: 0, expected: 0 },
-            { inputA: -2, inputB: 5, expected: -10 },
-            { inputA: 3.14, inputB: 2.71, expected: 8.5094 }
-        ];
+        item.testsQ6
     
         // Run the user function with the test cases
-        testCases.forEach(testCase => {
+        item.testsQ6.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
             const isCorrect = result === testCase.expected;
             const message = isCorrect ? 'Correct' : 'Incorrect';
             console.log(`${message}: ${result}`);
             const resultElement = document.createElement('p');
-            resultElement.textContent = `${testCase.inputA} ${testCase.inputB} expected ${testCase.expected}; result : ${result} ; ${message}`;
+            resultElement.textContent = ` expected ${testCase.expected}; result : ${result} ; ${message}`;
             consoleLogList.appendChild(resultElement);
         });
     });
