@@ -99,27 +99,76 @@ editorLib.init();
                 }
               }
 
-            const userFunction = new Function(['a', 'b'], removeFirstAndLastBrackets(userCode));
+            const userFunction = new Function([item.FuncArgsQ3], removeFirstAndLastBrackets(userCode));
             console.log(userFunction);    
 
 
         // Example test cases
-        const testCases = [
-            { inputA: 3, inputB: 5, expected: 15 },
-            { inputA: 3, inputB: 0, expected: 0 },
-            { inputA: -2, inputB: 5, expected: -10 },
-            { inputA: 3.14, inputB: 2.71, expected: 8.5094 }
-        ];
-    
+        item.testsQ3
+        let correctCount = 0;
+
         // Run the user function with the test cases
-        testCases.forEach(testCase => {
+        item.testsQ3.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
-            const isCorrect = result === testCase.expected;
+
+            const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
+
             const message = isCorrect ? 'Correct' : 'Incorrect';
+
             console.log(`${message}: ${result}`);
+
+
+            const resultDiv = document.querySelector('.descritionContainer_1');
+            if (isCorrect) {
+                correctCount++;
+            }
+            if (correctCount === 3) {
+                resultDiv.classList.remove('incorrect');
+                resultDiv.classList.add('correct');
+                const modal = document.getElementById('modal');
+                modal.style.display = 'block';
+                const closeButton = document.getElementById('close_modal');
+                closeButton.addEventListener('click', () => {
+                const modal = document.getElementById('modal');
+                modal.style.display = 'none';
+                
+            });
+            } else {
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
+            }
+
             const resultElement = document.createElement('p');
-            resultElement.textContent = `${testCase.inputA} ${testCase.inputB} expected ${testCase.expected}; result : ${result} ; ${message}`;
-            consoleLogList.appendChild(resultElement);
+
+            resultElement.classList.add('Outptut_text')
+
+            resultElement.textContent = ` expected ${testCase.expected}; result : ${result} ; ${message}`;
+
+            resultDiv.appendChild(resultElement);
+            
+            const existingButton = document.querySelector('.descritionContainer_1 button');
+
+            if (existingButton) {
+                existingButton.remove();
+            }
+            
+            const resetButton = document.createElement('button');
+
+            resetButton.classList.add('resetButton');
+
+            resetButton.textContent = 'Reset Tests';
+            
+            const resetButtonContainer = document.querySelector('.descritionContainer_1');
+
+            resetButtonContainer.appendChild(resetButton);
+            
+            resetButton.addEventListener('click', function() {
+                resultDiv.innerHTML = '';
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.remove('incorrect');
+            });
         });
+        
     });
+    
     
