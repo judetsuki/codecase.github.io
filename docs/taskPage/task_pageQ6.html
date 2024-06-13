@@ -11,6 +11,28 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript"> 
       var item = JSON.parse(localStorage.getItem('dataToPass6'));
+      var konsole = JSON.parse(localStorage.getItem('solvedItems'));
+
+// Создаем div для отображения имен элементов
+var namesDiv = document.createElement('div');
+
+// Создаем Set для хранения уникальных имен
+var uniqueNames = new Set();
+
+// Перебираем массив konsole и добавляем уникальные имена в Set
+konsole.forEach(function(item) {
+    uniqueNames.add(item.nameQ6);
+});
+
+// Создаем HTML элементы для каждого уникального имени и добавляем их в namesDiv
+uniqueNames.forEach(function(name) {
+    var nameElement = document.createElement('p');
+    nameElement.textContent = name;
+    namesDiv.appendChild(nameElement);
+});
+
+// Выводим содержимое namesDiv на страницу
+document.write(namesDiv.innerHTML);
       </script>
 
 </head>
@@ -93,18 +115,24 @@
 </html>
 
 
-<!--var konsole = JSON.parse(localStorage.getItem('solvedItems'));
+<!--
+var konsole = JSON.parse(localStorage.getItem('solvedItems'));
 
-  // Создаем div для отображения имен элементов
-  var namesDiv = document.createElement('div');
+var namesDiv = document.createElement('div');
 
-  // Перебираем массив konsole и создаем HTML элементы для каждого элемента
-  konsole.forEach(function(item) {
-      var nameElement = document.createElement('p');
-      nameElement.textContent = item.nameQ6;
-      namesDiv.appendChild(nameElement);
-  });
+// Создаем Set для хранения уникальных имен
+var uniqueNames = new Set();
 
- document.write(namesDiv.innerHTML);
+konsole.forEach(function(item) {
+    uniqueNames.add(item.nameQ6);
+});
+
+uniqueNames.forEach(function(name) {
+    var nameElement = document.createElement('p');
+    nameElement.textContent = name;
+    namesDiv.appendChild(nameElement);
+});
+
+document.write(namesDiv.innerHTML);
  Инвентарь получен
  !--> 
