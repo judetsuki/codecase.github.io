@@ -42,6 +42,7 @@
             <p style="margin-top: 10px;">
               <script>
                 document.write(item.SecondExampleQ6)
+                
               </script>
             </p>
 
@@ -72,8 +73,7 @@
       </div>
       <div id="modal" class="modal">
         <div class="modal_content">
-          <h2>Current Kata Finished</h2>
-          <p>Here is some text explaining the result or any additional information.</p>
+          <h2>Current Kata : <script>document.write(item.nameQ6)</script> - Finished</h2>
           <button id="close_modal" class="buttons">Close</button>
           <a href='../index.html'>
           <button id="go_to_home_modal" class="buttons">Go to Main menu</button>
@@ -93,3 +93,18 @@
 </html>
 
 
+<!--var konsole = JSON.parse(localStorage.getItem('solvedItems'));
+
+  // Создаем div для отображения имен элементов
+  var namesDiv = document.createElement('div');
+
+  // Перебираем массив konsole и создаем HTML элементы для каждого элемента
+  konsole.forEach(function(item) {
+      var nameElement = document.createElement('p');
+      nameElement.textContent = item.nameQ6;
+      namesDiv.appendChild(nameElement);
+  });
+
+ document.write(namesDiv.innerHTML);
+ Инвентарь получен
+ !--> 

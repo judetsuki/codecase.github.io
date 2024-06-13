@@ -117,7 +117,8 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
-
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItems')) || [];
+            let solvedUserCode = JSON.parse(localStorage.getItem('solvedUserCode')) || [];
             const resultDiv = document.querySelector('.descritionContainer_1');
             if (isCorrect) {
                 correctCount++;
@@ -131,7 +132,10 @@ editorLib.init();
                 closeButton.addEventListener('click', () => {
                 const modal = document.getElementById('modal');
                 modal.style.display = 'none';
-                
+                solvedItemsLS.push(item);
+                localStorage.setItem('solvedItems', JSON.stringify(solvedItemsLS));
+                solvedUserCode.push(userCode);
+                localStorage.setItem('solvedUserCode', JSON.stringify(solvedUserCode));
             });
             } else {
                 resultDiv.classList.remove('correct');
