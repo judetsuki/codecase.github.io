@@ -479,7 +479,7 @@ d
   left: calc(50% - (193.2px / 2));
   margin-top: 1%;
   position: relative;
-  color: black;
+  color: #1b1f24;
   
 }
 .task:hover {
