@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* Variables */
@@ -62,7 +61,7 @@ main {
 .all-cases-menu {
     margin-top: 20px;
     border-radius: 10px;
-    max-width: 90%;
+    max-width: 100%;
     background-color: rgb(219, 219, 219);
     box-shadow: 0px 0px 25px black inset;
     border: solid 2px black;
@@ -89,7 +88,7 @@ main {
     width: 83%;
 }
 
-.case-img {
+.q1_case,.q2_case,.q3_case,.q4_case,.q5_case,.q6_case {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -111,17 +110,17 @@ main {
 }
 
 .case-of-the-day-menu, .unique-cases-menu {
-    border-radius: 10px;
-    background-color: rgb(219, 219, 219);
-    box-shadow: 0px 0px 25px black inset;
-    border: solid 2px black;
-    flex: 1;
-    min-width: 300px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  flex: 1 0 300px; /* Адаптированное свойство flex */
+  margin: 10px; 
+  display: flex;
+  border-radius: 10px;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 25px black inset;
+  border: solid 2px black;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 23vw;
 }
 
 .special-case {
@@ -135,7 +134,7 @@ main {
 }
 
 .case-of-the-day-text, .unique-cases-text {
-    font-size: 2.9vw;
+    font-size: 2.5vw;
     margin-bottom: 20px;
     color: black;
     text-shadow: white 0px 0 8px;
@@ -161,13 +160,9 @@ footer {
 
 @media (max-width: 1024px) {
     .cases-parent {
-        flex-direction: column;
         align-items: center;
     }
-    .case-of-the-day-menu, .unique-cases-menu {
-        max-width: 80%;
-    }
-}
+  }
 
 @media (max-width: 768px) {
     .cases-grid {
@@ -193,7 +188,7 @@ footer {
     }
 
     .case-of-the-day-menu, .unique-cases-menu {
-        max-width: 100%;
+        max-width: 80%;
     }
 }
 
@@ -232,61 +227,78 @@ footer {
         height: auto;
     }
 }
+.section_inventary{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+}
 
-/* Add styles for the sidebar toggle button */
+.card_inventary {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 .sidebar-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  z-index: 1000; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none; 
+  background-color: rgb(219, 219, 219); 
+  border-radius: 5px; 
+  cursor: pointer;
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    transition: left 0.3s ease-in-out;
-    z-index: 999;
+  position: fixed;  
+  top: 0; 
+  left: -300px;
+  width: 300px; 
+  height: 100%;
+  background-color: #333; /* цвет фона */
+  color: white; /* цвет текста */
+  transition: left 0.3s ease-in-out; /* анимация смещения */
+  z-index: 999; /* выше других элементов, но ниже кнопки */
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  list-style: none; /* список без маркеров */
+  padding: 0; /* отступы */
+  margin: 0; /* поля */
+  text-align: center; /* по центру */
 }
 
 .sidebar ul li {
-    margin: 20px 0;
+  margin: 20px 0; /* отступы */
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s;
+  color: white; /* цвет текста */
+  text-decoration: none; /* без подчеркивания */
+  font-size: 20px; /* размер шрифта */
+  display: block; /* в виде блока */
+  padding: 10px; /* отступы */
+  transition: background-color 0.3s; /* анимация фона */
 }
 
 .sidebar ul li a:hover {
-    background-color: #575757;
+  background-color: #575757; /* фон при наведении */
 }
 
-/* Add styles for when the sidebar is shown */
+/* стили для показа боковой панели */
 .sidebar.show {
-    left: 0;
+  left: 0; /* отображение боковой панели */
 }
-
 /* ///////////////////// */ test scripts below /* ///////////////////// */
 
 .unbox-area{
@@ -333,6 +345,12 @@ footer {
 }
 #dialog-msg {
   text-align: center;
+}
+.case_section {
+  flex-direction: column;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
 }
 
 .scope{
@@ -468,18 +486,21 @@ d
 }
 
 .case_on_open_page{
+  position: relative;
   left: calc(50% - (320px / 2));
   width: 320px;
   margin-top: 5%;
 }
 
 .text_above_case{
+  position:relative;
   color: white;
   left: calc(50% - (115.2px / 2));
   top: 17%;
 }
 
 .text_above_case_uniq{
+  position:relative;
   color: white;
   left: calc(50% - (187.2px / 2));
   top: 17%; 
@@ -491,14 +512,24 @@ d
   max-width: 90%;
 }
 
-.descritionContainer{
+.descritionContainer {
   border-radius: 30px;
   background-color:gray;
-  height: 97vh;
+  height: 85vh;
   width: 50vw;
   margin: 10px;
   padding: 10px;
   
+}
+.descritionContainer_1{
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px  ;
+  background-color:gray;
+  height: 400px;
+  margin: 10px;
+  width: 47vw;
+  padding: 10px
 }
 .codeContainer{
   border-radius: 30px  ;
@@ -532,4 +563,67 @@ p{
   border: none;
   background-color: #1b1f24;
   color:white;
+}
+.resetButton {
+  border: 0;
+  padding: .5em;
+  background-color:darkslategray;
+  border: 2px solid #333;
+  margin-top: 1em;
+  width: 100px;
+  cursor: pointer;
+}
+
+.Outptut_text{
+
+}
+
+.correct {
+  border: 2px solid green;
+}
+
+.incorrect {
+  border: 2px solid red;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.modal_content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+  
+}
+
+#close_modal  {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+#go_to_home_modal {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+#go_to_home_modal:hover {
+  background-color: #d32f2f;
+}
+#close_modal:hover {
+  background-color: #d32f2f;
 }

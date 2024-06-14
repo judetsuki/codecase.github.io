@@ -5,5 +5,4 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebarToggle.addEventListener('click', function () {
         sidebar.classList.toggle('show');
     });
-  });
-  
+});
