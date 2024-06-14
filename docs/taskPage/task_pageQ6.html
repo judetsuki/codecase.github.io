@@ -11,29 +11,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript"> 
       var item = JSON.parse(localStorage.getItem('dataToPass6'));
-      var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem'));
-      var namesDiv = document.createElement('div');
-
-      // Создаем Set для хранения уникальных имен
-      var uniqueNames = new Set();
-      var uniqueCode = new Set();
-      TaskName_TaskCode.forEach(function(item) {
-    uniqueNames.add(item.nameQ6);
-    uniqueCode.add(item.taskCodeQ6);
-    });
-
-uniqueNames.forEach(function(name) {
-    var nameElement = document.createElement('p');
-    nameElement.textContent = name;
-    namesDiv.appendChild(nameElement);
-});
-uniqueCode.forEach(function(code) {
-    var codeElement = document.createElement('p');
-    codeElement.textContent = code;
-    namesDiv.appendChild(codeElement);
-})
-document.write(namesDiv.innerHTML);
-document.write(item.taskCodeQ6);
       </script>
 
 </head>
@@ -116,50 +93,27 @@ document.write(item.taskCodeQ6);
 </html>
 
 
-<!--
-var konsole = JSON.parse(localStorage.getItem('solvedItems'));
+<!--var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem'));
+      var namesDiv = document.createElement('div');
 
-var namesDiv = document.createElement('div');
-
-// Создаем Set для хранения уникальных имен
-var uniqueNames = new Set();
-
-konsole.forEach(function(item) {
+      // Создаем Set для хранения уникальных имен
+      var uniqueNames = new Set();
+      var uniqueCode = new Set();
+      TaskName_TaskCode.forEach(function(item) {
     uniqueNames.add(item.nameQ6);
-});
+    uniqueCode.add(item.taskCodeQ6);
+    });
 
 uniqueNames.forEach(function(name) {
     var nameElement = document.createElement('p');
     nameElement.textContent = name;
     namesDiv.appendChild(nameElement);
 });
-
+uniqueCode.forEach(function(code) {
+    var codeElement = document.createElement('p');
+    codeElement.textContent = code;
+    namesDiv.appendChild(codeElement);
+})
 document.write(namesDiv.innerHTML);
- Инвентарь получен решенные задачи !--> 
-
-
-
-
-
- 
-<!-- var userCode = JSON.parse(localStorage.getItem('solvedUserCode'));
-var namesDiv = document.createElement('div');
-
-// Создаем Set для хранения уникальных решений
-var uniqueSolutions = new Set();
-
-// Перебираем массив userCode и добавляем уникальные решения в Set
-userCode.forEach(function(solution) {
-    uniqueSolutions.add(solution);
-});
-
-// Создаем HTML элементы для каждого уникального решения и добавляем их в namesDiv
-uniqueSolutions.forEach(function(solution) {
-    var solutionElement = document.createElement('pre');
-    solutionElement.textContent = solution;
-    namesDiv.appendChild(solutionElement);
-});
-document.write(namesDiv.innerHTML);
---> 
-
-<!--Нужно теперь сделать так, чтобы решение соответствовало названию задачи.-->
+document.write(item.taskCodeQ6);
+      </script>-->
