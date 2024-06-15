@@ -28,30 +28,45 @@
     "main-logo">
 </header>
 <body>
+    <style>
+        .centered-text {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+    <div class="centered-text">
+        <h1>q5 inventory</h1>
+    </div>
     <div class="section_inventary">
 
         
 </div>
-<script src="../index.js"></script>
-<script>
+<script src="../index.js"></script><script>
     // Parse the JSON data from localStorage
     var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem5'));
-var namesDiv = document.querySelector('.section_inventary');
+    var namesDiv = document.querySelector('.section_inventary');
 var addedNames = {};
 
 TaskName_TaskCode.forEach(function(item) {
-if (!addedNames[item.nameQ5]) {
+if (!addedNames[item.img]) {
     var section = document.createElement('div');
     section.classList.add('section_inventary');
 
-    var card = document.createElement('div');
-    card.classList.add('card_inventary');
-    card.id = 'card_inventary-' + item.taskCodeQ5;
-    card.textContent = item.nameQ5;
-
-    section.appendChild(card);
+    var img = document.createElement('img');
+    var p = document.createElement('p');
+    p.textContent = item.nameQ5;
+    img.classList.add('card_inventary');
+    img.id = 'card_inventary' ;
+    img.src = item.img; // Устанавливаем путь к изображению в атрибут src
+    img.style.width = '200%'; // Занимает 1/4 ширины родительского элемента
+    img.style.maxWidth = '100'
+    img.style.height = '20vh'; // Максимальная ширина изображения
+    section.appendChild(img);
     namesDiv.appendChild(section);
+    addedNames[item.img] = true;
     addedNames[item.nameQ5] = true;
+
 }
 });
 </script>
