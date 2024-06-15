@@ -116,6 +116,7 @@ editorLib.init();
             const message = isCorrect ? 'Correct' : 'Incorrect';
 
             console.log(`${message}: ${result}`);
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem3')) || [];
 
 
             const resultDiv = document.querySelector('.descritionContainer_1');
@@ -131,7 +132,9 @@ editorLib.init();
                 closeButton.addEventListener('click', () => {
                 const modal = document.getElementById('modal');
                 modal.style.display = 'none';
-                
+                item.taskCodeQ3 = userCode;
+                solvedItemsLS.push(item);
+                localStorage.setItem('solvedItem3', JSON.stringify(solvedItemsLS));
             });
             } else {
                 resultDiv.classList.remove('correct');

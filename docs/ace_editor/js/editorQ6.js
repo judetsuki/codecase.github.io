@@ -117,7 +117,7 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
-            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem')) || [];
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem6')) || [];
             const resultDiv = document.querySelector('.descritionContainer_1');
             if (isCorrect) {
                 correctCount++;
@@ -133,7 +133,7 @@ editorLib.init();
                 modal.style.display = 'none';
                 item.taskCodeQ6 = userCode;
                 solvedItemsLS.push(item);
-                localStorage.setItem('solvedItem', JSON.stringify(solvedItemsLS));
+                localStorage.setItem('solvedItem6', JSON.stringify(solvedItemsLS));
             });
             } else {
                 resultDiv.classList.remove('correct');

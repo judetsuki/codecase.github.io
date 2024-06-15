@@ -117,6 +117,7 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem1')) || [];
 
             const resultDiv = document.querySelector('.descritionContainer_1');
             if (isCorrect) {
@@ -131,7 +132,9 @@ editorLib.init();
                 closeButton.addEventListener('click', () => {
                 const modal = document.getElementById('modal');
                 modal.style.display = 'none';
-                
+                item.taskCodeQ1 = userCode;
+                solvedItemsLS.push(item);
+                localStorage.setItem('solvedItem1', JSON.stringify(solvedItemsLS));
             });
             } else {
                 resultDiv.classList.remove('correct');
