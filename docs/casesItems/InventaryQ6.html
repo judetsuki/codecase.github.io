@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout Example</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <header>
@@ -24,32 +15,62 @@
         </ul>
     </div>
     <button class="sidebar-toggle" id="sidebarToggle">☰</button>
-    <img src="../images/logo.webp" alt="Main-Logo" class =
-    "main-logo">
+    <img src="../images/logo.webp" alt="Main-Logo" class="main-logo">
 </header>
 <body>
     <div class="section_inventary">
 
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-        <div class="card_inventary"></div>
-</div>
-<script src="../index.js"></script>
+        
+    </div>
 
+    <script>
+        // Parse the JSON data from localStorage
+        var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
+var namesDiv = document.querySelector('.section_inventary');
+var addedNames = {};
+
+TaskName_TaskCode.forEach(function(item) {
+    if (!addedNames[item.nameQ6]) {
+        var section = document.createElement('div');
+        section.classList.add('section_inventary');
+
+        var card = document.createElement('div');
+        card.classList.add('card_inventary');
+        card.id = 'card_inventary-' + item.taskCodeQ6;
+        card.textContent = item.nameQ6;
+
+        section.appendChild(card);
+        namesDiv.appendChild(section);
+        addedNames[item.nameQ6] = true;
+    }
+});
+    </script>
+
+    <script src="../index.js"></script>
 </body>
 </html>
-</body>
-</html>
+<!--
+<script>
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
+          var namesDiv = document.createElement('div');
+    
+          // Создаем Set для хранения уникальных имен
+          var uniqueNames = new Set();
+          var uniqueCode = new Set();
+          TaskName_TaskCode.forEach(function(item) {
+        uniqueNames.add(item.nameQ6);
+        uniqueCode.add(item.taskCodeQ6);
+        });
+    
+    uniqueNames.forEach(function(name) {
+        var nameElement = document.createElement('p');
+        nameElement.textContent = name;
+        namesDiv.appendChild(nameElement);
+    });
+    uniqueCode.forEach(function(code) {
+        var codeElement = document.createElement('p');
+        codeElement.textContent = code;
+        namesDiv.appendChild(codeElement);
+    })
+    document.write(namesDiv.innerHTML);
+    </script>-->
