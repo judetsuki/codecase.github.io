@@ -48,7 +48,28 @@
         <div class="card_inventary"></div>
 </div>
 <script src="../index.js"></script>
+<script>
+    // Parse the JSON data from localStorage
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem5'));
+var namesDiv = document.querySelector('.section_inventary');
+var addedNames = {};
 
+TaskName_TaskCode.forEach(function(item) {
+if (!addedNames[item.nameQ5]) {
+    var section = document.createElement('div');
+    section.classList.add('section_inventary');
+
+    var card = document.createElement('div');
+    card.classList.add('card_inventary');
+    card.id = 'card_inventary-' + item.taskCodeQ5;
+    card.textContent = item.nameQ5;
+
+    section.appendChild(card);
+    namesDiv.appendChild(section);
+    addedNames[item.nameQ5] = true;
+}
+});
+</script>
 </body>
 </html>
 </body>
@@ -61,8 +82,8 @@
           var uniqueNames = new Set();
           var uniqueCode = new Set();
           TaskName_TaskCode.forEach(function(item) {
-        uniqueNames.add(item.nameQ6);
-        uniqueCode.add(item.taskCodeQ6);
+        uniqueNames.add(item.nameQ5);
+        uniqueCode.add(item.taskCodeQ5);
         });
     
     uniqueNames.forEach(function(name) {
