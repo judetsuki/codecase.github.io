@@ -235,7 +235,24 @@ footer {
   grid-template-columns: repeat(4, 1fr); 
   gap: 20px;
 }
+.section_inventary1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  transition: transform 0.3s;
 
+}
+
+.card_inventary1 {
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
 .card_inventary {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
