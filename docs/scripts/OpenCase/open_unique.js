@@ -1,4 +1,4 @@
-import { text_uniq_1 , text_uniq_2 , text_uniq_3 , text_uniq_4 , text_uniq_5 , text_uniq_6 , text_uniq_7 } from "../tasks";
+import { text_uniq_1 , text_uniq_2 , text_uniq_3 , text_uniq_4 , text_uniq_5 , text_uniq_6 , text_uniq_7 } from "../tasks.js";
 
 const cells = 61 //количество предметов (скорость рулетки)
 
@@ -129,7 +129,8 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
-
+const a = document.getElementById('startButton');
+a.addEventListener('click', start);
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 
 // Обрабатываем событие popstate для восстановления состояния предыдущей страницы

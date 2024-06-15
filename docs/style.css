@@ -100,15 +100,49 @@ main {
     transform: scale(1.05);
 }
 
-.cases-parent {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px 0;
+.uniq_case ,.day_case {
+  max-width: 42%;
+  transition: transform 0.3s;
 }
 
+.uniq-case, .day-case:hover {
+    transform: scale(1.05);
+}
+
+.cases_parent{
+  text-align: center;
+}
+
+.case_of_the_day_menu,.unique_cases_menu{
+  position: relative;
+  margin-top: 200px;
+  border-radius: 10px;
+  max-height: 150%;
+  max-width: 30%;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 25px black inset;
+  border: solid 2px black;
+  display: inline-flex;
+  padding: 10px 10px 10px 10px;
+}
+
+.case_of_the_day_text,.unique_cases_text{
+position: absolute;
+bottom: 90%;
+color: black;
+text-shadow: white 0px 0 8px;
+}
+
+.case_of_the_day_text,.unique_cases_text,.all_cases_text{
+  font-size: 2.9vw;
+}
+.unique_cases_text{
+  margin-left: 10%;
+}
+
+.case_of_the_day_text{
+  margin-left: 5%;
+}
 .case-of-the-day-menu, .unique-cases-menu {
   flex: 1 0 300px; /* Адаптированное свойство flex */
   margin: 10px; 
