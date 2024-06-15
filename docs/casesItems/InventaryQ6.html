@@ -27,22 +27,28 @@
     <script>
         // Parse the JSON data from localStorage
         var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
-var namesDiv = document.querySelector('.section_inventary');
+        var namesDiv = document.querySelector('.section_inventary');
 var addedNames = {};
 
 TaskName_TaskCode.forEach(function(item) {
-    if (!addedNames[item.nameQ6]) {
+    if (!addedNames[item.img]) {
         var section = document.createElement('div');
         section.classList.add('section_inventary');
 
-        var card = document.createElement('div');
-        card.classList.add('card_inventary');
-        card.id = 'card_inventary-' + item.taskCodeQ6;
-        card.textContent = item.nameQ6;
-
-        section.appendChild(card);
+        var img = document.createElement('img');
+        var p = document.createElement('p');
+        p.textContent = item.nameQ6;
+        img.classList.add('card_inventary');
+        img.id = 'card_inventary' ;
+        img.src = item.img; // Устанавливаем путь к изображению в атрибут src
+        img.style.width = '200%'; // Занимает 1/4 ширины родительского элемента
+        img.style.maxWidth = '100'
+        img.style.height = '20vh'; // Максимальная ширина изображения
+        section.appendChild(img);
         namesDiv.appendChild(section);
+        addedNames[item.img] = true;
         addedNames[item.nameQ6] = true;
+
     }
 });
     </script>
@@ -75,3 +81,33 @@ TaskName_TaskCode.forEach(function(item) {
     })
     document.write(namesDiv.innerHTML);
     </script>-->
+
+
+
+    <!--
+    с именами
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
+    var namesDiv = document.querySelector('.section_inventary');
+    var addedNames = {};
+
+    TaskName_TaskCode.forEach(function(item) {
+        if (!addedNames[item.img]) {
+            var section = document.createElement('div');
+            section.classList.add('section_inventary');
+
+            var img = document.createElement('img');
+            var p = document.createElement('p');
+            p.textContent = item.nameQ6;
+            img.classList.add('card_inventary');
+            img.id = 'card_inventary';
+            img.src = item.img; // Устанавливаем путь к изображению в атрибут src
+            img.style.width = '200%'; // Занимает 1/4 ширины родительского элемента
+            img.style.maxWidth = '100';
+            img.style.height = '20vh'; // Максимальная ширина изображения
+            section.appendChild(img);
+            section.appendChild(p); // Append the p element after the img element
+            namesDiv.appendChild(section);
+            addedNames[item.img] = true;
+            addedNames[item.nameQ6] = true;
+        }
+    })-->
