@@ -191,7 +191,7 @@ export const text_q4_3 = 'You will be given an array of numbers. You have to sor
 export const text_q4_4 = 'In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray.'; // https://www.codewars.com/kata/59e66e48fc3c499ec5000103
 export const text_q4_5 = 'Welcome. \n In this kata you are required to, given a string, replace every letter with its position in the alphabet. \n If anything in the text isnt a letter, ignore it and dont return it. \n "a" = 1, "b" = 2, etc.'; // https://www.codewars.com/kata/546f922b54af40e1e90001da
 export const text_q4_6 = 'A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). \n Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.'; // https://www.codewars.com/kata/545cedaa9943f7fe7b000048
-
+export const text_q4_7 = '';
 
 // q4 FuncStart
 export const function_name_q4_1 = 'function persistence(num) { \n //code me \n }';

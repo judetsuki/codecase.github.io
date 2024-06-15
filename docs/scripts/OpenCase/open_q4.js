@@ -9,7 +9,7 @@ const items = [
   {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
   {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : text_q4_5,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
   {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : text_q4_6,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7 ,SecondExampleQ4 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ4 : /*сюда первый экземпляр текста*/ '' ,testsQ4 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ4: /*сюда имя функции*/ '', chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
