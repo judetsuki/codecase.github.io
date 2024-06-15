@@ -8,13 +8,13 @@ const cells = 61 //количество предметов (скорость р�
 
 // From 0.001 to 100
 const items = [
-  {nameQ6: 'SumMix', img: '../images/iPhone.png',taskTextQ6 : text_q6_1,SecondExampleQ6 : second_example_q6_1 ,exampleQ6 : text_example_q6_1 ,testsQ6 : testCases_q6_1  ,FuncNameQ6: function_name_q6_1, FuncArgsQ6 : userFunction_q6_1, chance: 14.29},
-  {nameQ6: 'PowersOfTwo', img: '../images/keyboard.png',taskTextQ6 : text_q6_2,SecondExampleQ6 : second_example_q6_2 ,exampleQ6 : text_example_q6_2 ,testsQ6 : testCases_q6_2 ,FuncNameQ6: function_name_q6_2, FuncArgsQ6 : userFunction_q6_2, chance: 14.29},
-  {nameQ6: 'Multiply', img: '../images/headphones.png',taskTextQ6 : text_q6_3,SecondExampleQ6 : second_example_q6_3 ,exampleQ6 : text_example_q6_3 ,testsQ6 : testCases_q6_3 ,FuncNameQ6: function_name_q6_3, FuncArgsQ6 : userFunction_q6_3 , chance: 14.29},
-  {nameQ6: 'Invert values', img: '../images/pivo.png',taskTextQ6 : text_q6_4,SecondExampleQ6 : second_example_q6_4 ,exampleQ6 : text_example_q6_4 ,testsQ6 : testCases_q6_4 ,FuncNameQ6: function_name_q6_4, FuncArgsQ6 : userFunction_q6_4, chance: 14.29},
-  {nameQ6: 'Find Nearest square number', img: '../images/butterfly.png',taskTextQ6 : text_q6_5,SecondExampleQ6 : second_example_q6_5 ,exampleQ6 : text_example_q6_5 ,testsQ6 : testCases_q6_5 ,FuncNameQ6: function_name_q6_5, FuncArgsQ6 : userFunction_q6_5, chance: 14.29},
-  {nameQ6: 'USD => CNY', img: '../images/jini.png',taskTextQ6 : text_q6_6,SecondExampleQ6 : second_example_q6_6 ,exampleQ6 : text_example_q6_6 ,testsQ6 : testCases_q6_6 ,FuncNameQ6: function_name_q6_6, FuncArgsQ6 : userFunction_q6_6, chance: 14.29},
-  {nameQ6: 'Find the Difference in Age between Oldest and Youngest Family Members', img: '../images/vinipuh.png',taskTextQ6 : text_q6_7,SecondExampleQ6 : second_example_q6_7 ,exampleQ6 : text_example_q6_7 ,testsQ6 : testCases_q6_7 ,FuncNameQ6: function_name_q6_7, FuncArgsQ6 : userFunction_q6_7, chance: 14.29},
+  {nameQ6: 'SumMix', img: '../images/Task_Icons/q6/q6_1.png',taskTextQ6 : text_q6_1,SecondExampleQ6 : second_example_q6_1 ,exampleQ6 : text_example_q6_1 ,testsQ6 : testCases_q6_1  ,FuncNameQ6: function_name_q6_1, FuncArgsQ6 : userFunction_q6_1, chance: 14.29},
+  {nameQ6: 'PowersOfTwo', img: '../images/Task_Icons/q6/q6_2.png',taskTextQ6 : text_q6_2,SecondExampleQ6 : second_example_q6_2 ,exampleQ6 : text_example_q6_2 ,testsQ6 : testCases_q6_2 ,FuncNameQ6: function_name_q6_2, FuncArgsQ6 : userFunction_q6_2, chance: 14.29},
+  {nameQ6: 'Multiply', img: '../images/Task_Icons/q6/q6_3.png',taskTextQ6 : text_q6_3,SecondExampleQ6 : second_example_q6_3 ,exampleQ6 : text_example_q6_3 ,testsQ6 : testCases_q6_3 ,FuncNameQ6: function_name_q6_3, FuncArgsQ6 : userFunction_q6_3 , chance: 14.29},
+  {nameQ6: 'Invert values', img: '../images/Task_Icons/q6/q6_4.png',taskTextQ6 : text_q6_4,SecondExampleQ6 : second_example_q6_4 ,exampleQ6 : text_example_q6_4 ,testsQ6 : testCases_q6_4 ,FuncNameQ6: function_name_q6_4, FuncArgsQ6 : userFunction_q6_4, chance: 14.29},
+  {nameQ6: 'Find Nearest square number', img: '../images/Task_Icons/q6/q6_5.png',taskTextQ6 : text_q6_5,SecondExampleQ6 : second_example_q6_5 ,exampleQ6 : text_example_q6_5 ,testsQ6 : testCases_q6_5 ,FuncNameQ6: function_name_q6_5, FuncArgsQ6 : userFunction_q6_5, chance: 14.29},
+  {nameQ6: 'USD => CNY', img: '../images/Task_Icons/q6/q6_6.png',taskTextQ6 : text_q6_6,SecondExampleQ6 : second_example_q6_6 ,exampleQ6 : text_example_q6_6 ,testsQ6 : testCases_q6_6 ,FuncNameQ6: function_name_q6_6, FuncArgsQ6 : userFunction_q6_6, chance: 14.29},
+  {nameQ6: 'Find the Difference in Age between Oldest and Youngest Family Members', img: '../images/Task_Icons/q6/q6_7.png',taskTextQ6 : text_q6_7,SecondExampleQ6 : second_example_q6_7 ,exampleQ6 : text_example_q6_7 ,testsQ6 : testCases_q6_7 ,FuncNameQ6: function_name_q6_7, FuncArgsQ6 : userFunction_q6_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {

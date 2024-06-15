@@ -1,12 +1,13 @@
-// Q6 Tasks
+// q6 Tasks
 export const text_q6_1 = 'Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. \n Return your answer as a number.;' // https://www.codewars.com/kata/57eaeb9578748ff92a000009/javascript
-export const text_q6_2 = 'Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ). '
+export const text_q6_2 = 'Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ). \n Examples \n n = 0  ==> [1]        # [2^0] \n n = 1  ==> [1, 2]     # [2^0, 2^1] \n n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]'; // https://www.codewars.com/kata/57a083a57cb1f31db7000028
 export const text_q6_3 = 'Multiply two numbers together.' // https://www.codewars.com/kata/50654ddff44f800200000004
 export const text_q6_4 = 'Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.You can assume that all values are integers. Do not mutate the input array.'; // https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad
 export const text_q6_5 = 'Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n. '; // https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
 export const text_q6_6 = 'Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by Chinese Yuan (CNY). The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")'; // https://www.codewars.com/kata/5977618080ef220766000022
-export const text_q6_7 = `At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].`; // https://www.codewars.com/kata/5720a1cb65a504fdff0003e2/train/javascript
-//Q6 FuncStart
+export const text_q6_7 = `At the annual family gathering, the family likes to find the oldest living family members age and the youngest family members age and calculate the difference between them.You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed age of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].`; // https://www.codewars.com/kata/5720a1cb65a504fdff0003e2/train/javascript
+
+// q6 FuncStart
 export const function_name_q6_1 = 'function sumMix(x){ \n\ \n\}';
 export const function_name_q6_2 = 'function powersOfTwo(n){ \n\  \n\ }';
 export const function_name_q6_3 = 'function multiply(a,b){ \n\ \n\ }';
@@ -15,7 +16,7 @@ export const function_name_q6_5 = 'function nearestSq(n){ \n\ \n\ }';
 export const function_name_q6_6 = 'function usdToCny(usd){ \n\ \n\ }';
 export const function_name_q6_7 = 'function differenceInAges(ages){ \n\ \n\ }';
 
-//Q6 Examples
+// q6 Examples
 export const text_example_q6_1 = `First example: \n\ x =  [6,'3',-3,0] --> 6 `;
 export const second_example_q6_1 = `Second example: \n\ x =  [-2,'-3',-3,12, -21] --> -17`;
 export const text_example_q6_2 = 'First example: \n\ n = 0  ==> [1]        # [2^0]';
@@ -27,50 +28,49 @@ export const second_example_q6_4 = 'Second example : [] --> [] \n ';
 export const text_example_q6_5 = 'For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10.';
 export const second_example_q6_5 = 'If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n.';
 export const text_example_q6_6 = `First example 15 : -> '101.25 Chinese Yuan'`
-export const second_example_q6_6 = ` Second example : 465 -> '3138.75 Chinese Yuan'`;
+export const second_example_q6_6 = ` Second example : 465 -> '3138.75 Chinese Yuan''`
 export const text_example_q6_7 = 'First example : [10, 20, 15, 30, 25, 5] ==> [5, 30, 25]';
 export const second_example_q6_7 = 'Second example : [30, 25, 40, 15, 20, 5] ==> [5, 40, 35]';
 
-//Q6 tests
-
+// q6 tests
 export const testCases_q6_1 = [
-    { inputA: [6,'3',-3,0], expected: 6 },
-    { inputA: [6,'-3',-3,12], expected: 12 },
-    { inputA: [-2,'-3',-3,12, -21], expected: -17 },
+  { inputA: [6,'3',-3,0], expected: 6 },
+  { inputA: [6,'-3',-3,12], expected: 12 },
+  { inputA: [-2,'-3',-3,12, -21], expected: -17 },
 ];
 export const testCases_q6_2 = [
-    { inputA: [0], expected: [1] },
-    { inputA: [1], expected: [1,2] },
-    { inputA: [4], expected: [1,2,4,8,16] },
+  { inputA: [0], expected: [1] },
+  { inputA: [1], expected: [1,2] },
+  { inputA: [4], expected: [1,2,4,8,16] },
 ]
 export const testCases_q6_3 = [
-    { inputA: 6,inputB: 3 , expected: 18 },
-    { inputA: -2, inputB: -3, expected: 6 },
-    { inputA: -6, inputB: 0, expected: 0 },
+  { inputA: 6,inputB: 3 , expected: 18 },
+  { inputA: -2, inputB: -3, expected: 6 },
+  { inputA: -6, inputB: 0, expected: 0 },
 ]
 export const testCases_q6_4 = [
-  { inputA: [1, -2, 3, 4, -5], expected: [-1, 2, -3, -4, 5] },
-  { inputA: [], expected: [] },
-  { inputA: [1, 2, 3, 4, 5], expected: [-1, -2, -3, -4, -5] },
+{ inputA: [1, -2, 3, 4, -5], expected: [-1, 2, -3, -4, 5] },
+{ inputA: [], expected: [] },
+{ inputA: [1, 2, 3, 4, 5], expected: [-1, -2, -3, -4, -5] },
 ]
 export const testCases_q6_5 = [
-  {inputA: 111, expected: 121 },
-  {inputA: 9999, expected: 10000 },
-  {inputA: 0, expected: 0 },
+{inputA: 111, expected: 121 },
+{inputA: 9999, expected: 10000 },
+{inputA: 0, expected: 0 },
 ]
 export const testCases_q6_6 = [
-  {inputA: 15, expected: '101.25 Chinese Yuan' },
-  {inputA: 465, expected: '3138.75 Chinese Yuan' },
-  {inputA: 123, expected: '830.25 Chinese Yuan' },
+{inputA: 15, expected: '101.25 Chinese Yuan' },
+{inputA: 465, expected: '3138.75 Chinese Yuan' },
+{inputA: 123, expected: '830.25 Chinese Yuan' },
 
 ]
 export const testCases_q6_7 = [
-  {inputA: [10, 20, 15, 30, 25, 5], expected: [5, 30, 25] },
-  {inputA: [30, 25, 40, 15, 20, 5], expected: [5, 40, 35] },
-  {inputA: [82, 15, 6, 38, 35] , expected : [6, 82, 76] },
+{inputA: [10, 20, 15, 30, 25, 5], expected: [5, 30, 25] },
+{inputA: [30, 25, 40, 15, 20, 5], expected: [5, 40, 35] },
+{inputA: [82, 15, 6, 38, 35] , expected : [6, 82, 76] },
 ]
-//Q6 Func param 
 
+// q6 Func param 
 export const userFunction_q6_1 = 'x'
 export const userFunction_q6_2 = 'n'
 export const userFunction_q6_3 = ['a', 'b']
@@ -79,100 +79,170 @@ export const userFunction_q6_5 = 'n'
 export const userFunction_q6_6 = 'usd'
 export const userFunction_q6_7 = 'ages'
 
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// q5 Task
+export const text_q5_1 = 'Given any positive integer x ≤ 4000, find the smallest positive integer m such that mx consists of all 9s. Return -1 if no such m exists. '; // https://www.codewars.com/kata/664b9dd610985cc3b6784111/javascript
+export const text_q5_2 = 'Given an array of ones and zeroes, convert the equivalent binary value to an integer. \n Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.'; // https://www.codewars.com/kata/578553c3a1b8d5c40300037c
+export const text_q5_3 = 'You will be given a string of characters as an input. Complete the function that returns a list of strings: (a) in the reverse order of the original string, and (b) with each successive string starting one character further in from the end of the original string. \n Assume the original string is at least 3 characters long. Try to do this using slices and avoid converting the string to a list.'; // https://www.codewars.com/kata/586efc2dcf7be0f217000619
+export const text_q5_4 = 'Given two integer arrays where the second array is a shuffled duplicate of the first array with one element missing, find the missing element. \n Please note, there may be duplicates in the arrays, so checking if a numerical value exists in one and not the other is not a valid solution.'; // https://www.codewars.com/kata/5a5915b8d39ec5aa18000030
+export const text_q5_5 = 'Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.'; // https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c
+export const text_q5_6 = 'Given a non-negative integer, return an array / a list of the individual digits in order.'; // https://www.codewars.com/kata/5417423f9e2e6c2f040002ae
+export const text_q5_7 = 'Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integers divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string "(integer) is prime" (null in C#, empty table in COBOL) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).'; // https://www.codewars.com/kata/544aed4c4a30184e960010f4
+export const text_q5_8 = 'Two numbers are relatively prime if their greatest common factor is 1; in other words: if they cannot be divided by any other common numbers than 1. \n 13, 16, 9, 5, and 119 are all relatively prime because they share no common factors, except for 1. To see this, I will show their factorizations:' // https://www.codewars.com/kata/56b0f5f84de0afafce00004e
 
-//Q5 Task
-export const text_q5_1 = 'Task \n Given any positive integer x ≤ 4000, find the smallest positive integer m such that mx consists of all 9s. Return -1 if no such m exists. \n Examples: \n allNines(11) -> 9, because 11*9 = 99. \n allNines(12) -> -1, because 12 is even, so no multiple of it can be all 9s. \n allNines(13) -> 76923, because 13*76923 = 999999, and no smaller positive integer, when multiplied by 13, generates an integer containing only 9s. \n NOTE: Although x ≤ 4000, m can be very very LARGE. Where necessary, the way of handling big integers appropriate to the language should be used.'; // https://www.codewars.com/kata/664b9dd610985cc3b6784111/javascript
-export const text_q5_2 = 'Given an array of ones and zeroes, convert the equivalent binary value to an integer. \n Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.\n Examples: \n Testing: [0, 0, 0, 1] ==> 1 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 0, 1] ==> 5 \n Testing: [1, 0, 0, 1] ==> 9 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 1, 0] ==> 6 \n Testing: [1, 1, 1, 1] ==> 15 \n Testing: [1, 0, 1, 1] ==> 11 \n However, the arrays can have varying lengths, not just limited to 4.'; // https://www.codewars.com/kata/578553c3a1b8d5c40300037c
-export const text_q5_3 = 'You ll be given a string of characters as an input. Complete the function that returns a list of strings: (a) in the reverse order of the original string, and (b) with each successive string starting one character further in from the end of the original string. \n Assume the original string is at least 3 characters long. Try to do this using slices and avoid converting the string to a list. \n Examples \n 123   ==>  [321, 21, 1] \n abcde ==>  [edcba, dcba, cba, ba, a]'; // https://www.codewars.com/kata/586efc2dcf7be0f217000619
-export const text_q5_4 = 'Given two integer arrays where the second array is a shuffled duplicate of the first array with one element missing, find the missing element. \n Please note, there may be duplicates in the arrays, so checking if a numerical value exists in one and not the other is not a valid solution. \n find_missing([1, 2, 2, 3], [1, 2, 3]) => 2 \n find_missing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) => 8 \n The first array will always have at least one element.'; // https://www.codewars.com/kata/5a5915b8d39ec5aa18000030
-export const text_q5_5 = 'Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers. \n For example: \n ([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8] \n ([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26] \n ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]'; // https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c
-export const text_q5_6 = 'Given a non-negative integer, return an array / a list of the individual digits in order. \n Examples: \n 123 => [1,2,3] \n 1 => [1] \n 8675309 => [8,6,7,5,3,0,9]'; // https://www.codewars.com/kata/5417423f9e2e6c2f040002ae
-export const text_q5_7 = 'Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integers divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string (integer) is prime (null in C#, empty table in COBOL) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust). \n Example: \n divisors(12); // should return [2,3,4,6] \n divisors(25); // should return [5] \n divisors(13); // should return "13 is prime"'; // https://www.codewars.com/kata/544aed4c4a30184e960010f4
+// q5 FuncStart
+export const function_name_q5_1 = 'function allNines(x) { \n  \n }';
+export const function_name_q5_2 = 'const binaryArrayToNumber = arr => { \n   \n };';
+export const function_name_q5_3 = 'function reverseSlice(str) { \n \n}';
+export const function_name_q5_4 = 'function findMissing(arr1, arr2) { \n \n }';
+export const function_name_q5_5 = 'function evenNumbers(array, number) { \n \n }';
+export const function_name_q5_6 = 'function digitize(n) { \n \n }';
+export const function_name_q5_7 = 'function divisors(integer) { \n \n };';
+export const function_name_q5_8 = 'function relativelyPrime(n, arr) { \n \n }'
+export const function_name_q5_9 = '';
 
-//Q5 FuncStart
-export const function_name_q5_1 = '';
-export const function_name_q5_2 = '';
-export const function_name_q5_3 = '';
-export const function_name_q5_4 = '';
-export const function_name_q5_5 = '';
-export const function_name_q5_6 = '';
-export const function_name_q5_7 = '';
-
-//Q5 Examples
+// q5 Examples
 export const text_example_q5_1 = '';
-export const second_example_q5_1 = '';
-export const text_example_q5_2 = '';
-export const second_example_q5_2 = '';
+export const second_example_q5_1 = 'Examples: \n 11 -> 9, because 11 * 9 == 99. \n 12 -> -1, because 12 is even, so no multiple of it can contain only nines. \n 13 -> 76923, because 13 * 76923 == 999999, and no smaller positive integer, when multiplied by 13, generates an integer containing only nines. \n NOTE: Although x ≤ 4000, m can be very very LARGE. Where necessary, the way of handling big integers appropriate to the language should be used. ';
+export const text_example_q5_2 = 'However, the arrays can have varying lengths, not just limited to 4.';
+export const second_example_q5_2 = 'Examples: \n Testing: [0, 0, 0, 1] ==> 1 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 0, 1] ==> 5 \n Testing: [1, 0, 0, 1] ==> 9 \n Testing: [0, 0, 1, 0] ==> 2 \n Testing: [0, 1, 1, 0] ==> 6 \n Testing: [1, 1, 1, 1] ==> 15 \n Testing: [1, 0, 1, 1] ==> 11';
 export const text_example_q5_3 = '';
-export const second_example_q5_3 = '';
-export const text_example_q5_4 = '';
-export const second_example_q5_4 = '';
+export const second_example_q5_3 = 'Examples \n "123"  ==>  ["321", "21", "1"] \n "abcde" ==>  ["edcba", "dcba", "cba", "ba", "a"]';
+export const text_example_q5_4 = 'The first array will always have at least one element.';
+export const second_example_q5_4 = 'find_missing([1, 2, 2, 3], [1, 2, 3]) => 2 \n find_missing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) => 8';
 export const text_example_q5_5 = '';
-export const second_example_q5_5 = '';
+export const second_example_q5_5 = 'For example: \n ([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8] \n ([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26] \n ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]';
 export const text_example_q5_6 = '';
-export const second_example_q5_6 = '';
+export const second_example_q5_6 = 'Examples: \n 123 => [1,2,3] \n 1 => [1] \n 8675309 => [8,6,7,5,3,0,9]';
 export const text_example_q5_7 = '';
-export const second_example_q5_7 = '';
+export const second_example_q5_7 = 'Example: \n divisors(12); // should return [2,3,4,6] \n divisors(25); // should return [5] \n divisors(13); // should return "13 is prime"';
+export const text_example_q5_8 = ' Examples \n relatively_prime(8, [1, 2, 3, 4, 5, 6, 7]) \n >> [1, 3, 5, 7] \n relatively_prime(15, [72, 27, 32, 61, 77, 11, 40]) \n >> [32, 61, 77, 11] \n relatively_prime(210, [15, 100, 2222222, 6, 4, 12369, 99]) \n >> []';
+export const second_example_q5_8 = ' 13: 13 \n 16: 2 * 2 * 2 * 2 \n  9: 3 * 3 \n  5: 5 \n 119: 17 * 7 \n Complete the function that takes 2 arguments: a number (n), and a list of numbers (arr). The function should return a list of all the numbers in arr that are relatively prime to n. All numbers in will be positive integers.';
 
-//Q6 Tests
-export const test_q5_1 = '';
-export const test_q5_2 = '';
-export const test_q5_3 = '';
-export const test_q5_4 = '';
-export const test_q5_5 = '';
-export const test_q5_6 = '';
+// q5 Tests
+export const test_q5_1 = [
+  { inputA: 11, expected: 9 },
+  { inputA: 12, expected: -1 },
+  { inputA: 13, expected: 76923 },
+  ];
+export const test_q5_2 = [
+  { inputA: [0, 0, 0, 1], expected: 1 },
+  { inputA: [0, 0, 1, 0], expected: 2 },
+  { inputA: [0, 1, 0, 1], expected: 5 },
+  { inputA: [1, 0, 0, 1], expected: 9 },
+  { inputA: [0, 0, 1, 0], expected: 2 },
+  { inputA: [0, 1, 1, 0], expected: 6 },
+  { inputA: [1, 1, 1, 1], expected: 15 },
+  { inputA: [1, 0, 1, 1], expected: 11 },
+];
+export const test_q5_3 = [
+  { inputA: '123', expected: ['321', '21', '1'] },
+  { inputA: 'abcde', expected: ['edcba', 'dcba', 'cba', 'ba', 'a'] },
+  { inputA: '12345', expected: ['54321', '4321', '321', '21', '1'] },
+];
+export const test_q5_4 = [
+  {inputA: [1, 2, 2, 3], inputB: [1, 2, 3], expected: 2},
+  {inputA: [6, 1, 3, 6, 8, 2], inputB: [3, 6, 6, 1, 2], expected: 8},
+  {inputA: [3, 2, 6, 6, 1, 2], inputB: [3, 4, 6, 5, 2], expected: 1},
+];
+export const test_q5_5 = [
+  {inputA: [1, 2, 2, 3], inputB: [1, 2, 3], expected: 2},
+  {inputA: [6, 1, 3, 6, 8, 2], inputB: [3, 6, 6, 1, 2], expected: 8},
+  {inputA: [3, 2, 6, 6, 1, 2], inputB: [3, 4, 6, 5, 2], expected: 1},
+];
+export const test_q5_6 = [
+  {inputA: 123, expected: [1, 2, 3]},
+  {inputA: 1, expected: [1]},
+  {inputA: 8675309, expected: [8, 6, 7, 5, 3, 0, 9]},
+];
+export const test_q5_7 = [
+  {inputA: 12, expected: [2, 3, 4, 6]},
+  {inputA: 25, expected: [5]},
+  {inputA: 13, expected: '13 is prime'},
+];
+export const test_q5_8 = [
+  {inputA: 8, inputB: [1, 2, 3, 4, 5, 6, 7], expected: [1, 3, 5, 7]},
+  {inputA: 15, inputB: [72, 27, 32, 61, 77, 11, 40], expected: [32, 61, 77, 11]},
+  {inputA: 210, inputB: [15, 100, 2222222, 6, 4, 12369, 99], expected: []},
+];
+
+// q5 Func param
+export const userFunction_q5_1 = 'x';
+export const userFunction_q5_2 = 'arr';
+export const userFunction_q5_3 = 'str';
+export const userFunction_q5_4 = ['arr1','arr2'];
+export const userFunction_q5_5 = ['array','number'];
+export const userFunction_q5_6 = 'n';
+export const userFunction_q5_7 = 'integer';
+export const userFunction_q5_8 = ['n', 'arr'];
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Q4 Tasks
-export const text_q4_1 = 'Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit. \n For example (Input --> Output): \n 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit, there are 3 multiplications) \n 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2, there are 4 multiplications) \n 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)'; // https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
-export const text_q4_2 = 'Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers. The function should also return "Even" or "Odd" when accessing a value at an integer index. \n For example: \n evenOrOdd(2); //Even \n evenOrOdd[2]; //Even \n evenOrOdd(7); //Odd \n evenOrOdd[7]; //Odd'; // https://www.codewars.com/kata/6656a4687f3e4eb5fb520817
-export const text_q4_3 = 'Task \n You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions. \n Examples \n [7, 1]  =>  [1, 7] \n [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4] \n [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]'; // https://www.codewars.com/kata/578aa45ee9fd15ff4600090d
-export const text_q4_4 = 'In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray. \n For example: solve([[1,2],[4],[5,6]]) = 4, because it results in only 4 possibilites. They are [1,4,5],[1,4,6],[2,4,5],[2,4,6]. \n Make sure that you dont count duplicates; for example solve([[1,2],[4,4],[5,6,6]]) = 4, since the extra outcomes are just duplicates. \n See test cases for more examples. \n Good luck!'; // https://www.codewars.com/kata/59e66e48fc3c499ec5000103
-export const text_q4_5 = 'Welcome. \n In this kata you are required to, given a string, replace every letter with its position in the alphabet. \n If anything in the text isnt a letter, ignore it and dont return it. \n "a" = 1, "b" = 2, etc. \n Example \n Input = "The sunset sets at twelve o clock." \n Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"'; // https://www.codewars.com/kata/546f922b54af40e1e90001da
+// q4 Tasks
+export const text_q4_1 = 'Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.'; // https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
+export const text_q4_2 = 'Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers. The function should also return "Even" or "Odd" when accessing a value at an integer index.'; // https://www.codewars.com/kata/6656a4687f3e4eb5fb520817
+export const text_q4_3 = 'You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.'; // https://www.codewars.com/kata/578aa45ee9fd15ff4600090d
+export const text_q4_4 = 'In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray.'; // https://www.codewars.com/kata/59e66e48fc3c499ec5000103
+export const text_q4_5 = 'Welcome. \n In this kata you are required to, given a string, replace every letter with its position in the alphabet. \n If anything in the text isnt a letter, ignore it and dont return it. \n "a" = 1, "b" = 2, etc.'; // https://www.codewars.com/kata/546f922b54af40e1e90001da
 export const text_q4_6 = 'A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). \n Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.'; // https://www.codewars.com/kata/545cedaa9943f7fe7b000048
-export const text_q4_7 = 'Your job is to create a calculator which evaluates expressions in Reverse Polish notation.' 
 
-//Q4 FuncStart
-export const function_name_q4_1 = '';
-export const function_name_q4_2 = '';
-export const function_name_q4_3 = '';
-export const function_name_q4_4 = '';
-export const function_name_q4_5 = '';
-export const function_name_q4_6 = '';
+
+// q4 FuncStart
+export const function_name_q4_1 = 'function persistence(num) { \n //code me \n }';
+export const function_name_q4_2 = 'function evenOrOdd(n) { \n  //"Even" or "Odd" \n }';
+export const function_name_q4_3 = 'function sortArray(array) { \n  // Return a sorted array. \n }';
+export const function_name_q4_4 = 'function solve(arr) { \n  return 0; \n };';
+export const function_name_q4_5 = 'function alphabetPosition(text) { \n  return text; \n }';
+export const function_name_q4_6 = 'function isPangram(string){ \n  //... \n }';
 export const function_name_q4_7 = '';
 
-//Q4 Examples
+// q4 Examples
 export const text_example_q4_1 = '';
-export const second_example_q4_1 = '';
+export const second_example_q4_1 = 'For example (Input --> Output): \n 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit, there are 3 multiplications) \n 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2, there are 4 multiplications) \n 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)';
 export const text_example_q4_2 = '';
-export const second_example_q4_2 = '';
+export const second_example_q4_2 = 'For example: \n evenOrOdd(2); //"Even" \n evenOrOdd[2]; //"Even" \n evenOrOdd(7); //"Odd" \n evenOrOdd[7]; //"Odd"';
 export const text_example_q4_3 = '';
-export const second_example_q4_3 = '';
-export const text_example_q4_4 = '';
-export const second_example_q4_4 = '';
+export const second_example_q4_3 = 'Examples \n [7, 1]  =>  [1, 7] \n [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4] \n [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]';
+export const text_example_q4_4 = 'Make sure that you dont count duplicates; for example solve([[1,2],[4,4],[5,6,6]]) = 4, since the extra outcomes are just duplicates.';
+export const second_example_q4_4 = 'For example: solve([[1,2],[4],[5,6]]) = 4, because it results in only 4 possibilites. They are [1,4,5],[1,4,6],[2,4,5],[2,4,6].';
 export const text_example_q4_5 = '';
-export const second_example_q4_5 = '';
+export const second_example_q4_5 = 'Example \n Input = "The sunset sets at twelve o clock." \n Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"';
 export const text_example_q4_6 = '';
 export const second_example_q4_6 = '';
 export const text_example_q4_7 = '';
 export const second_example_q4_7 = '';
 
-//Q6 Tests
+// q4 Tests
 export const test_q4_1 = '';
 export const test_q4_2 = '';
 export const test_q4_3 = '';
 export const test_q4_4 = '';
 export const test_q4_5 = '';
 export const test_q4_6 = '';
+export const test_q4_7 = '';
+
+// q4 Func Param
+export const userFunction_q4_1 = 'num';
+export const userFunction_q4_2 = 'n';
+export const userFunction_q4_3 = 'array';
+export const userFunction_q4_4 = 'arr';
+export const userFunction_q4_5 = 'text';
+export const userFunction_q4_6 = 'string';
+export const userFunction_q4_7 = '';
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Q3 Tasks
-export const text_q3_1 = 'Write a class that, when given a string, will return an uppercase string with each letter shifted forward in the alphabet by however many spots the cipher was initialized to. \n For example: \n var c = new CaesarCipher(5); // creates a CipherHelper with a shift of five \n c.encode(Codewars); // returns HTIJBFWX \n c.decode(BFKKQJX); // returns WAFFLES \n If something in the string is not in the alphabet (e.g. punctuation, spaces), simply leave it as is. \n The shift will always be in range of [1, 26].'; // https://www.codewars.com/kata/526d42b6526963598d0004db
+export const text_q3_1 = 'Write a class that, when given a string, will return an uppercase string with each letter shifted forward in the alphabet by however many spots the cipher was initialized to.'; // https://www.codewars.com/kata/526d42b6526963598d0004db
 export const text_q3_2 = 'You are given the outline of a Rational class to do arithmetic with rational numbers. \n Complete the class filling in the operations for simplifying, comparing, adding, subtracting, multiplying, and dividing Rationals. \n None of the operations (except for the constructor and the simplify) should modify the Rational.'; // https://www.codewars.com/kata/5260074c9a0022f83e0009da
 export const text_q3_3 = 'Implement a function that receives two IPv4 addresses, and returns the number of addresses between them (including the first one, excluding the last one). \n All inputs will be valid IPv4 addresses in the form of strings. The last address will always be greater than the first one. \n Examples \n * With input "10.0.0.0", "10.0.0.50"  => return   50  \n * With input "10.0.0.0", "10.0.1.0"   => return  256  \n * With input "20.0.0.10", "20.0.1.0"  => return  246'; // https://www.codewars.com/kata/526989a41034285187000de4
 export const text_q3_4 = 'Complete the greatestProduct method so that itll find the greatest product of five consecutive digits in the given string of digits. \n For example: the greatest product of five consecutive digits in the string "123834539327238239583" is 3240. \n The input string always has more than five digits. \n Adapted from Project Euler.'; // https://www.codewars.com/kata/529872bdd0f550a06b00026e
@@ -181,7 +251,7 @@ export const text_q3_6 = 'In this Kata, you will be given a string of numbers in
 export const text_q3_7 = 'Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes? \n Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0. \n Examples: \n // must return 2 \n cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200});  \n // must return 0 \n cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}); '; //https://www.codewars.com/kata/525c65e51bf619685c000059
 
 //Q3 FuncStart
-export const function_name_q3_1 = '';
+export const function_name_q3_1 = 'var CaesarCipher = function (shift) { \n  // TODO: Complete the CaesarCipher object \n };';
 export const function_name_q3_2 = '';
 export const function_name_q3_3 = '';
 export const function_name_q3_4 = '';
@@ -190,8 +260,8 @@ export const function_name_q3_6 = '';
 export const function_name_q3_7 = '';
 
 //Q3 Examples
-export const text_example_q3_1 = '';
-export const second_example_q3_1 = '';
+export const text_example_q3_1 = ' \n If something in the string is not in the alphabet (e.g. punctuation, spaces), simply leave it as is. \n The shift will always be in range of [1, 26].';
+export const second_example_q3_1 = '\n For example: \n var c = new CaesarCipher(5); // creates a CipherHelper with a shift of five \n c.encode(Codewars); // returns HTIJBFWX \n c.decode(BFKKQJX); // returns WAFFLES ';
 export const text_example_q3_2 = '';
 export const second_example_q3_2 = '';
 export const text_example_q3_3 = '';
@@ -205,13 +275,24 @@ export const second_example_q3_6 = '';
 export const text_example_q3_7 = '';
 export const second_example_q3_7 = '';
 
-//Q6 Tests
+//Q3 Tests
 export const test_q3_1 = '';
 export const test_q3_2 = '';
 export const test_q3_3 = '';
 export const test_q3_4 = '';
 export const test_q3_5 = '';
 export const test_q3_6 = '';
+
+// q3 Func Param
+export const userFunction_q3_1 = 'shift';
+export const userFunction_q3_2 = '';
+export const userFunction_q3_3 = '';
+export const userFunction_q3_4 = '';
+export const userFunction_q3_5 = '';
+export const userFunction_q3_6 = '';
+export const userFunction_q3_7 = '';
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -257,6 +338,7 @@ export const test_q2_3 = '';
 export const test_q2_4 = '';
 export const test_q2_5 = '';
 export const test_q2_6 = '';
+
 
 
 

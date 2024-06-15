@@ -1,13 +1,19 @@
-import { text_q5_1 , text_q5_2 , text_q5_3 , text_q5_4 , text_q5_5 , text_q5_6 , text_q5_7 } from "../tasks.js";
+import { text_q5_1 , text_q5_2 , text_q5_3 , text_q5_4 , text_q5_5 , text_q5_6 , text_q5_7 , text_q5_8 } from "../tasks.js";
+import { second_example_q5_1, second_example_q5_2, second_example_q5_3, second_example_q5_4, second_example_q5_5, second_example_q5_6, second_example_q5_7, second_example_q5_8 } from "../tasks.js";
+import { text_example_q5_1, text_example_q5_2, text_example_q5_3, text_example_q5_4, text_example_q5_5, text_example_q5_6, text_example_q5_7, text_example_q5_8 } from "../tasks.js";
+import { function_name_q5_1, function_name_q5_2, function_name_q5_3, function_name_q5_4, function_name_q5_5, function_name_q5_6, function_name_q5_7, function_name_q5_8 } from "../tasks.js";
+import { test_q5_1, test_q5_2, test_q5_3, test_q5_4, test_q5_5, test_q5_6, test_q5_7, test_q5_8 } from "../tasks.js";
+import { userFunction_q5_1, userFunction_q5_2, userFunction_q5_3, userFunction_q5_4, userFunction_q5_5, userFunction_q5_6, userFunction_q5_7, userFunction_q5_8 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 const items = [
-  {nameQ5: 'iPhone', img: '../images/iPhone.png',taskTextQ5 : text_q5_1,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'Keyboard', img: '../images/keyboard.png',taskTextQ5 : text_q5_2,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'Headphones', img: '../images/headphones.png',taskTextQ5 : text_q5_3,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'Pivo', img: '../images/pivo.png',taskTextQ5 : text_q5_4,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'butterfly', img: '../images/butterfly.png',taskTextQ5 : text_q5_5,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ2 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'jini', img: '../images/jini.png',taskTextQ5 : text_q5_6,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
-  {nameQ5: 'vini', img: '../images/vinipuh.png',taskTextQ5 : text_q5_7,SecondExampleQ5 : /* сюда вставить 2 экземпляр текста*/ '' ,exampleQ5 : /*сюда первый экземпляр текста*/ '' ,testsQ5 : /*сюда первый экземпляр текста*/ '' ,FuncNameQ5: /*сюда имя функции*/ '', chance: 14.29},
+  {nameQ5: 'All Nines', img: '../images/Task_Icons/q5/q5_1.png',taskTextQ5 : text_q5_1,SecondExampleQ5 : second_example_q5_1 ,exampleQ5 : text_example_q5_1 ,testsQ5 : test_q5_1 ,FuncNameQ5: function_name_q5_1,FuncArgsQ5 : userFunction_q5_1, chance: 14.29},
+  {nameQ5: 'Ones and Zeros', img: '../images/Task_Icons/q5/q5_2.png',taskTextQ5 : text_q5_2,SecondExampleQ5 : second_example_q5_2 ,exampleQ5 : text_example_q5_2 ,testsQ5 : test_q5_2 ,FuncNameQ5: function_name_q5_2, FuncArgsQ5: userFunction_q5_2, chance: 14.29},
+  {nameQ5: 'String reverse slicing 101', img: '../images/Task_Icons/q5/q5_3.png',taskTextQ5 : text_q5_3,SecondExampleQ5 : second_example_q5_3 ,exampleQ5 : text_example_q5_3 , testsQ5 : test_q5_3 , FuncNameQ5 : function_name_q5_3,FuncArgsQ5: userFunction_q5_3, chance: 14.29},
+  {nameQ5: 'Find the missing element between two arrays', img: '../images/Task_Icons/q5/q5_4.png',taskTextQ5 : text_q5_4,SecondExampleQ5 : second_example_q5_4 ,exampleQ5 : text_example_q5_4 , testsQ5: test_q5_4 ,FuncNameQ5 : function_name_q5_4,FuncArgsQ5: userFunction_q5_4, chance: 14.29},
+  {nameQ5: 'Even numbers in an array', img: '../images/Task_Icons/q5/q5_5.png',taskTextQ5 : text_q5_5,SecondExampleQ5 : second_example_q5_5 ,exampleQ2 : text_example_q5_5 ,testsQ5 : test_q5_5 ,FuncNameQ5: function_name_q5_5, FuncArgsQ5: userFunction_q5_5, chance: 14.29},
+  {nameQ5: 'Digitize', img: '../images/Task_Icons/q5/q5_6.png',taskTextQ5 : text_q5_6,SecondExampleQ5 : second_example_q5_6 ,exampleQ5 : text_example_q5_6 ,testsQ5 : test_q5_6 ,FuncNameQ5: function_name_q5_6,FuncArgsQ5: userFunction_q5_6, chance: 14.29},
+  {nameQ5: 'Find the divisors!', img: '../images/Task_Icons/q5/q5_7.png',taskTextQ5 : text_q5_7,SecondExampleQ5 : second_example_q5_7 ,exampleQ5 :text_example_q5_7 ,testsQ5 : test_q5_7 ,FuncNameQ5: function_name_q5_7, FuncArgsQ5: userFunction_q5_7, chance: 14.29},
+  {nameQ5: 'Relatively Prime Numbers', img: '../images/Task_Icons/q5/q5_8.png', taskTextQ5 : text_q5_8,SecondExampleQ5 : second_example_q5_8, exampleQ5 : text_example_q5_8, testsQ5 : test_q5_8, FuncNameQ5: function_name_q5_8, FuncArgsQ5: userFunction_q5_8, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
