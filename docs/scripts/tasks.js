@@ -191,7 +191,6 @@ export const text_q4_3 = 'You will be given an array of numbers. You have to sor
 export const text_q4_4 = 'In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray.'; // https://www.codewars.com/kata/59e66e48fc3c499ec5000103
 export const text_q4_5 = 'Welcome. \n In this kata you are required to, given a string, replace every letter with its position in the alphabet. \n If anything in the text isnt a letter, ignore it and dont return it. \n "a" = 1, "b" = 2, etc.'; // https://www.codewars.com/kata/546f922b54af40e1e90001da
 export const text_q4_6 = 'A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). \n Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.'; // https://www.codewars.com/kata/545cedaa9943f7fe7b000048
-export const text_q4_7 = '';
 
 // q4 FuncStart
 export const function_name_q4_1 = 'function persistence(num) { \n //code me \n }';
@@ -200,7 +199,6 @@ export const function_name_q4_3 = 'function sortArray(array) { \n  // Return a s
 export const function_name_q4_4 = 'function solve(arr) { \n  return 0; \n };';
 export const function_name_q4_5 = 'function alphabetPosition(text) { \n  return text; \n }';
 export const function_name_q4_6 = 'function isPangram(string){ \n  //... \n }';
-export const function_name_q4_7 = '';
 
 // q4 Examples
 export const text_example_q4_1 = '';
@@ -215,17 +213,40 @@ export const text_example_q4_5 = '';
 export const second_example_q4_5 = 'Example \n Input = "The sunset sets at twelve o clock." \n Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"';
 export const text_example_q4_6 = '';
 export const second_example_q4_6 = '';
-export const text_example_q4_7 = '';
-export const second_example_q4_7 = '';
 
 // q4 Tests
-export const test_q4_1 = '';
-export const test_q4_2 = '';
-export const test_q4_3 = '';
-export const test_q4_4 = '';
-export const test_q4_5 = '';
-export const test_q4_6 = '';
-export const test_q4_7 = '';
+export const test_q4_1 = [
+  {inputA: 39, expected: 3},
+  {inputA: 999, expected: 4},
+  {inputA: 4, expected: 0},
+];
+export const test_q4_2 = [
+  {inputA: 2, expected: 'Even'},
+  {inputA: 7, expected: 'Odd'},
+  {inputA: 8, expected: 'Even'},
+];
+export const test_q4_3 = [
+  {inputA: [7, 1], expected: [1, 7]},
+  {inputA: [5, 8, 6, 3, 4], expected: [3, 8, 6, 5, 4]},
+  {inputA: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0], expected: [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]},
+]
+export const test_q4_4 = [
+  {inputA: [[1, 2], [4], [5, 6]], expected: 4},
+  {inputA: [[1, 2, 3], [4, 5], [6]], expected: 6},
+  {inputA: [[1, 2], [4, 4], [5, 6, 6]], expected: 4},
+  
+];
+export const test_q4_5 = [
+  {inputA: "The sunset sets at twelve o' clock.", expected: '20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11'},
+  {inputA: "Hello, World!", expected: "8 5 12 12 15 23 15 18 12 4"},
+  {inputA: "12345", expected: ""},
+];
+export const test_q4_6 = [
+  {inputA: "The quick brown fox jumps over the lazy dog", expected: true},
+  {inputA: "The quick brown fox jumps over the lazy cat", expected: false},
+  {inputA: "The quick brown fox jumps over the lazy", expected: false},
+];
+
 
 // q4 Func Param
 export const userFunction_q4_1 = 'num';
@@ -234,7 +255,6 @@ export const userFunction_q4_3 = 'array';
 export const userFunction_q4_4 = 'arr';
 export const userFunction_q4_5 = 'text';
 export const userFunction_q4_6 = 'string';
-export const userFunction_q4_7 = '';
 
 
 
