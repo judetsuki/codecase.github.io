@@ -3,4 +3,5 @@
 ## by Fdevll, luka0204, YaroslavDudin, elektrosila , and jop221
 
 
-made possible with https://ace.c9.io/doc/site/images/ace-logo.png
+made possible with [Ace Code Editor]([url](https://ace.c9.io/)) and [Github Pages]([url](https://pages.github.com/))
+
