@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codecase</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">    
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <nav class="sidebar"> 
+        <div class="logo-menu">
+            <h2 class=logo>CodeCase</h2>
+            <i class="bx bx-menu toggle-btn"></i>
+        </div>
+        <ul class="list">
+            <li class="list_item">
+                <a href="../index.html">
+                    <i class='bx bx-home'></i> 
+                    <span class="link_name" style="--i:1">Home</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="../help.html">
+                    <i class='bx bx-info-circle' ></i>
+                    <span class="link_name"style="--i:2">Help</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="../inventary.html"> 
+                    <i class='bx bxs-backpack'></i>
+                    <span class="link_name"style="--i:3">Inventary</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script src="../background.js"></script>
+<body>
+    <style>
+        .centered-text {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+    <div class="centered-text">
+        <h1>q1 inventory</h1>
+    </div>
+    <div class="section_inventary">
+
+        
+</div>
+<script src="../index.js"></script>
+<script>
+    // Parse the JSON data from localStorage
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem1'));
+var namesDiv = document.querySelector('.section_inventary');
+var addedNames = {};
+
+TaskName_TaskCode.forEach(function(item) {
+if (!addedNames[item.nameQ1]) {
+    var section = document.createElement('div');
+    section.classList.add('section_inventary');
+
+    var card = document.createElement('div');
+    card.classList.add('card_inventary');
+    card.id = 'card_inventary-' + item.taskCodeQ1;
+    card.textContent = item.nameQ1;
+
+    section.appendChild(card);
+    namesDiv.appendChild(section);
+    addedNames[item.nameQ1] = true;
+}
+});
+</script>
+</body>
+</html>
+</body>
+</html>
+<script>
+var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem1'));
+      var namesDiv = document.createElement('div');
+
+      // Создаем Set для хранения уникальных имен
+      var uniqueNames = new Set();
+      var uniqueCode = new Set();
+      TaskName_TaskCode.forEach(function(item) {
+    uniqueNames.add(item.nameQ1);
+    uniqueCode.add(item.taskCodeQ1);
+    });
+
+uniqueNames.forEach(function(name) {
+    var nameElement = document.createElement('p');
+    nameElement.textContent = name;
+    namesDiv.appendChild(nameElement);
+});
+uniqueCode.forEach(function(code) {
+    var codeElement = document.createElement('p');
+    codeElement.textContent = code;
+    namesDiv.appendChild(codeElement);
+})
+document.write(namesDiv.innerHTML);
+document.write(item.taskCodeQ1);
+</script>

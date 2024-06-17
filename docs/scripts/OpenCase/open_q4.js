@@ -1,15 +1,19 @@
-import { text_q4_1 , text_q4_2 , text_q4_3 , text_q4_4 , text_q4_5 , text_q4_6 , text_q4_7 } from "../tasks.js";
+import { text_q4_1 , text_q4_2 , text_q4_3 , text_q4_4 , text_q4_5 , text_q4_6 } from "../tasks.js";
+import { second_example_q4_1, second_example_q4_2, second_example_q4_3, second_example_q4_4, second_example_q4_5, second_example_q4_6 } from "../tasks.js";
+import { test_q4_1, test_q4_2, test_q4_3, test_q4_4, test_q4_5, test_q4_6 } from "../tasks.js";
+import { userFunction_q4_1, userFunction_q4_2, userFunction_q4_3, userFunction_q4_4, userFunction_q4_5, userFunction_q4_6 } from "../tasks.js";
+import { text_example_q4_1, text_example_q4_2, text_example_q4_3, text_example_q4_4, text_example_q4_5, text_example_q4_6 } from "../tasks.js";
+import { function_name_q4_1, function_name_q4_2, function_name_q4_3, function_name_q4_4, function_name_q4_5, function_name_q4_6 } from "../tasks.js";
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {nameQ4: 'iPhone', img: '../images/iPhone.png',taskTextQ4 : text_q4_1, chance: 14.29},
-  {nameQ4: 'Keyboard', img: '../images/keyboard.png',taskTextQ4 : text_q4_2, chance: 14.29},
-  {nameQ4: 'Headphones', img: '../images/headphones.png',taskTextQ4 : text_q4_3, chance: 14.29},
-  {nameQ4: 'Pivo', img: '../images/pivo.png',taskTextQ4 : text_q4_4, chance: 14.29},
-  {nameQ4: 'butterfly', img: '../images/butterfly.png',taskTextQ4 : text_q4_5, chance: 14.29},
-  {nameQ4: 'jini', img: '../images/jini.png',taskTextQ4 : text_q4_6, chance: 14.29},
-  {nameQ4: 'vini', img: '../images/vinipuh.png',taskTextQ4 : text_q4_7, chance: 14.29},
+  {nameQ4: 'Persistent Bugger', img: '../images/Task_Icons/q4/q4_1.png',taskTextQ4 : text_q4_1, SecondExampleQ4 : second_example_q4_1 ,exampleQ4 : text_example_q4_1 ,testsQ4 : test_q4_1 ,FuncNameQ4: function_name_q4_1,FuncArgsQ4 : userFunction_q4_1, chance: 14.29},
+  {nameQ4: 'Even or Odd Accessor', img: '../images/Task_Icons/q4/q4_2.png',taskTextQ4 : text_q4_2,SecondExampleQ4 : second_example_q4_2 ,exampleQ4 : text_example_q4_2 ,testsQ4 : test_q4_2 ,FuncNameQ4: function_name_q4_2,FuncArgsQ4 : userFunction_q4_2, chance: 0.29},
+  {nameQ4: 'Sort the odd', img: '../images/Task_Icons/q4/q4_3.png',taskTextQ4 : text_q4_3,SecondExampleQ4 : second_example_q4_3 ,exampleQ4 : text_example_q4_3 ,testsQ4 : test_q4_3 ,FuncNameQ4: function_name_q4_3,FuncArgsQ4 : userFunction_q4_3, chance: 14.29},
+  {nameQ4: 'Array combinations', img: '../images/Task_Icons/q4/q4_4.png',taskTextQ4 : text_q4_4, SecondExampleQ4 : second_example_q4_4 ,exampleQ4 : text_example_q4_4 ,testsQ4 : test_q4_4 ,FuncNameQ4: function_name_q4_4,FuncArgsQ4 : userFunction_q4_4, chance: 14.29},
+  {nameQ4: 'Replace With Alphabet Position', img: '../images/Task_Icons/q4/q4_5.png',taskTextQ4 : text_q4_5,SecondExampleQ4 : second_example_q4_5 ,exampleQ4 : text_example_q4_5 ,testsQ4 : test_q4_5 ,FuncNameQ4: function_name_q4_5,FuncArgsQ4 : userFunction_q4_5, chance: 14.29},
+  {nameQ4: 'Detect Pangram', img: '../images/Task_Icons/q4/q4_6.png',taskTextQ4 : text_q4_6,SecondExampleQ4 : second_example_q4_6 ,exampleQ4 : text_example_q4_6 ,testsQ4 : test_q4_6 ,FuncNameQ4: function_name_q4_6,FuncArgsQ4 : userFunction_q4_6, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -103,7 +107,7 @@ function start() {
     const result = compareNames(items, data1.nameQ4); // сравниваем имя выпавшего элемента с именами предметов
     localStorage.setItem('dataToPass4', JSON.stringify(result)); // сохраняем данные в localStorage
     const dataToPass = JSON.parse(localStorage.getItem('dataToPass4'));
-    console.log(dataToPas4) // получаем данные из localStorage
+    console.log(dataToPass) // получаем данные из localStorage
     
     
   }, 5000);

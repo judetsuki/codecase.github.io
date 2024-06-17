@@ -56,7 +56,9 @@ html, body {
     width: 100px;
     cursor: pointer;
 }
-
+.editor__btn:hover {
+    opacity: .9;
+}
 .editor__console {
     background-color: darkslategray;
     width: 100%;

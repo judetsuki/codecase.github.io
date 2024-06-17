@@ -8,42 +8,74 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-<header>
-<img src="./images/logo.webp" alt="Main-Logo" class = "main-logo">
-<a href='help.html' class = 'help_button'>Help</a>
-</header>
-
-<div class = "all_cases_menu">
-    <a href='./CaseOpenPage/case_open_page_q6.html'><img src="./images/cases/q6 case.png" alt="case_test" class = "q6_case"></a>
-    <a href='./CaseOpenPage/case_open_page_q5.html'><img src="./images/cases/q5 case.png" alt="case_test" class = "q5_case"></a>
-    <a href='./CaseOpenPage/case_open_page_q4.html'><img src="./images/cases/q4 case.png" alt="case_test" class = "q4_case"></a>
-    <a href='./CaseOpenPage/case_open_page_q3.html'><img src="./images/cases/q3 case.png" alt="case_test" class = "q3_case"></a>
-    <a href='./CaseOpenPage/case_open_page_q2.html'><img src="./images/cases/q2 case.png" alt="case_test" class = "q2_case"></a>
-    <a href='./CaseOpenPage/case_open_page_q1.html'><img src="./images/cases/q1 case.png" alt="case_test" class = "q1_case"></a>
-    <h2 class = "all_cases_text">All Cases</h2>
-    </div>
-    
-    <div class ="cases_parent">
-    <div class = "case_of_the_day_menu">
-        <h2 class = "case_of_the_day_text">Case of the Day</h2>
-        <a href='' class="day"><img src="" alt="case_test" class = "day_case"></a>
-        <a href = '' onclick="runme()"> <img src=""></a>
-
-
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="background.js"></script>
+    <nav class="sidebar"> 
+        <div class="logo-menu">
+            <h2 class=logo>CodeCase</h2>
+            <i class="bx bx-menu toggle-btn"></i>
         </div>
-            
-        <div class = "unique_cases_menu">
-            <h2 class = "unique_cases_text">Unique Cases</h2>
-            <a href='./CaseOpenPage/case_open_page_unique.html'><img src="./images/cases/uniqCase.png" alt="case_test" class = "uniq_case"></a>
+        <ul class="list">
+            <li class="list_item">
+                <a href="index.html">
+                    <i class='bx bx-home'></i> 
+                    <span class="link_name" style="--i:1">Home</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="help.html">
+                    <i class='bx bx-info-circle' ></i>
+                    <span class="link_name"style="--i:2">Help</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="inventary.html"> 
+                    <i class='bx bxs-backpack'></i>
+                    <span class="link_name"style="--i:3">Inventary</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="all-cases-text">All Cases</h2>
+        <div class="all-cases-menu">
+            <div class="cases-grid">
+                <a href='./CaseOpenPage/case_open_page_q6.html'><img src="./images/cases/q6 case.png" alt="case_test" class="q6_case case-img">
+                <span class="case_text">Case Q6</span></a>
+                <a href='./CaseOpenPage/case_open_page_q5.html'><img src="./images/cases/q5 case.png" alt="case_test" class="q5_case case-img">
+                    <span class="case_text">Case Q5</span></a></a>
+                <a href='./CaseOpenPage/case_open_page_q4.html'><img src="./images/cases/q4 case.png" alt="case_test" class="q4_case case-img">
+                    <span class="case_text">Case Q4</span></a></a>
+                <a href='./CaseOpenPage/case_open_page_q3.html'><img src="./images/cases/q3 case.png" alt="case_test" class="q3_case case-img">
+                    <span class="case_text">Case Q3</span></a></a>
+                <a href='./CaseOpenPage/case_open_page_q2.html'><img src="./images/cases/q2 case.png" alt="case_test" class="q2_case case-img">
+                    <span class="case_text">Case Q2</span></a></a>
+                <a href='./CaseOpenPage/case_open_page_q1.html'><img src="./images/cases/q1 case.png" alt="case_test" class="q1_case case-img">
+                    <span class="case_text">Case Q1</span></a></a>
             </div>
         </div>
-        <footer>
-        </footer>
-</body>
+        <div class ="cases_parent">
+            <div class = "case_of_the_day_menu">
+                <h2 class = "case_of_the_day_text">Case of the Day</h2>
+                <a href='' class="day"><img src="" alt="case_test" class = "day_case case-img">
+                    <span class="case_text">Case of the Day</span></a>
+                <a href = '' onclick="runme()"> <img src=""></a>
+        
+        
+                </div>
+                    
+                <div class = "unique_cases_menu">
+                    <h2 class = "unique_cases_text">Unique Cases</h2>
+                    <a href='./CaseOpenPage/case_open_page_unique.html'><img src="./images/cases/uniqCase.png" alt="case_test" class = "uniq_case case-img">
+                        <span class="case_text">Mystery Case</span></a>
+                    </div>
+                </div>
+    </main>
+    <script src="./index.js"></script>
+    </body>
 </html>
-
 <script src ="./scripts/case_of_the_day.js"></script>
