@@ -12,7 +12,7 @@ Fdevll, luka0204, YaroslavDudin, elektrosila , and jop221
 
 
 ## Desciption
-made possible with [Ace Code Editor]([url](https://ace.c9.io/)) and [Github Pages]([url](https://pages.github.com/))
+made possible with [Ace Code Editor](https://ace.c9.io/) and [Github Pages](https://pages.github.com/)
 
-[Link](https://github.com/)
+
 
