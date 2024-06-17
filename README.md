@@ -11,14 +11,12 @@
   <li><a href="https://github.com/elektrosila">Программист - elektrosila</a></li>
 </ul>
 
-
-
-
-
-
-
 ## Описание
 Проект написан при помощи [Ace Code Editor](https://ace.c9.io/) и [Github Pages](https://pages.github.com/)
+
+Представляет собой сервис, который соединяет в себе развлекательный элемент, а именно кейсы, вдохновленные кейсами с таких проектов как [TastyDrop](https://tastydrop.in/) и [csgonet](csgo.net), и образовательный элемент в виде небольших задач, похожих на задачи на таких сервисах как [leetcode](https://leetcode.com/) и [codewars](https://www.codewars.com/)
+
+
 
 
 
