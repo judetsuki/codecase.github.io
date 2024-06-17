@@ -3,11 +3,13 @@
 
 
 ## Команда:
-Тимлид / Г. Верстальщик - [luka0204](https://github.com/luka0204) 
-Г. Программист - [YaroslavDudin](https://github.com/YaroslavDudin)
-Верстальщик - [jop221](https://github.com/jop221)
-Тестировщик / Программист - [Fdevll](https://github.com/Fdevll)
-Программист - [elektrosila](https://github.com/elektrosila)
+<ul>
+  <li><a href="https://github.com/luka0204">Тимлид / Г. Верстальщик - luka0204</a></li>
+  <li><a href="https://github.com/YaroslavDudin">Г. Программист - YaroslavDudin</a></li>
+  <li><a href="https://github.com/jop221">Верстальщик - jop221</a></li>
+  <li><a href="https://github.com/Fdevll">Тестировщик / Программист - Fdevll</a></li>
+  <li><a href="https://github.com/elektrosila">Программист - elektrosila</a></li>
+</ul>
 
 
 
