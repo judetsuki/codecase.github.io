@@ -1,18 +1,22 @@
 # codecase.github.io
-## A gamified educational website project
+## геймифицированный вебсайт-проект для обучения
 
 
-## The team:
-Lead Programmer - YaroslavDudin
-Fdevll, luka0204, YaroslavDudin, elektrosila , and jop221
+## Команда:
+Тимлид / Г. Верстальщик - [luka0204](https://github.com/luka0204) 
+Г. Программист - [YaroslavDudin](https://github.com/YaroslavDudin)
+Верстальщик - [jop221](https://github.com/jop221)
+Тестировщик / Программист - [Fdevll](https://github.com/Fdevll)
+Программист - [elektrosila](https://github.com/elektrosila)
 
 
 
 
 
 
-## Desciption
-made possible with [Ace Code Editor](https://ace.c9.io/) and [Github Pages](https://pages.github.com/)
+
+## Описание
+Проект написан при помощи [Ace Code Editor](https://ace.c9.io/) и [Github Pages](https://pages.github.com/)
 
 
 
