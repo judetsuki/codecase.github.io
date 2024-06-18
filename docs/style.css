@@ -235,22 +235,9 @@ footer {
   }
 
 @media (max-width: 768px) {
-  .descritionContainer_1 {
-    width: 108vh!important;
-    
-  }
-  .editor__wrapper {
-    width: 87vw!important;
-}
-  .descritionContainer {
-    width: 108vh!important;
-}
 .case_on_inventary {
   height: revert !important
 }
-  .section-1{
-    grid-template-columns: 1fr!important;
-  }
   .cases_parent{
     display: flex;
     text-align: center;
@@ -694,26 +681,32 @@ d
 
 .descritionContainer {
   border-radius: 30px;
-  background-color:gray;
+  background: transparent;
+  backdrop-filter: blur(1000px);
   height: 85vh;
   width: 44vw;
   margin: 10px;
   padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
   
 }
 .descritionContainer_1{
   display: flex;
   flex-direction: column;
   border-radius: 30px;
-  background-color: gray;
+  background: transparent;
+  backdrop-filter: blur(1000px);
   height: 42.7vh;
   margin: 10px;
   width: 47vw;
   padding: 10px;
+  overflow: auto;
 }
 .codeContainer{
   border-radius: 30px  ;
-  background-color:gray;
+  background: transparent;
+  backdrop-filter: blur(25px);
   height: 722px;
   margin: 10px;
   width: 47vw;
@@ -723,7 +716,8 @@ d
 
 
 .resultContainer-task{
-  background-color:gray;
+  background: transparent;
+  backdrop-filter: blur(25px);
   height: 585px;
   border-radius: 30px;
   margin: 10px;
@@ -826,4 +820,83 @@ a {
 }
 a:hover .case_text {
     color: gray;
+}
+@media screen and (max-width: 600px) {
+  .section-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
+
+  .descritionContainer, .codeContainer, .resultContainer-task {
+    width: 95% !important;
+  }
+
+  .descritionContainer_1 {
+    width: 95% !important;
+  }
+
+  #cadeArea {
+    width: 100%;
+  }
+
+  .resetButton {
+    width: 100%;
+  }
+}
+
+/* For medium screens */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .section-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
+
+  .descritionContainer, .codeContainer, .resultContainer-task {
+    width: 97% !important;
+  }
+
+  .descritionContainer_1 {
+    width: 97% !important;
+  }
+
+  #cadeArea {
+    width: 100%!important;
+  }
+
+  .resetButton {
+    width: 100%!important;
+  }
+}
+
+/* For large screens */
+@media screen and (min-width: 901px) {
+  .section-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+    margin-top: 52px;
+  }
+
+  .descritionContainer, .codeContainer, .resultContainer-task {
+    width: 47vw;
+  }
+
+  .descritionContainer_1 {
+    width: 46vw;
+  }
+
+  #cadeArea {
+    width: 777px;
+  }
+
+  .resetButton {
+    width: 100px;
+  }
+}
+@media (max-width: 900px){
+.section-1 {
+    grid-template-columns: 1fr !important;
+}
 }
