@@ -12,22 +12,39 @@
     <script type="text/javascript"> 
       var item = JSON.parse(localStorage.getItem('dataToPass5'));
       </script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
-  <header>
-    <div class="sidebar" id="sidebar">
-      <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../help.html">Help</a></li>
-          <li><a href="../Inventary.html">Inventory</a></li>
+  <div id="particles-js"></div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <nav class="sidebar"> 
+      <div class="logo-menu">
+          <h2 class=logo>CodeCase</h2>
+          <i class="bx bx-menu toggle-btn"></i>
+      </div>
+      <ul class="list-sidebar">
+          <li class="list_item">
+              <a href="../index.html">
+                  <i class='bx bx-home'></i> 
+                  <span class="link_name" style="--i:1">Home</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../help.html">
+                  <i class='bx bx-info-circle' ></i>
+                  <span class="link_name"style="--i:2">Help</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../inventary.html"> 
+                  <i class='bx bxs-backpack'></i>
+                  <span class="link_name"style="--i:3">Inventary</span>
+              </a>
+          </li>
       </ul>
-  </div>
-  <button class="sidebar-toggle" id="sidebarToggle">☰</button>
-  <img src="../images/logo.webp" alt="Main-Logo" class =
-  "main-logo">
+  </nav>
 
-    </header>
 
     <div class='section-1'>
         <div class= 'descritionContainer'>
@@ -86,11 +103,11 @@
           
         </div>
       </div>
-
 <script  src="../ace_editor/js/ace-editor/src-min/ace.js"></script>
 <script  src="../ace_editor/js/ace-editor/src-min/mode-javascript.js"></script>
 <script  src="../ace_editor/js/ace-editor/src-min/ext-language_tools.js"></script>
 <script src="../index.js"></script>
+<script src="../background.js"></script>
 <!-- Custom Scripts -->
 <script src="../ace_editor/js/editorQ5.js"></script>
 <script src="../ace_editor/js/editor-console.js"></script>

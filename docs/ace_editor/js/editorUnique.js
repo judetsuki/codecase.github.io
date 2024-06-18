@@ -2,13 +2,11 @@
 const consoleLogList = document.querySelector('.editor__console-logs');
 const executeCodeBtn = document.querySelector('.editor__run');
 const resetCodeBtn = document.querySelector('.editor__reset');
-var item = JSON.parse(localStorage.getItem('dataToPass6')); //заменить на нужную задачу
+var item = JSON.parse(localStorage.getItem('dataToPassUnique')); //заменить на нужную задачу
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = item.FuncNameQ6; // добавить имена функций в зависимости от задачи
+let defaultCode = item.FuncNameUnique; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
-console.log(item);
-
 let editorLib = {
     clearConsoleScreen() {
         consoleMessages.length = 0;
@@ -100,15 +98,16 @@ editorLib.init();
                 }
               }
 
-            const userFunction = new Function([item.FuncArgsQ6], removeFirstAndLastBrackets(userCode));
+            const userFunction = new Function([item.FuncArgsUnique], removeFirstAndLastBrackets(userCode));
             console.log(userFunction);    
 
 
         // Example test cases
-        item.testsQ6
+        item.testsUnique
         let correctCount = 0;
+
         // Run the user function with the test cases
-        item.testsQ6.forEach(testCase => {
+        item.testsUnique.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);
 
             const isCorrect = JSON.stringify(result) === JSON.stringify(testCase.expected);
@@ -117,7 +116,8 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
-            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem6')) || [];
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItemUnique')) || [];
+
             const resultDiv = document.querySelector('.descritionContainer_1');
             if (isCorrect) {
                 correctCount++;
@@ -131,9 +131,9 @@ editorLib.init();
                 closeButton.addEventListener('click', () => {
                 const modal = document.getElementById('modal');
                 modal.style.display = 'none';
-                item.taskCodeQ6 = userCode;
+                item.taskCodeUnique = userCode;
                 solvedItemsLS.push(item);
-                localStorage.setItem('solvedItem6', JSON.stringify(solvedItemsLS));
+                localStorage.setItem('solvedItemUnique', JSON.stringify(solvedItemsLS));
             });
             } else {
                 resultDiv.classList.remove('correct');

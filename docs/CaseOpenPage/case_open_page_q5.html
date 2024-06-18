@@ -9,24 +9,39 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta http-equiv="cache-control" content="no-cache">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="body_open_page">
-  <header>
-    <div class="sidebar" id="sidebar">
-      <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../help.html">Help</a></li>
-          <li><a href="../Inventary.html">Inventory</a></li>
+  <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../background.js"></script>
+    <nav class="sidebar"> 
+      <div class="logo-menu">
+          <h2 class=logo>CodeCase</h2>
+          <i class="bx bx-menu toggle-btn"></i>
+      </div>
+      <ul class="list-sidebar">
+          <li class="list_item">
+              <a href="../index.html">
+                  <i class='bx bx-home'></i> 
+                  <span class="link_name" style="--i:1">Home</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../help.html">
+                  <i class='bx bx-info-circle' ></i>
+                  <span class="link_name"style="--i:2">Help</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../inventary.html"> 
+                  <i class='bx bxs-backpack'></i>
+                  <span class="link_name"style="--i:3">Inventary</span>
+              </a>
+          </li>
       </ul>
-  </div>
-  <button class="sidebar-toggle" id="sidebarToggle">☰</button>
-  <img src="../images/logo.webp" alt="Main-Logo" class =
-  "main-logo">
-
-
-    </header>
-<section>
+  </nav>
+<div class="open_page_section">
   <div class="case_section">
     <img src="../images/cases/q5 case.png" alt="case_test" class = "case_on_open_page">
     <h2 class = "text_above_case">"Case Q5"</h2>
@@ -41,19 +56,38 @@
   <a href='../taskPage/task_pageQ5.html' class = 'task_button'>
     <button id="goToTaskButton"  class="task" style="display: none;" >Перейти к заданию</button>
   </a>
-</div>
 
-<div id="resultContainer" class="result">
-  <h1 id="resultText" style="color: aliceblue; "></h1>
-  <h2 id="resultTitle" style="color: aliceblue; "></h2> <!--test color-->
-  <img id="resultImage" src="" alt="" style="height: 300px; margin: auto;"> <!--test color-->
-</div>
+<h1 class = "test_text text_case">Tasks</h1>
+<div class="grid-container-5">
 
-</section>
-  
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_1.png" alt="case_test" class="case_on_open_page">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_2.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_3.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_4.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_5.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_6.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_7.png" alt="case_test">
+  </div>
+  <div class="image-wrapper">
+    <img src="../images/Task_Icons/q5/q5_8.png" alt="case_test">
+  </div>
+</div>
     </body>
 </html>
 <script src="../index.js"></script>
-
+<script src="../background.js"></script>
 <script type="module" src="../scripts/OpenCase/open_q5.js"></script>
 
