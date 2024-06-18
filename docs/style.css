@@ -53,19 +53,28 @@ body {
   grid-gap: 10px;
   margin-left: 80px;
   justify-items: center;
+  background-color: rgba(90, 89, 89, 0.425);
+  border-radius: 10px;
 
 }
 .grid-container-4 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  background-color: rgba(90, 89, 89, 0.425);
+  border-radius: 10px;
+
   grid-gap: 10px;
   margin-left: 80px;
   justify-items: center;
+
 
 }
 .grid-container-5 {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  background-color: rgba(90, 89, 89, 0.425);
+  border-radius: 10px;
+
   grid-gap: 10px;
   margin-left: 80px;
   justify-items: center;
@@ -271,7 +280,7 @@ footer {
   }
 
 @media (max-width: 768px) {
-  .grid-container {
+  .grid-container-4,.grid-container-5,.grid-container-6 {
     grid-template-columns: repeat(2, 1fr);
   }
 .case_on_inventary {
@@ -325,7 +334,7 @@ footer {
   .case_on_open_page{
     max-width: 100%;
   }
-  .grid-container {
+  .grid-container-4,.grid-container-5,.grid-container-6 {
     grid-template-columns: repeat(1, 1fr);
   } 
     .cases-grid {
@@ -948,6 +957,10 @@ a:hover .case_text {
 .test_text{
   margin-left: 80px;
   color: white;
+}
+.text_case{
+  margin-top: 20px;
+
 }
 h1{
   text-align: center;
