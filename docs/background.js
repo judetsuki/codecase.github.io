@@ -1,10 +1,10 @@
 particlesJS('particles-js', {
     particles: {
         number: {
-            value: 80,
+            value: 75,
             density: {
                 enable: true,
-                value_area: 800
+                value_area: 1000
             }
         },
         color: {
@@ -54,7 +54,7 @@ particlesJS('particles-js', {
         },
         move: {
             enable: true,
-            speed: 0.6,
+            speed: 1,
             direction: 'none',
             random: false,
             straight: false,
