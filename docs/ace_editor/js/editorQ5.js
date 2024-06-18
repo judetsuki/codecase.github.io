@@ -117,7 +117,7 @@ editorLib.init();
 
             console.log(`${message}: ${result}`);
 
-            let solvedItemsLS = localStorage.getItem('solvedItem5') || [];
+            let solvedItemsLS = JSON.parse(localStorage.getItem('solvedItem5')) || [];
 
             const resultDiv = document.querySelector('.descritionContainer_1');
             if (isCorrect) {

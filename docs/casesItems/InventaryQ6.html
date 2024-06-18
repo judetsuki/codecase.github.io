@@ -59,7 +59,7 @@
         var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
         var namesDiv = document.querySelector('.section_inventary');
 var addedNames = {};
-
+console.log(TaskName_TaskCode);
 TaskName_TaskCode.forEach(function(item) {
     if (!addedNames[item.img]) {
         var section = document.createElement('div');
