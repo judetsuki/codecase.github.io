@@ -455,17 +455,17 @@ footer {
 .sidebar.expanded .logo-menu .toggle-btn {
   left: 90%;
 }
-.sidebar .list {
+.sidebar .list-sidebar {
   margin-top: 10px;
 }
-.list .list_item {
+.list-sidebar .list_item {
   width: 100%;
   list-style: none;
   height: 50px;
   line-height: 50px;
   margin: 5px 0;
 }
-.list .list_item a {
+.list-sidebar .list_item a {
   display: flex;
   align-items: center;
   border-radius: 6px;
@@ -475,14 +475,14 @@ footer {
   font-size: 18px;
   transition: all 0.4s ease;
 }
-.list .list_item a i {
+.list-sidebar .list_item a i {
   min-width: 50px;
   height: 50px;
   text-align: center;
   line-height: 50px;
 }
-.list .list_item.active a,
-.list .list_item a:hover {
+.list-sidebar .list_item.active a,
+.list-sidebar .list_item a:hover {
   background: rgba(255, 255, 255, .2);
 }
 .sidebar .link_name {
