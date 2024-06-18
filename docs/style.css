@@ -173,7 +173,7 @@ main {
 
 .uniq_case ,.day_case {
   max-width: 42%;
-  transition: 0.6s;
+  transition: 0.2s;
 }
 
 .uniq-case, .day-case:hover {
