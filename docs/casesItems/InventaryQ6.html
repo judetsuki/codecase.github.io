@@ -71,13 +71,13 @@ TaskName_TaskCode.forEach(function(item) {
         img.classList.add('card_inventary');
         img.id = 'card_inventary' ;
         img.src = item.img; // Устанавливаем путь к изображению в атрибут src
-        img.style.width = '200%'; // Занимает 1/4 ширины родительского элемента
+        img.style.width = '300%'; // Занимает 1/4 ширины родительского элемента
         img.style.maxWidth = '100'
         img.style.height = '20vh'; // Максимальная ширина изображения
         section.appendChild(img);
         namesDiv.appendChild(section);
         addedNames[item.img] = true;
-        addedNames[item.nameQ5] = true;
+        addedNames[item.nameQ6] = true;
 
     }
 });
