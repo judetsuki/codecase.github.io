@@ -162,7 +162,7 @@ main {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    transition: 0.6s;
+    transition: 0.2s;
 }
 
 .case-img:hover {
