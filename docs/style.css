@@ -900,3 +900,13 @@ a:hover .case_text {
     grid-template-columns: 1fr !important;
 }
 }
+.test_text{
+  margin-left: 80px;
+  color: white;
+}
+h1{
+  text-align: center;
+}
+.taskName{
+  color: white;
+}
