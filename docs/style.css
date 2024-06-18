@@ -162,6 +162,7 @@ main {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+    transition: 0.2s;
 }
 
 .case-img:hover {
@@ -172,6 +173,7 @@ main {
 
 .uniq_case ,.day_case {
   max-width: 42%;
+  transition: 0.2s;
 }
 
 .uniq-case, .day-case:hover {
@@ -223,6 +225,17 @@ color: white;
 .case_of_the_day_text{
   
   margin-bottom: 7%;
+}
+.case-of-the-day-menu, .unique-cases-menu {
+  flex: 1 0 300px; /* Адаптированное свойство flex */
+  margin: 10px; 
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 23vw;
+  z-index: 2;
 }
 
 .special-case {
@@ -414,7 +427,7 @@ footer {
   background: transparent;
   backdrop-filter: blur(40px);
   padding: 6px 14px;
-  transition: 0.1s;
+  transition: 0.2s;
   z-index: 3;
 }
 .sidebar.expanded {
