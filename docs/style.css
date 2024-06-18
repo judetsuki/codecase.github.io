@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+ 
 }
 
 html {
@@ -148,6 +148,7 @@ main {
     margin-bottom: 20px;
     color: white;
     margin-top: 20px;
+    font-family: 'poppins', sans-serif;
 }
 
 .cases-grid {
@@ -210,10 +211,12 @@ main {
 position: absolute;
 bottom: 90%;
 color: white;
+font-family: 'poppins', sans-serif;
 }
 
 .case_of_the_day_text,.unique_cases_text,.all_cases_text{
   font-size: 2.9vw;
+  
 }
 .unique_cases_text{
  
@@ -226,17 +229,7 @@ color: white;
   
   margin-bottom: 7%;
 }
-.case-of-the-day-menu, .unique-cases-menu {
-  flex: 1 0 300px; /* Адаптированное свойство flex */
-  margin: 10px; 
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 23vw;
-  z-index: 2;
-}
+
 
 .special-case {
     flex: 1;
@@ -374,7 +367,7 @@ footer {
     }
 }
 .section_inventary{
-  font-family: Arial, sans-serif;
+  font-family: 'poppins', sans-serif;
   margin: 0;
   padding: 20px;
   display: grid;
@@ -383,7 +376,7 @@ footer {
   margin-left: 80px;
 }
 .section_inventary1 {
-  font-family: Arial, sans-serif;
+  font-family: 'poppins', sans-serif;
   margin: 0;
   padding: 20px;
   display: grid;
@@ -445,6 +438,7 @@ footer {
   pointer-events: none;
   opacity: 0;
   transition: .1s;
+  font-family: 'poppins', sans-serif;
 }
 .sidebar.expanded .logo-menu .logo {
   opacity: 1;
@@ -475,6 +469,7 @@ footer {
   height: 50px;
   line-height: 50px;
   margin: 5px 0;
+  font-family: 'poppins', sans-serif;
 }
 .list-sidebar .list_item a {
   display: flex;
@@ -717,11 +712,13 @@ d
 .text_above_case{
   color: white;
   top: 17%;
+  font-family: 'poppins', sans-serif;
 }
 
 .text_above_case_uniq{
   color: white;
   top: 17%; 
+  font-family: 'poppins', sans-serif;
 }
 .section-1{
   display: grid;
@@ -864,6 +861,7 @@ p{
     text-overflow: ellipsis;
     transition: color .3s ease;
     white-space: nowrap;
+    font-family: 'poppins', sans-serif;
 }
 
 a {
@@ -965,6 +963,7 @@ a:hover .case_text {
 }
 h1{
   text-align: center;
+  font-family: 'poppins', sans-serif;
 }
 .taskName{
   color: white;
