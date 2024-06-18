@@ -10,7 +10,6 @@ function expandSidebar() {
     sidebar.querySelectorAll('.link_name').forEach((link, index) => {
         link.style.opacity = '1';
         link.style.pointerEvents = 'auto';
-        link.style.transitionDelay = `calc(.1s * ${index + 1})`;
     });
     toggleBtn.style.left = '90%';
     isExpanded = true;

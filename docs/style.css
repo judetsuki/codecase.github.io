@@ -504,7 +504,6 @@ footer {
 .sidebar.expanded .link_name {
   opacity: 1;
   pointer-events: auto;
-  transition-delay: calc(.1s * var(--i));
 }
 
 /* CSS for hover effect on desktop */
