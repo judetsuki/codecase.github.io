@@ -127,7 +127,6 @@ function start() {
     
     
   }, 5000);
-  resultContainer.style.display = 'block';
 
   list.addEventListener('transitionend', () => {
     isStarted = false;
