@@ -7,7 +7,6 @@ var item = JSON.parse(localStorage.getItem('dataToPass6')); //заменить �
 let codeEditor = ace.edit("editorCode");
 let defaultCode = item.FuncNameQ6; // добавить имена функций в зависимости от задачи
 let consoleMessages = [];
-console.log(item);
 
 let editorLib = {
     clearConsoleScreen() {
@@ -107,6 +106,7 @@ editorLib.init();
         // Example test cases
         item.testsQ6
         let correctCount = 0;
+
         // Run the user function with the test cases
         item.testsQ6.forEach(testCase => {
             const result = userFunction(testCase.inputA, testCase.inputB);

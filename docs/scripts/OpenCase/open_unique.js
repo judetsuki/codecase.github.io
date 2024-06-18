@@ -1,35 +1,16 @@
-import { text_q6_1 , text_q6_2 , text_q6_3 , text_q6_4 , text_q6_5 , text_q6_6 , text_q6_7 } from "../tasks.js";
-import {testCases_q6_1 , testCases_q6_2 , testCases_q6_3 , testCases_q6_4 , testCases_q6_5 , testCases_q6_6 , testCases_q6_7} from "../tasks.js"
-import {function_name_q6_1 , function_name_q6_2 , function_name_q6_3 , function_name_q6_4 , function_name_q6_5 , function_name_q6_6 , function_name_q6_7} from "../tasks.js"
-import {userFunction_q6_1 , userFunction_q6_2, userFunction_q6_3 , userFunction_q6_4 , userFunction_q6_5 , userFunction_q6_6 , userFunction_q6_7} from "../tasks.js"
-import {text_example_q6_1 , text_example_q6_2 , text_example_q6_3 , text_example_q6_4 , text_example_q6_5 , text_example_q6_6 , text_example_q6_7} from "../tasks.js"
-import {second_example_q6_1 , second_example_q6_2 , second_example_q6_3 , second_example_q6_4 , second_example_q6_5 , second_example_q6_6 , second_example_q6_7} from "../tasks.js"
-import { text_q5_1 , text_q5_2 , text_q5_3 , text_q5_4 , text_q5_5 , text_q5_6 , text_q5_7 , text_q5_8 } from "../tasks.js";
-import { second_example_q5_1, second_example_q5_2, second_example_q5_3, second_example_q5_4, second_example_q5_5, second_example_q5_6, second_example_q5_7, second_example_q5_8 } from "../tasks.js";
-import { text_example_q5_1, text_example_q5_2, text_example_q5_3, text_example_q5_4, text_example_q5_5, text_example_q5_6, text_example_q5_7, text_example_q5_8 } from "../tasks.js";
-import { function_name_q5_1, function_name_q5_2, function_name_q5_3, function_name_q5_4, function_name_q5_5, function_name_q5_6, function_name_q5_7, function_name_q5_8 } from "../tasks.js";
-import { test_q5_1, test_q5_2, test_q5_3, test_q5_4, test_q5_5, test_q5_6, test_q5_7, test_q5_8 } from "../tasks.js";
-import { userFunction_q5_1, userFunction_q5_2, userFunction_q5_3, userFunction_q5_4, userFunction_q5_5, userFunction_q5_6, userFunction_q5_7, userFunction_q5_8 } from "../tasks.js";
-import { text_q4_1 , text_q4_2 , text_q4_3 , text_q4_4 , text_q4_5 , text_q4_6 } from "../tasks.js";
-import { second_example_q4_1, second_example_q4_2, second_example_q4_3, second_example_q4_4, second_example_q4_5, second_example_q4_6 } from "../tasks.js";
-import { test_q4_1, test_q4_2, test_q4_3, test_q4_4, test_q4_5, test_q4_6 } from "../tasks.js";
-import { userFunction_q4_1, userFunction_q4_2, userFunction_q4_3, userFunction_q4_4, userFunction_q4_5, userFunction_q4_6 } from "../tasks.js";
-import { text_example_q4_1, text_example_q4_2, text_example_q4_3, text_example_q4_4, text_example_q4_5, text_example_q4_6 } from "../tasks.js";
-import { function_name_q4_1, function_name_q4_2, function_name_q4_3, function_name_q4_4, function_name_q4_5, function_name_q4_6 } from "../tasks.js";
+import { text_uniq_1 , text_uniq_2 , text_uniq_3 , text_uniq_4 , text_uniq_5 , text_uniq_6 , text_uniq_7 } from "../tasks.js";
 
 const cells = 61 //количество предметов (скорость рулетки)
 
 // From 0.001 to 100
 const items = [
-  {nameUnique: 'SumMix', img: '../images/Task_Icons/q6/q6_1.png',taskTextUnique : text_q6_1,SecondExampleUnique : second_example_q6_1 ,exampleUnique : text_example_q6_1 ,testsUnique : testCases_q6_1  ,FuncNameUnique: function_name_q6_1, FuncArgsUnique : userFunction_q6_1, chance: 10.29},
-  {nameUnique: 'PowersOfTwo', img: '../images/Task_Icons/q6/q6_2.png',taskTextUnique : text_q6_2,SecondExampleUnique : second_example_q6_2 ,exampleUnique : text_example_q6_2 ,testsUnique : testCases_q6_2 ,FuncNameUnique: function_name_q6_2, FuncArgsUnique : userFunction_q6_2, chance: 10.29},
-  {nameUnique: 'Multiply', img: '../images/Task_Icons/q6/q6_3.png',taskTextUnique : text_q6_3,SecondExampleUnique : second_example_q6_3 ,exampleUnique : text_example_q6_3 ,testsUnique : testCases_q6_3 ,FuncNameUnique: function_name_q6_3, FuncArgsUnique : userFunction_q6_3 , chance: 10.29},
-  {nameUnique: 'All Nines', img: '../images/Task_Icons/q5/q5_1.png',taskTextUnique : text_q5_1,SecondExampleUnique : second_example_q5_1 ,exampleUnique : text_example_q5_1 ,testsUnique : test_q5_1 ,FuncNameUnique: function_name_q5_1,FuncArgsUnique : userFunction_q5_1, chance: 10.29},
-  {nameUnique: 'String reverse slicing 101', img: '../images/Task_Icons/q5/q5_3.png',taskTextUnique : text_q5_3,SecondExampleUnique : second_example_q5_3 ,exampleUnique : text_example_q5_3 , testsUnique : test_q5_3 , FuncNameUnique : function_name_q5_3,FuncArgsUnique: userFunction_q5_3, chance: 10.29},
-  {nameUnique: 'Ones and Zeros', img: '../images/Task_Icons/q5/q5_2.png',taskTextUnique : text_q5_2,SecondExampleUnique : second_example_q5_2 ,exampleUnique : text_example_q5_2 ,testsUnique : test_q5_2 ,FuncNameUnique: function_name_q5_2, FuncArgsUnique: userFunction_q5_2, chance: 10.29},
-  {nameUnique: 'Persistent Bugger', img: '../images/Task_Icons/q4/q4_1.png',taskTextUnique : text_q4_1, SecondExampleUnique : second_example_q4_1 ,exampleUnique : text_example_q4_1 ,testsUnique : test_q4_1 ,FuncNameUnique: function_name_q4_1,FuncArgsUnique : userFunction_q4_1, chance: 10.29},
-  {nameUnique: 'Even or Odd Accessor', img: '../images/Task_Icons/q4/q4_2.png',taskTextUnique : text_q4_2,SecondExampleUnique : second_example_q4_2 ,exampleUnique : text_example_q4_2 ,testsUnique : test_q4_2 ,FuncNameUnique: function_name_q4_2,FuncArgsUnique : userFunction_q4_2, chance: 10.29},
-  {nameUnique: 'Sort the odd', img: '../images/Task_Icons/q4/q4_3.png',taskTextUnique : text_q4_3,SecondExampleUnique : second_example_q4_3 ,exampleUnique : text_example_q4_3 ,testsUnique : test_q4_3 ,FuncNameUnique: function_name_q4_3,FuncArgsUnique : userFunction_q4_3, chance: 10.29},
+  {name: 'iPhone', img: '../images/iPhone.png',taskText : text_uniq_1, chance: 14.29},
+  {name: 'Keyboard', img: '../images/keyboard.png',taskText : text_uniq_2, chance: 14.29},
+  {name: 'Headphones', img: '../images/headphones.png',taskText : text_uniq_3, chance: 14.29},
+  {name: 'Pivo', img: '../images/pivo.png',taskText : text_uniq_4, chance: 14.29},
+  {name: 'butterfly', img: '../images/butterfly.png',taskText : text_uniq_5, chance: 14.29},
+  {name: 'jini', img: '../images/jini.png',taskText : text_uniq_6, chance: 14.29},
+  {name: 'vini', img: '../images/vinipuh.png',taskText : text_uniq_7, chance: 14.29},
 ]
 // создать отдельный файл с текстом заданий, и импортировать их в const items
 function getItem() {
@@ -114,19 +95,20 @@ function start() {
     function compareNames(object, reqItem) {
       let result;
       object.forEach((item) => {
-        if (item.nameUnique === reqItem) {  
+        if (item.name === reqItem) {  
           result = item;
         }
       });
       return result;
     }
-    const result = compareNames(items, data1.nameUnique); // сравниваем имя выпавшего элемента с именами предметов
-    localStorage.setItem('dataToPassUnique', JSON.stringify(result)); // сохраняем данные в localStorage
-    const dataToPass = JSON.parse(localStorage.getItem('dataToPassUnique'));
+    const result = compareNames(items, data1.name); // сравниваем имя выпавшего элемента с именами предметов
+    localStorage.setItem('dataToPass', JSON.stringify(result)); // сохраняем данные в localStorage
+    const dataToPass = JSON.parse(localStorage.getItem('dataToPass'));
     console.log(dataToPass) // получаем данные из localStorage
     
     
   }, 5000);
+  resultContainer.style.display = 'block';
 
   list.addEventListener('transitionend', () => {
     isStarted = false;
@@ -147,7 +129,7 @@ function start() {
     showGoToTaskButton(); // Show the "Go to task" button
   }, {once: true});
 }
-const a = document.querySelector('.start');
+const a = document.getElementById('startButton');
 a.addEventListener('click', start);
 history.pushState({ page: 1 }, "Title 1", "?page=1");
 

@@ -21,13 +21,11 @@ html, body {
     display: flex;
     flex-direction: column;
     border-radius: 30px  ;
-    background: transparent;
-    backdrop-filter: blur(50px);
+    background-color:gray;
     height: 400px;
     margin: 10px;
-    width: 97%;
-    padding: 10px;
-    z-index:2;
+    width: 47vw;
+    padding: 10px
 }
 
 .editor__body {
