@@ -10,65 +10,64 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript"> 
-      var item = JSON.parse(localStorage.getItem('dataToPass6'));
+      var item = JSON.parse(localStorage.getItem('dataToPassUnique'));
       </script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
   <div id="particles-js"></div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <nav class="sidebar"> 
-        <div class="logo-menu">
-            <h2 class=logo>CodeCase</h2>
-            <i class="bx bx-menu toggle-btn"></i>
-        </div>
-        <ul class="list">
-            <li class="list_item">
-                <a href="../index.html">
-                    <i class='bx bx-home'></i> 
-                    <span class="link_name" style="--i:1">Home</span>
-                </a>
-            </li>
-            <li class="list_item">
-                <a href="../help.html">
-                    <i class='bx bx-info-circle' ></i>
-                    <span class="link_name"style="--i:2">Help</span>
-                </a>
-            </li>
-            <li class="list_item">
-                <a href="../inventary.html"> 
-                    <i class='bx bxs-backpack'></i>
-                    <span class="link_name"style="--i:3">Inventary</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <nav class="sidebar"> 
+      <div class="logo-menu">
+          <h2 class=logo>CodeCase</h2>
+          <i class="bx bx-menu toggle-btn"></i>
+      </div>
+      <ul class="list">
+          <li class="list_item">
+              <a href="../index.html">
+                  <i class='bx bx-home'></i> 
+                  <span class="link_name" style="--i:1">Home</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../help.html">
+                  <i class='bx bx-info-circle' ></i>
+                  <span class="link_name"style="--i:2">Help</span>
+              </a>
+          </li>
+          <li class="list_item">
+              <a href="../inventary.html"> 
+                  <i class='bx bxs-backpack'></i>
+                  <span class="link_name"style="--i:3">Inventary</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
 
 
     <div class='section-1'>
         <div class= 'descritionContainer'>
           <h1 class="taskName">
             <script type="text/javascript">
-              document.write(item.nameQ6)
+              document.write(item.nameUnique)
             </script>
           </h1>
           <p id = "task_text" class="taskDescription">
             <script type="text/javascript">
-              document.write(item.taskTextQ6)
+              document.write(item.taskTextUnique)
             </script>
           </p>
 
           <p style="margin-top: 10px;">
             <script>
-              document.write(item.exampleQ6)
+              document.write(item.exampleUnique)
             </script>
             </p>
   
             <p style="margin-top: 10px;">
               <script>
-                document.write(item.SecondExampleQ6)
-                
+                document.write(item.SecondExampleUnique)
               </script>
             </p>
 
@@ -99,7 +98,7 @@
       </div>
       <div id="modal" class="modal">
         <div class="modal_content">
-          <h2>Current Kata : <script>document.write(item.nameQ6)</script> - Finished</h2>
+          <h2>Current Kata : <script>document.write(item.nameUnique)</script> - Finished</h2>
           <button id="close_modal" class="buttons">Close</button>
           
         </div>
@@ -110,33 +109,9 @@
 <script src="../index.js"></script>
 <script src="../background.js"></script>
 <!-- Custom Scripts -->
-<script src="../ace_editor/js/editorQ6.js"></script>
+<script src="../ace_editor/js/editorUnique.js"></script>
 <script src="../ace_editor/js/editor-console.js"></script>
 </body>
 </html>
 
 
-<!--var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem'));
-      var namesDiv = document.createElement('div');
-
-      // Создаем Set для хранения уникальных имен
-      var uniqueNames = new Set();
-      var uniqueCode = new Set();
-      TaskName_TaskCode.forEach(function(item) {
-    uniqueNames.add(item.nameQ6);
-    uniqueCode.add(item.taskCodeQ6);
-    });
-
-uniqueNames.forEach(function(name) {
-    var nameElement = document.createElement('p');
-    nameElement.textContent = name;
-    namesDiv.appendChild(nameElement);
-});
-uniqueCode.forEach(function(code) {
-    var codeElement = document.createElement('p');
-    codeElement.textContent = code;
-    namesDiv.appendChild(codeElement);
-})
-document.write(namesDiv.innerHTML);
-document.write(item.taskCodeQ6);
-      </script>-->

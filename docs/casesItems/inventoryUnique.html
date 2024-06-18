@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codecase</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <nav class="sidebar"> 
+        <div class="logo-menu">
+            <h2 class=logo>CodeCase</h2>
+            <i class="bx bx-menu toggle-btn"></i>
+        </div>
+        <ul class="list">
+            <li class="list_item">
+                <a href="../index.html">
+                    <i class='bx bx-home'></i> 
+                    <span class="link_name" style="--i:1">Home</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="../help.html">
+                    <i class='bx bx-info-circle' ></i>
+                    <span class="link_name"style="--i:2">Help</span>
+                </a>
+            </li>
+            <li class="list_item">
+                <a href="../inventary.html"> 
+                    <i class='bx bxs-backpack'></i>
+                    <span class="link_name"style="--i:3">Inventary</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script src="../background.js"></script>
+<body>
+
+    <style>
+        .centered-text {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+    <div class="centered-text">
+        <h1>Unique inventory</h1>
+    </div>
+    <div class="section_inventary">
+
+        
+    </div>
+
+    <script>
+        // Parse the JSON data from localStorage
+        var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItemUnique'));
+        var namesDiv = document.querySelector('.section_inventary');
+var addedNames = {};
+console.log(TaskName_TaskCode);
+TaskName_TaskCode.forEach(function(item) {
+    if (!addedNames[item.img]) {
+        var section = document.createElement('div');
+        section.classList.add('section_inventary');
+
+        var img = document.createElement('img');
+        var p = document.createElement('p');
+        p.textContent = item.nameUnique;
+        img.classList.add('card_inventary');
+        img.id = 'card_inventary' ;
+        img.src = item.img; // Устанавливаем путь к изображению в атрибут src
+        img.style.width = '300%'; // Занимает 1/4 ширины родительского элемента
+        img.style.maxWidth = '100'
+        img.style.height = '20vh'; // Максимальная ширина изображения
+        section.appendChild(img);
+        namesDiv.appendChild(section);
+        addedNames[item.img] = true;
+        addedNames[item.nameUnique] = true;
+
+    }
+});
+    </script>
+
+    <script src="../index.js"></script>
+</body>
+</html>
+<!--
+<script>
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
+          var namesDiv = document.createElement('div');
+    
+          // Создаем Set для хранения уникальных имен
+          var uniqueNames = new Set();
+          var uniqueCode = new Set();
+          TaskName_TaskCode.forEach(function(item) {
+        uniqueNames.add(item.nameQ6);
+        uniqueCode.add(item.taskCodeQ6);
+        });
+    
+    uniqueNames.forEach(function(name) {
+        var nameElement = document.createElement('p');
+        nameElement.textContent = name;
+        namesDiv.appendChild(nameElement);
+    });
+    uniqueCode.forEach(function(code) {
+        var codeElement = document.createElement('p');
+        codeElement.textContent = code;
+        namesDiv.appendChild(codeElement);
+    })
+    document.write(namesDiv.innerHTML);
+    </script>-->
+
+
+
+    <!--
+    с именами
+    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem6'));
+    var namesDiv = document.querySelector('.section_inventary');
+    var addedNames = {};
+
+    TaskName_TaskCode.forEach(function(item) {
+        if (!addedNames[item.img]) {
+            var section = document.createElement('div');
+            section.classList.add('section_inventary');
+
+            var img = document.createElement('img');
+            var p = document.createElement('p');
+            p.textContent = item.nameQ6;
+            img.classList.add('card_inventary');
+            img.id = 'card_inventary';
+            img.src = item.img; // Устанавливаем путь к изображению в атрибут src
+            img.style.width = '200%'; // Занимает 1/4 ширины родительского элемента
+            img.style.maxWidth = '100';
+            img.style.height = '20vh'; // Максимальная ширина изображения
+            section.appendChild(img);
+            section.appendChild(p); // Append the p element after the img element
+            namesDiv.appendChild(section);
+            addedNames[item.img] = true;
+            addedNames[item.nameQ6] = true;
+        }
+    })-->
