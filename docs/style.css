@@ -725,7 +725,6 @@ d
   border-radius: 30px;
   background: transparent;
   backdrop-filter: blur(1000px);
-  height: 85vh;
   width: 44vw;
   margin: 10px;
   padding: 10px;
@@ -914,6 +913,9 @@ a:hover .case_text {
 
 /* For large screens */
 @media screen and (min-width: 901px) {
+  .descritionContainer{
+    height: 85vh; ;
+  }
   .section-1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -938,6 +940,7 @@ a:hover .case_text {
   }
 }
 @media (max-width: 900px){
+.descritionContainer
 .section-1 {
     grid-template-columns: 1fr !important;
 }
