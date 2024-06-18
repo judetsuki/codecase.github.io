@@ -162,7 +162,6 @@ main {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    transition: 0.2s;
 }
 
 .case-img:hover {
@@ -173,7 +172,6 @@ main {
 
 .uniq_case ,.day_case {
   max-width: 42%;
-  transition: 0.2s;
 }
 
 .uniq-case, .day-case:hover {
@@ -225,17 +223,6 @@ color: white;
 .case_of_the_day_text{
   
   margin-bottom: 7%;
-}
-.case-of-the-day-menu, .unique-cases-menu {
-  flex: 1 0 300px; /* Адаптированное свойство flex */
-  margin: 10px; 
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 23vw;
-  z-index: 2;
 }
 
 .special-case {
@@ -427,7 +414,7 @@ footer {
   background: transparent;
   backdrop-filter: blur(40px);
   padding: 6px 14px;
-  transition: all 0.5s ease;
+  transition: 0.1s;
   z-index: 3;
 }
 .sidebar.expanded {
@@ -444,7 +431,7 @@ footer {
   color: aliceblue;
   pointer-events: none;
   opacity: 0;
-  transition: .3s;
+  transition: .1s;
 }
 .sidebar.expanded .logo-menu .logo {
   opacity: 1;
@@ -461,7 +448,7 @@ footer {
   text-align: center;
   line-height: 40px;
   cursor: pointer;
-  transition: .5s;
+  transition: .1s;
 }
 .sidebar.expanded .logo-menu .toggle-btn {
   left: 90%;
@@ -484,7 +471,7 @@ footer {
   color: aliceblue;
   white-space: nowrap;
   font-size: 18px;
-  transition: all 0.4s ease;
+  transition:  0.1s ;
 }
 .list-sidebar .list_item a i {
   min-width: 50px;
@@ -499,7 +486,7 @@ footer {
 .sidebar .link_name {
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s;
+  transition: opacity .1s;
 }
 .sidebar.expanded .link_name {
   opacity: 1;
