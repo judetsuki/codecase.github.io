@@ -92,28 +92,5 @@ if (!addedNames[item.img]) {
 </html>
 </body>
 </html>
-<script>
-    var TaskName_TaskCode = JSON.parse(localStorage.getItem('solvedItem5'));
-          var namesDiv = document.createElement('div');
-    
-          // Создаем Set для хранения уникальных имен
-          var uniqueNames = new Set();
-          var uniqueCode = new Set();
-          TaskName_TaskCode.forEach(function(item) {
-        uniqueNames.add(item.nameQ5);
-        uniqueCode.add(item.taskCodeQ5);
-        });
-    
-    uniqueNames.forEach(function(name) {
-        var nameElement = document.createElement('p');
-        nameElement.textContent = name;
-        namesDiv.appendChild(nameElement);
-    });
-    uniqueCode.forEach(function(code) {
-        var codeElement = document.createElement('p');
-        codeElement.textContent = code;
-        namesDiv.appendChild(codeElement);
-    })
-    document.write(namesDiv.innerHTML);
-    document.write(item.taskCodeQ5);
-    </script>
+
+  
