@@ -62,7 +62,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
   background-color: rgba(90, 89, 89, 0.425);
   border-radius: 10px;
-
+  margin-left: 80px;
   grid-gap: 10px;
   justify-items: center;
 
@@ -73,6 +73,7 @@ body {
   grid-template-columns: repeat(8, 1fr);
   background-color: rgba(90, 89, 89, 0.425);
   border-radius: 10px;
+  margin-left: 80px;
 
   grid-gap: 10px;
   justify-items: center;
