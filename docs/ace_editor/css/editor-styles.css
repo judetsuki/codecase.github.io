@@ -102,19 +102,19 @@ html, body {
 }
 
 .log--string {
-    color: #48BF0A;
+    color: #000;
 }
 
 .log--number {
-    color: #48BF0A;
+    color: #000;
 }
 
 .log--boolean {
-    color: blue;
+    color: #000;
 }
 
 .log--undefined {
-    color: grey;
+    color: red;
 }
 
 .log--error {
@@ -122,13 +122,13 @@ html, body {
 }
 
 .log--object {
-    color: darkcyan;
+    color: #000
 }
 
 .log--array {
-    color: darkblue;
+    color: #000;
 }
 
 .log--function {
-    color: yellow;
+    color: #000;
 }
